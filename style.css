@@ -581,19 +581,86 @@ body.theme-light {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.85rem 1.5rem;
-  background-color: rgba(11, 15, 20, 0.88);
-  backdrop-filter: blur(10px);
-  border-bottom: 2px solid var(--border-color);
-  transition: border-color 0.3s ease;
+  padding: 0.45rem 1.5rem;
+  background: rgba(11, 15, 25, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+body.theme-light .top-nav {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.95);
 }
 
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.75rem;
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
+  line-height: 1;
+  animation: brand-name-float 3.5s ease-in-out infinite;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: default;
+  user-select: none;
+}
+
+/* ==========================================================================
+   AVATAR DE PERFIL NA NAVBAR
+   ========================================================================== */
+.nav-avatar-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: default;
+}
+
+.nav-avatar-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 25%;
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 8px var(--accent-glow);
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand:hover .nav-avatar-img {
+  transform: scale(1.1);
+  box-shadow: 0 0 14px var(--accent-color), 0 0 22px var(--accent-glow);
+}
+
+.nav-avatar-online-dot {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  width: 9px;
+  height: 9px;
+  background: #10b981;
+  border-radius: 50%;
+  border: 2px solid var(--bg-color);
+  box-shadow: 0 0 5px #10b981;
+  animation: online-pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes online-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 5px #10b981; }
+  50% { opacity: 0.7; transform: scale(0.85); box-shadow: 0 0 10px #10b981; }
+}
+
+body.theme-light .nav-avatar-img {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 8px var(--accent-glow), 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .pixel-bracket {
@@ -635,13 +702,13 @@ body.theme-light {
 
 /* Micro LED status diode */
 .nav-led-dot {
-  width: 7px;
-  height: 7px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: var(--accent-color);
-  box-shadow: 0 0 5px var(--accent-color);
+  box-shadow: 0 0 7px var(--accent-color);
   display: inline-block;
-  margin-right: 0.35rem;
+  margin-right: 0.45rem;
   transition: all 0.3s ease;
   animation: led-dot-pulse 2.2s infinite ease-in-out;
   flex-shrink: 0;
@@ -667,6 +734,7 @@ body.theme-light {
   letter-spacing: 1px;
   display: inline-flex;
   align-items: center;
+  line-height: 1;
   cursor: default;
   user-select: none;
   position: relative;
@@ -674,7 +742,6 @@ body.theme-light {
   border: none;
   outline: none;
   box-shadow: none;
-  animation: brand-name-float 3.5s ease-in-out infinite;
   transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
@@ -705,28 +772,29 @@ body.theme-light {
   transition: all 0.3s ease;
 }
 
-/* Hover: flutua sutilmente e ativa breve LED suave sem ofuscamento */
-.dev-name-glow:hover {
-  animation: brand-name-float 3.5s ease-in-out infinite paused, led-brief-ignite 0.4s ease-out;
-  transform: translateY(-5px);
-  border: none;
-  background: transparent;
-  box-shadow: none;
+/* Hover no conjunto (Brand: Foto + Nome): pausa flutuação suave, acende micro LED e projeta brilho */
+.brand:hover {
+  animation-play-state: paused;
+  transform: translateY(-3px);
 }
 
-.dev-name-glow:hover::after {
+.brand:hover .dev-name-glow {
+  animation: led-brief-ignite 0.4s ease-out;
+}
+
+.brand:hover .dev-name-glow::after {
   opacity: 0.55;
   left: 10%;
   right: 10%;
 }
 
-.dev-name-glow:hover .nav-led-dot {
+.brand:hover .nav-led-dot {
   background: #ffffff;
-  box-shadow: 0 0 6px var(--accent-color);
-  transform: scale(1.2);
+  box-shadow: 0 0 5px #ffffff, 0 0 9px var(--accent-color), 0 0 14px var(--accent-glow);
+  transform: scale(1.15);
 }
 
-.dev-name-glow:hover .pixel-bracket {
+.brand:hover .pixel-bracket {
   color: var(--accent-color);
   text-shadow:
     0 0 6px var(--accent-color),
@@ -734,7 +802,7 @@ body.theme-light {
   transform: scale(1.12);
 }
 
-.dev-name-glow:hover .brand-name {
+.brand:hover .brand-name {
   color: #ffffff;
   text-shadow:
     0 0 4px rgba(255, 255, 255, 0.85),
@@ -807,7 +875,8 @@ body.theme-light {
 .nav-social-links {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.55rem;
+  margin-right: 0.35rem;
 }
 
 /* Animação de Flutuação Suave para os Ícones */
@@ -824,9 +893,9 @@ body.theme-light {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 31px;
-  height: 31px;
-  border-radius: 4px;
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
   background: rgba(18, 24, 38, 0.45);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -837,6 +906,12 @@ body.theme-light {
   position: relative;
   overflow: hidden;
   animation: nav-social-float 3.2s ease-in-out infinite;
+}
+
+.nav-social-btn svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.25s ease;
 }
 
 /* Flutuação Assíncrona Orgânica: cada ícone opera em frequência e fase própria */
@@ -891,6 +966,79 @@ body.theme-light {
   background: rgba(16, 185, 129, 0.12);
   box-shadow: 0 0 12px rgba(16, 185, 129, 0.65), inset 0 0 6px rgba(16, 185, 129, 0.3);
 }
+
+/* ==========================================================================
+   BOTÃO MINHA TRAJETÓRIA NA NAVBAR (VERSÃO COMPACTA RETRÔ)
+   ========================================================================== */
+.pixel-btn.nav-traj-btn,
+.nav-social-links .nav-traj-btn,
+.nav-traj-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.38rem;
+  padding: 0.28rem 0.82rem !important;
+  height: 34px;
+  min-height: unset !important;
+  font-family: var(--font-code);
+  font-size: 0.73rem !important;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: var(--accent-color);
+  background: rgba(18, 24, 38, 0.55);
+  border: 1px solid color-mix(in srgb, var(--accent-color) 40%, transparent);
+  border-radius: 9999px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: none;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+.pixel-btn.nav-traj-btn:hover,
+.nav-social-links .nav-traj-btn:hover,
+.nav-traj-btn:hover {
+  border-color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color) 16%, rgba(18, 24, 38, 0.85));
+  color: var(--accent-color);
+  box-shadow: 0 0 10px var(--accent-glow);
+  transform: translateY(-2px);
+}
+
+.nav-traj-btn .btn-prompt {
+  font-weight: 800;
+  font-size: 0.75rem;
+  animation: prompt-blink 1.4s infinite;
+}
+
+.pixel-btn.nav-traj-btn:hover .btn-prompt,
+.nav-traj-btn:hover .btn-prompt {
+  color: var(--accent-color);
+}
+
+body.theme-light .pixel-btn.nav-traj-btn,
+body.theme-light .nav-traj-btn {
+  background: rgba(255, 255, 255, 0.65);
+  color: var(--accent-color);
+  border-color: color-mix(in srgb, var(--accent-color) 35%, transparent);
+  box-shadow: none;
+}
+
+body.theme-light .pixel-btn.nav-traj-btn:hover,
+body.theme-light .nav-traj-btn:hover {
+  background: color-mix(in srgb, var(--accent-color) 12%, #ffffff);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+body.theme-light .pixel-btn.nav-traj-btn:hover .btn-prompt,
+body.theme-light .nav-traj-btn:hover .btn-prompt {
+  color: var(--accent-color);
+}
+
 
 .crt-btn,
 .theme-toggle-btn {
@@ -1091,6 +1239,171 @@ body.theme-light .hero::before {
   margin-bottom: 0.5rem;
 }
 
+
+/* ==========================================================================
+   HERO PROFILE CARD — Ficha Técnica do Desenvolvedor
+   ========================================================================== */
+.hero-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: rgba(18, 24, 38, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.4rem 1.8rem;
+  margin: 0.2rem auto 0.2rem auto;
+  max-width: 640px;
+  width: 100%;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35),
+    0 0 15px var(--accent-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-profile-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+}
+
+.hero-profile-card:hover {
+  border-color: var(--accent-color);
+  box-shadow:
+    0 12px 36px rgba(0, 0, 0, 0.45),
+    0 0 25px var(--accent-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.profile-avatar-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.profile-avatar-frame {
+  position: relative;
+  width: 90px;
+  height: 116px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 16px var(--accent-glow);
+  background: #0b0f14;
+}
+
+.profile-ascii-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  filter: contrast(1.1) brightness(1.05);
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar-frame:hover .profile-ascii-img {
+  transform: scale(1.06);
+}
+
+.avatar-badge-tag {
+  font-family: var(--font-code);
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 1px;
+}
+
+.profile-bio-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.bio-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-family: var(--font-code);
+  font-size: 0.83rem;
+  line-height: 1.5;
+}
+
+.bio-key {
+  color: var(--accent-color);
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+  min-width: 140px;
+}
+
+.key-symbol {
+  opacity: 0.6;
+  margin-right: 2px;
+}
+
+.bio-val {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.bio-val.highlight {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.bio-pulse-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #10b981;
+  border-radius: 50%;
+  margin-right: 5px;
+  box-shadow: 0 0 6px #10b981;
+  animation: pulse-dot 2s ease-in-out infinite;
+  vertical-align: middle;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.7); }
+}
+
+.status-val {
+  color: #10b981;
+  font-weight: 700;
+}
+
+/* Light mode profile card */
+body.theme-light .hero-profile-card {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06), 0 0 14px var(--accent-glow);
+}
+
+body.theme-light .hero-profile-card:hover {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 20px var(--accent-glow);
+}
+
+body.theme-light .profile-avatar-frame {
+  background: #f0f4f8;
+}
+
 /* ==========================================================================
    CARROSSEL INFINITO DE TECNOLOGIAS (TECH MARQUEE TICKER)
    ========================================================================== */
@@ -1107,26 +1420,41 @@ body.theme-light .hero::before {
   pointer-events: auto;
 }
 
+.tech-marquee-wrapper::after {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 820px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 5%, var(--accent-color) 50%, transparent 95%);
+  box-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-glow);
+  margin-top: 0.9rem;
+  border-radius: 2px;
+  opacity: 0.85;
+}
+
 .marquee-tag {
   font-family: var(--font-code);
-  font-size: 0.75rem;
+  font-size: 0.92rem;
   font-weight: 700;
-  letter-spacing: 2px;
-  color: var(--text-muted);
+  letter-spacing: 2.5px;
+  color: var(--accent-color);
+  text-shadow: 0 0 10px var(--accent-glow);
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 1rem;
 }
 
 .marquee-tag::before,
 .marquee-tag::after {
   content: "";
   display: inline-block;
-  width: 32px;
-  height: 1px;
-  background: var(--border-color);
-  opacity: 0.6;
+  width: 58px;
+  height: 1.5px;
+  background: var(--accent-color);
+  opacity: 0.8;
+  box-shadow: 0 0 8px var(--accent-glow);
 }
 
 .tech-marquee-container {
@@ -1205,10 +1533,17 @@ body.theme-light .hero::before {
 }
 
 .tech-icon {
-  font-size: 1.1rem;
+  font-size: 1.35rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  line-height: 1;
+}
+
+.tech-icon i {
+  font-size: 1.35rem;
+  line-height: 1;
+  display: block;
 }
 
 /* Modo Retrô Vintage */
@@ -1756,6 +2091,89 @@ body.theme-light .pixel-btn.outline:hover {
 
 .about-text strong {
   color: var(--text-main);
+}
+
+/* Capítulos Detalhados da Trajetória */
+.about-chapter {
+  margin-bottom: 1.6rem;
+  padding: 1.4rem 1.6rem;
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  border-left: 3.5px solid var(--accent-color);
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.about-chapter:last-child {
+  margin-bottom: 0;
+}
+
+.about-chapter:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35), 0 0 16px var(--accent-glow);
+  transform: translateY(-2px);
+}
+
+.about-chapter-tag {
+  display: inline-block;
+  font-family: var(--font-code);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 1.2px;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+.about-chapter-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.about-chapter p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 0.9rem;
+}
+
+.about-chapter p:last-child {
+  margin-bottom: 0;
+}
+
+.about-chapter strong {
+  color: var(--text-main);
+}
+
+.about-chapter em {
+  color: var(--accent-color);
+  font-style: italic;
+}
+
+.stack-box-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+body.theme-light .about-chapter {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 3.5px solid var(--accent-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+body.theme-light .about-chapter:hover {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: var(--accent-color);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08), 0 0 14px var(--accent-glow);
 }
 
 .stack-box {

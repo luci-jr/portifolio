@@ -5,18 +5,31 @@
     <h1 class="hero-title">{{ portfolio.currentConfig().title }}</h1>
     <p class="hero-desc">{{ portfolio.currentConfig().desc }}</p>
 
-    <!-- Terminal de Telemetria com Go Serverless -->
-    <div class="terminal-telemetry">
-      <div class="term-header">
-        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-        <span class="term-title">nexus-telemetry.sh</span>
-      </div>
-      <div class="term-body">
-        <div class="term-line">
-          <span class="prompt">$</span> {{ portfolio.currentConfig().command }}
+    <!-- Card de Perfil do Desenvolvedor -->
+    <div class="hero-profile-card" aria-label="Ficha Técnica do Desenvolvedor">
+      <div class="profile-avatar-box">
+        <div class="profile-avatar-frame">
+          <img src="perfil-lucivaldo.jpg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/perfil-lucivaldo.jpg'}" alt="Foto de Perfil de Lucivaldo Junior" class="profile-ascii-img">
         </div>
-        <div class="term-line term-output">
-          {{ telemetryService.telemetry() }}
+        <span class="avatar-badge-tag">&lt;DEV_PROFILE // 2026&gt;</span>
+      </div>
+
+      <div class="profile-bio-details">
+        <div class="bio-item">
+          <span class="bio-key"><span class="key-symbol">&gt;</span> PROFISSÃO:</span>
+          <span class="bio-val highlight">Desenvolvedor Back-end (Java &amp; Go)</span>
+        </div>
+        <div class="bio-item">
+          <span class="bio-key"><span class="key-symbol">&gt;</span> IDADE:</span>
+          <span class="bio-val">39 anos</span>
+        </div>
+        <div class="bio-item">
+          <span class="bio-key"><span class="key-symbol">&gt;</span> ONDE MORO:</span>
+          <span class="bio-val">Belém do Pará — Brasil 📍</span>
+        </div>
+        <div class="bio-item bio-status-row">
+          <span class="bio-key"><span class="key-symbol">&gt;</span> DISPONIBILIDADE:</span>
+          <span class="bio-val status-val"><span class="bio-pulse-dot"></span> DISPONÍVEL PARA CONTRATAÇÃO (CLT / PJ)</span>
         </div>
       </div>
     </div>
@@ -30,47 +43,51 @@
 
   <!-- Carrossel Infinito de Tecnologias (Infinite Tech Marquee em Toda a Largura) -->
   <div class="tech-marquee-wrapper" aria-label="Tecnologias e Stacks Dominadas">
-    <div class="marquee-tag">STACKS EM OPERAÇÃO</div>
+    <div class="marquee-tag">STACKS EM CONSTANTE DESENVOLVIMENTO</div>
     <div class="tech-marquee-container">
       <div class="tech-marquee-track">
         <!-- Bloco 1 -->
-        <div class="tech-item"><span class="tech-icon">☕</span><span class="tech-name">Java 21</span></div>
-        <div class="tech-item"><span class="tech-icon">🍃</span><span class="tech-name">Spring Boot 3</span></div>
-        <div class="tech-item"><span class="tech-icon">🐹</span><span class="tech-name">Go (Golang)</span></div>
-        <div class="tech-item"><span class="tech-icon">🅰️</span><span class="tech-name">Angular 21</span></div>
-        <div class="tech-item"><span class="tech-icon">🔷</span><span class="tech-name">TypeScript</span></div>
-        <div class="tech-item"><span class="tech-icon">🟩</span><span class="tech-name">Node.js</span></div>
-        <div class="tech-item"><span class="tech-icon">🐳</span><span class="tech-name">Docker</span></div>
-        <div class="tech-item"><span class="tech-icon">🐝</span><span class="tech-name">Docker Swarm</span></div>
-        <div class="tech-item"><span class="tech-icon">☁️</span><span class="tech-name">AWS Cloud</span></div>
-        <div class="tech-item"><span class="tech-icon">🐘</span><span class="tech-name">PostgreSQL 16</span></div>
-        <div class="tech-item"><span class="tech-icon">⚡</span><span class="tech-name">Redis</span></div>
-        <div class="tech-item"><span class="tech-icon">🐧</span><span class="tech-name">Linux / Ubuntu</span></div>
-        <div class="tech-item"><span class="tech-icon">🐙</span><span class="tech-name">Git & GitHub</span></div>
-        <div class="tech-item"><span class="tech-icon">🚦</span><span class="tech-name">Traefik v2</span></div>
-        <div class="tech-item"><span class="tech-icon">🐇</span><span class="tech-name">RabbitMQ</span></div>
-        <div class="tech-item"><span class="tech-icon">🧪</span><span class="tech-name">JUnit 5</span></div>
-        <div class="tech-item"><span class="tech-icon">🌲</span><span class="tech-name">Cypress</span></div>
-        <div class="tech-item"><span class="tech-icon">🔥</span><span class="tech-name">Firebase</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-java-plain colored"></i></span><span class="tech-name">Java 21</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-spring-original colored"></i></span><span class="tech-name">Spring Boot 3</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-go-plain colored"></i></span><span class="tech-name">Go (Golang)</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-go-plain colored"></i></span><span class="tech-name">Ebitengine (Go)</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-angularjs-plain colored" style="color: #dd0031 !important;"></i></span><span class="tech-name">Angular 21</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-typescript-plain colored"></i></span><span class="tech-name">TypeScript</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-nodejs-plain colored"></i></span><span class="tech-name">Node.js</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-docker-plain colored"></i></span><span class="tech-name">Docker</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-docker-plain colored"></i></span><span class="tech-name">Docker Swarm</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></span><span class="tech-name">AWS Cloud</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></span><span class="tech-name">AWS RDS</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-postgresql-plain colored"></i></span><span class="tech-name">PostgreSQL 16</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-mysql-plain colored"></i></span><span class="tech-name">MySQL</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-redis-plain colored"></i></span><span class="tech-name">Redis</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-linux-plain"></i></span><span class="tech-name">Linux / Ubuntu</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-git-plain colored"></i></span><span class="tech-name">Git &amp; GitHub</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-traefikproxy-original colored"></i></span><span class="tech-name">Traefik v2</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-postman-plain colored"></i></span><span class="tech-name">Postman</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-firebase-plain colored"></i></span><span class="tech-name">Firebase</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-googlecloud-plain colored"></i></span><span class="tech-name">Google Cloud</span></div>
         <!-- Bloco 2 (Duplicado para loop infinito contínuo) -->
-        <div class="tech-item"><span class="tech-icon">☕</span><span class="tech-name">Java 21</span></div>
-        <div class="tech-item"><span class="tech-icon">🍃</span><span class="tech-name">Spring Boot 3</span></div>
-        <div class="tech-item"><span class="tech-icon">🐹</span><span class="tech-name">Go (Golang)</span></div>
-        <div class="tech-item"><span class="tech-icon">🅰️</span><span class="tech-name">Angular 21</span></div>
-        <div class="tech-item"><span class="tech-icon">🔷</span><span class="tech-name">TypeScript</span></div>
-        <div class="tech-item"><span class="tech-icon">🟩</span><span class="tech-name">Node.js</span></div>
-        <div class="tech-item"><span class="tech-icon">🐳</span><span class="tech-name">Docker</span></div>
-        <div class="tech-item"><span class="tech-icon">🐝</span><span class="tech-name">Docker Swarm</span></div>
-        <div class="tech-item"><span class="tech-icon">☁️</span><span class="tech-name">AWS Cloud</span></div>
-        <div class="tech-item"><span class="tech-icon">🐘</span><span class="tech-name">PostgreSQL 16</span></div>
-        <div class="tech-item"><span class="tech-icon">⚡</span><span class="tech-name">Redis</span></div>
-        <div class="tech-item"><span class="tech-icon">🐧</span><span class="tech-name">Linux / Ubuntu</span></div>
-        <div class="tech-item"><span class="tech-icon">🐙</span><span class="tech-name">Git & GitHub</span></div>
-        <div class="tech-item"><span class="tech-icon">🚦</span><span class="tech-name">Traefik v2</span></div>
-        <div class="tech-item"><span class="tech-icon">🐇</span><span class="tech-name">RabbitMQ</span></div>
-        <div class="tech-item"><span class="tech-icon">🧪</span><span class="tech-name">JUnit 5</span></div>
-        <div class="tech-item"><span class="tech-icon">🌲</span><span class="tech-name">Cypress</span></div>
-        <div class="tech-item"><span class="tech-icon">🔥</span><span class="tech-name">Firebase</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-java-plain colored"></i></span><span class="tech-name">Java 21</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-spring-original colored"></i></span><span class="tech-name">Spring Boot 3</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-go-plain colored"></i></span><span class="tech-name">Go (Golang)</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-go-plain colored"></i></span><span class="tech-name">Ebitengine (Go)</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-angularjs-plain colored" style="color: #dd0031 !important;"></i></span><span class="tech-name">Angular 21</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-typescript-plain colored"></i></span><span class="tech-name">TypeScript</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-nodejs-plain colored"></i></span><span class="tech-name">Node.js</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-docker-plain colored"></i></span><span class="tech-name">Docker</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-docker-plain colored"></i></span><span class="tech-name">Docker Swarm</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></span><span class="tech-name">AWS Cloud</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></span><span class="tech-name">AWS RDS</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-postgresql-plain colored"></i></span><span class="tech-name">PostgreSQL 16</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-mysql-plain colored"></i></span><span class="tech-name">MySQL</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-redis-plain colored"></i></span><span class="tech-name">Redis</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-linux-plain"></i></span><span class="tech-name">Linux / Ubuntu</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-git-plain colored"></i></span><span class="tech-name">Git &amp; GitHub</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-traefikproxy-original colored"></i></span><span class="tech-name">Traefik v2</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-postman-plain colored"></i></span><span class="tech-name">Postman</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-firebase-plain colored"></i></span><span class="tech-name">Firebase</span></div>
+        <div class="tech-item"><span class="tech-icon"><i class="devicon-googlecloud-plain colored"></i></span><span class="tech-name">Google Cloud</span></div>
       </div>
     </div>
   </div>

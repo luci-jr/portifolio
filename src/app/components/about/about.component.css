@@ -102,6 +102,89 @@
   color: var(--text-main);
 }
 
+/* Capítulos Detalhados da Trajetória */
+.about-chapter {
+  margin-bottom: 1.6rem;
+  padding: 1.4rem 1.6rem;
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  border-left: 3.5px solid var(--accent-color);
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.about-chapter:last-child {
+  margin-bottom: 0;
+}
+
+.about-chapter:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35), 0 0 16px var(--accent-glow);
+  transform: translateY(-2px);
+}
+
+.about-chapter-tag {
+  display: inline-block;
+  font-family: var(--font-code);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 1.2px;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+.about-chapter-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.about-chapter p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 0.9rem;
+}
+
+.about-chapter p:last-child {
+  margin-bottom: 0;
+}
+
+.about-chapter strong {
+  color: var(--text-main);
+}
+
+.about-chapter em {
+  color: var(--accent-color);
+  font-style: italic;
+}
+
+.stack-box-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+:host-context(.theme-light) .about-chapter {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 3.5px solid var(--accent-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+:host-context(.theme-light) .about-chapter:hover {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: var(--accent-color);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08), 0 0 14px var(--accent-glow);
+}
+
 .stack-box {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(6px);

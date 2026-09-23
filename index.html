@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucivaldo Junior | Portfólio — Desenvolvedor de Software</title>
+  <title>Lucivaldo Junior - Portfólio - Desenvolvedor</title>
   <meta name="description" content="Portfólio de Lucivaldo Junior — Front-end (Angular), Backend (Java/Go), SysOps e Game Dev." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -20,51 +21,47 @@
   <!-- Barra de Telemetria Superior -->
   <header class="top-nav">
     <div class="brand">
+      <!-- Avatar de Perfil -->
+      <div class="nav-avatar-wrapper" title="Lucivaldo Junior">
+        <img src="perfil-navbar.png"
+             onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/perfil-navbar.png'}"
+             alt="Foto de Lucivaldo Junior"
+             class="nav-avatar-img">
+        <span class="nav-avatar-online-dot" title="ONLINE"></span>
+      </div>
       <div class="dev-name-glow" title="Lucivaldo Junior — Back-end, SysOps & Front-end">
         <span class="nav-led-dot" title="Status: ONLINE"></span>
         <span class="pixel-bracket">[</span>
-        <span class="brand-name">Lucivaldo Junior</span>
+        <span class="brand-name">LUCIVALDO JUNIOR</span>
         <span class="pixel-bracket">]</span>
       </div>
+    </div>
 
-      <!-- Redes Sociais Rápidas ao lado do Nome -->
+    <!-- Controles do Sistema: Redes Sociais + Alternador de Tema (Dark/Light) & Scanlines CRT -->
+    <div class="system-controls">
+      <!-- Redes Sociais Rápidas ao lado dos Controles de Tema e CRT -->
       <div class="nav-social-links" aria-label="Redes Sociais Rápidas">
+        <!-- Botão Minha Trajetória -->
+        <a href="#sobre" class="pixel-btn nav-traj-btn" title="Ver Minha Trajetória" aria-label="Minha Trajetória">
+          <span class="btn-prompt">&gt;_</span> MINHA TRAJETÓRIA
+        </a>
         <a href="https://github.com/luci-jr" target="_blank" class="nav-social-btn nav-btn-github" title="Acessar GitHub de Lucivaldo Junior" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
           </svg>
         </a>
         <a href="https://linkedin.com/in/lucivaldo-junior" target="_blank" class="nav-social-btn nav-btn-linkedin" title="Acessar LinkedIn de Lucivaldo Junior" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
           </svg>
         </a>
         <a href="mailto:lucivaldojr25@gmail.com" class="nav-social-btn nav-btn-email" title="Enviar Email para lucivaldojr25@gmail.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
             <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
           </svg>
         </a>
       </div>
-    </div>
 
-    <!-- Seletor de Classes: 1. Front-end, 2. Backend, 3. SysOps, 4. Gamer -->
-    <nav class="class-selector" aria-label="Seletor de Especialidade">
-      <button class="class-btn active" data-class="frontend" id="btn-frontend">
-        <span class="key-hint">1</span> 🌐 FRONT-END
-      </button>
-      <button class="class-btn" data-class="backend" id="btn-backend">
-        <span class="key-hint">2</span> ☕ BACKEND
-      </button>
-      <button class="class-btn" data-class="sysops" id="btn-sysops">
-        <span class="key-hint">3</span> 🐧 SYSOPS
-      </button>
-      <button class="class-btn" data-class="gamer" id="btn-gamer">
-        <span class="key-hint">4</span> 🕹️ GAMER
-      </button>
-    </nav>
-
-    <!-- Controles do Sistema: Alternador de Tema (Dark/Light) & Scanlines CRT -->
-    <div class="system-controls">
       <!-- Botão Alternador Tema Dark / Light -->
       <button id="themeToggle" class="crt-btn theme-toggle-btn" title="Alternar Modo Claro / Escuro">
         <span id="themeIcon">🌙</span> <span id="themeStatus">DARK</span>
@@ -88,76 +85,87 @@
           Ecossistema Angular 21+, TypeScript estrito, componentização standalone, Signals reativos e a plataforma Comunidade Tech.
         </p>
 
-        <!-- Terminal Status Bar / Go Serverless Telemetry -->
-        <div class="terminal-telemetry">
-          <div class="term-header">
-            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-            <span class="term-title">nexus-telemetry.sh</span>
-          </div>
-          <div class="term-body">
-            <div class="term-line">
-              <span class="prompt">$</span> ng serve --project=comunidade-tech
+        <!-- Card de Perfil do Desenvolvedor -->
+        <div class="hero-profile-card" aria-label="Ficha Técnica do Desenvolvedor">
+          <div class="profile-avatar-box">
+            <div class="profile-avatar-frame">
+              <img src="public/perfil-lucivaldo.jpg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='perfil-lucivaldo.jpg'}" alt="Foto de Perfil de Lucivaldo Junior" class="profile-ascii-img">
             </div>
-            <div class="term-line term-output" id="telemetryData">
-              ANGULAR 21: COMPILED | STANDALONE SIGNALS | FIREBASE: SYNC
-            </div>
+            <span class="avatar-badge-tag">&lt;DEV_PROFILE // 2026&gt;</span>
           </div>
-        </div>
 
-        <div class="hero-actions">
-          <a href="#projetos" class="pixel-btn primary">VER PROJETOS</a>
-          <a href="#sobre" class="pixel-btn secondary retro-btn"><span class="btn-prompt">&gt;_</span> SOBRE MIM</a>
-          <a href="#contato" class="pixel-btn outline">CONTATO</a>
+          <div class="profile-bio-details">
+            <div class="bio-item">
+              <span class="bio-key"><span class="key-symbol">&gt;</span> PROFISSÃO:</span>
+              <span class="bio-val highlight">Desenvolvedor Back-end (Java &amp; Go)</span>
+            </div>
+            <div class="bio-item">
+              <span class="bio-key"><span class="key-symbol">&gt;</span> IDADE:</span>
+              <span class="bio-val">39 anos</span>
+            </div>
+            <div class="bio-item">
+              <span class="bio-key"><span class="key-symbol">&gt;</span> ONDE MORO:</span>
+              <span class="bio-val">Belém do Pará — Brasil 📍</span>
+            </div>
+            <div class="bio-item bio-status-row">
+              <span class="bio-key"><span class="key-symbol">&gt;</span> DISPONIBILIDADE:</span>
+              <span class="bio-val status-val"><span class="bio-pulse-dot"></span> DISPONÍVEL PARA CONTRATAÇÃO (CLT / PJ)</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Carrossel Infinito de Tecnologias (Infinite Tech Marquee em Toda a Largura) -->
       <div class="tech-marquee-wrapper" aria-label="Tecnologias e Stacks Dominadas">
-        <div class="marquee-tag">STACKS EM OPERAÇÃO</div>
+        <div class="marquee-tag">STACKS EM CONSTANTE DESENVOLVIMENTO</div>
         <div class="tech-marquee-container">
           <div class="tech-marquee-track">
             <!-- Bloco 1 -->
-            <div class="tech-item"><span class="tech-icon">☕</span><span class="tech-name">Java 21</span></div>
-            <div class="tech-item"><span class="tech-icon">🍃</span><span class="tech-name">Spring Boot 3</span></div>
-            <div class="tech-item"><span class="tech-icon">🐹</span><span class="tech-name">Go (Golang)</span></div>
-            <div class="tech-item"><span class="tech-icon">🅰️</span><span class="tech-name">Angular 21</span></div>
-            <div class="tech-item"><span class="tech-icon">🔷</span><span class="tech-name">TypeScript</span></div>
-            <div class="tech-item"><span class="tech-icon">🟩</span><span class="tech-name">Node.js</span></div>
-            <div class="tech-item"><span class="tech-icon">🐳</span><span class="tech-name">Docker</span></div>
-            <div class="tech-item"><span class="tech-icon">🐝</span><span class="tech-name">Docker Swarm</span></div>
-            <div class="tech-item"><span class="tech-icon">☁️</span><span class="tech-name">AWS Cloud</span></div>
-            <div class="tech-item"><span class="tech-icon">🐘</span><span class="tech-name">PostgreSQL 16</span></div>
-            <div class="tech-item"><span class="tech-icon">⚡</span><span class="tech-name">Redis</span></div>
-            <div class="tech-item"><span class="tech-icon">🐧</span><span class="tech-name">Linux / Ubuntu</span></div>
-            <div class="tech-item"><span class="tech-icon">🐙</span><span class="tech-name">Git & GitHub</span></div>
-            <div class="tech-item"><span class="tech-icon">🚦</span><span class="tech-name">Traefik v2</span></div>
-            <div class="tech-item"><span class="tech-icon">🐇</span><span class="tech-name">RabbitMQ</span></div>
-            <div class="tech-item"><span class="tech-icon">🧪</span><span class="tech-name">JUnit 5</span></div>
-            <div class="tech-item"><span class="tech-icon">🌲</span><span class="tech-name">Cypress</span></div>
-            <div class="tech-item"><span class="tech-icon">🔥</span><span class="tech-name">Firebase</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-java-plain colored"></i></span><span class="tech-name">Java 21</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-spring-original colored"></i></span><span class="tech-name">Spring Boot 3</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-go-plain colored"></i></span><span class="tech-name">Go (Golang)</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-go-plain colored"></i></span><span class="tech-name">Ebitengine (Go)</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-angularjs-plain colored" style="color: #dd0031 !important;"></i></span><span class="tech-name">Angular 21</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-typescript-plain colored"></i></span><span class="tech-name">TypeScript</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-nodejs-plain colored"></i></span><span class="tech-name">Node.js</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-docker-plain colored"></i></span><span class="tech-name">Docker</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-docker-plain colored"></i></span><span class="tech-name">Docker Swarm</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></span><span class="tech-name">AWS Cloud</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></span><span class="tech-name">AWS RDS</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-postgresql-plain colored"></i></span><span class="tech-name">PostgreSQL 16</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-mysql-plain colored"></i></span><span class="tech-name">MySQL</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-redis-plain colored"></i></span><span class="tech-name">Redis</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-linux-plain"></i></span><span class="tech-name">Linux / Ubuntu</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-git-plain colored"></i></span><span class="tech-name">Git &amp; GitHub</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-traefikproxy-original colored"></i></span><span class="tech-name">Traefik v2</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-postman-plain colored"></i></span><span class="tech-name">Postman</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-firebase-plain colored"></i></span><span class="tech-name">Firebase</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-googlecloud-plain colored"></i></span><span class="tech-name">Google Cloud</span></div>
             <!-- Bloco 2 (Duplicado para loop infinito contínuo) -->
-            <div class="tech-item"><span class="tech-icon">☕</span><span class="tech-name">Java 21</span></div>
-            <div class="tech-item"><span class="tech-icon">🍃</span><span class="tech-name">Spring Boot 3</span></div>
-            <div class="tech-item"><span class="tech-icon">🐹</span><span class="tech-name">Go (Golang)</span></div>
-            <div class="tech-item"><span class="tech-icon">🅰️</span><span class="tech-name">Angular 21</span></div>
-            <div class="tech-item"><span class="tech-icon">🔷</span><span class="tech-name">TypeScript</span></div>
-            <div class="tech-item"><span class="tech-icon">🟩</span><span class="tech-name">Node.js</span></div>
-            <div class="tech-item"><span class="tech-icon">🐳</span><span class="tech-name">Docker</span></div>
-            <div class="tech-item"><span class="tech-icon">🐝</span><span class="tech-name">Docker Swarm</span></div>
-            <div class="tech-item"><span class="tech-icon">☁️</span><span class="tech-name">AWS Cloud</span></div>
-            <div class="tech-item"><span class="tech-icon">🐘</span><span class="tech-name">PostgreSQL 16</span></div>
-            <div class="tech-item"><span class="tech-icon">⚡</span><span class="tech-name">Redis</span></div>
-            <div class="tech-item"><span class="tech-icon">🐧</span><span class="tech-name">Linux / Ubuntu</span></div>
-            <div class="tech-item"><span class="tech-icon">🐙</span><span class="tech-name">Git & GitHub</span></div>
-            <div class="tech-item"><span class="tech-icon">🚦</span><span class="tech-name">Traefik v2</span></div>
-            <div class="tech-item"><span class="tech-icon">🐇</span><span class="tech-name">RabbitMQ</span></div>
-            <div class="tech-item"><span class="tech-icon">🧪</span><span class="tech-name">JUnit 5</span></div>
-            <div class="tech-item"><span class="tech-icon">🌲</span><span class="tech-name">Cypress</span></div>
-            <div class="tech-item"><span class="tech-icon">🔥</span><span class="tech-name">Firebase</span></div>
-          </div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-java-plain colored"></i></span><span class="tech-name">Java 21</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-spring-original colored"></i></span><span class="tech-name">Spring Boot 3</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-go-plain colored"></i></span><span class="tech-name">Go (Golang)</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-go-plain colored"></i></span><span class="tech-name">Ebitengine (Go)</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-angularjs-plain colored" style="color: #dd0031 !important;"></i></span><span class="tech-name">Angular 21</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-typescript-plain colored"></i></span><span class="tech-name">TypeScript</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-nodejs-plain colored"></i></span><span class="tech-name">Node.js</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-docker-plain colored"></i></span><span class="tech-name">Docker</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-docker-plain colored"></i></span><span class="tech-name">Docker Swarm</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></span><span class="tech-name">AWS Cloud</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></span><span class="tech-name">AWS RDS</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-postgresql-plain colored"></i></span><span class="tech-name">PostgreSQL 16</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-mysql-plain colored"></i></span><span class="tech-name">MySQL</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-redis-plain colored"></i></span><span class="tech-name">Redis</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-linux-plain"></i></span><span class="tech-name">Linux / Ubuntu</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-git-plain colored"></i></span><span class="tech-name">Git &amp; GitHub</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-traefikproxy-original colored"></i></span><span class="tech-name">Traefik v2</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-postman-plain colored"></i></span><span class="tech-name">Postman</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-firebase-plain colored"></i></span><span class="tech-name">Firebase</span></div>
+            <div class="tech-item"><span class="tech-icon"><i class="devicon-googlecloud-plain colored"></i></span><span class="tech-name">Google Cloud</span></div>
         </div>
       </div>
     </section>
+
 
     <!-- PROJETOS SEGMENTADOS POR CATEGORIA -->
     <section class="section projects-section" id="projetos">
@@ -363,34 +371,77 @@
     <!-- SOBRE & TRAJETÓRIA -->
     <section class="section about-section" id="sobre">
       <div class="section-header">
-        <h2 class="section-title"><span class="glow">></span> MINHA_TRAJETORIA</h2>
+        <h2 class="section-title"><span class="glow">&gt;</span> MINHA_TRAJETORIA</h2>
+        <p class="section-subtitle">Do hardware e redes nos anos 2000 aos 15 anos de liderança na gastronomia, até a engenharia de software moderna.</p>
       </div>
       <div class="about-grid">
         <div class="about-text">
-          <p>
-            Desenvolvedor Back-end júnior focado em <strong>Java 21 (Spring Boot 3)</strong>
-            e <strong>Go (Golang 1.22+)</strong>, com sólidas noções de SysOps (Docker, Swarm e AWS)
-            e desenvolvimento web com <strong>Angular 21+</strong>.
-          </p>
-          <p>
-            Minha história une duas grandes forças: uma transição de carreira legítima de
-            <strong>15+ anos na gastronomia profissional</strong> (onde forjei resiliência extrema,
-            gestão operacional de crise e liderança sob pressão) com vivência prática em
-            <strong>redes e hardware</strong> desde os anos 2000 (Interconect).
-          </p>
-          <p>
-            Membro ativo da comunidade técnica regional (AWS User Group Belém) e
-            graduando em Análise e Desenvolvimento de Sistemas (UNAMA).
-          </p>
+          <!-- Capítulo 1: Origem na Tecnologia -->
+          <div class="about-chapter">
+            <span class="about-chapter-tag">2002 — 2006 // AS RAÍZES TÉCNICAS</span>
+            <h3 class="about-chapter-title">O Contato Inicial com Hardware e Redes</h3>
+            <p>
+              Minha história com a computação começou no início dos anos 2000. Entre 2002 e 2006, atuei profissionalmente na <strong>Interconect</strong> como <strong>Técnico de Informática e Redes</strong>. Essa vivência foi a minha escola de computação raiz: montagem e manutenção física de microcomputadores, diagnóstico de placas, periféricos, impressoras e estruturação de redes locais cabeadas. Ali entendi como o hardware, o sistema operacional e a conectividade se integram por baixo dos panos.
+            </p>
+          </div>
+
+          <!-- Capítulo 2: A Forja na Gastronomia -->
+          <div class="about-chapter">
+            <span class="about-chapter-tag">2006 — 2023 // DISCIPLINA &amp; LIDERANÇA</span>
+            <h3 class="about-chapter-title">A Forja de 15+ Anos na Gastronomia Profissional</h3>
+            <p>
+              A vida me levou a explorar outro universo de exigência máxima: a gastronomia profissional. Durante mais de 15 anos, atuei como <strong>Cozinheiro e Chefe de Cozinha</strong> (passando por funções de alta precisão como pizzaiolo e sushiman). 
+            </p>
+            <p>
+              Uma cozinha industrial em horário de pico é um dos ambientes mais desafiadores do mercado: centenas de pedidos concorrentes, tolerância zero para falhas e decisões sob calor e pressão contínua. Essa jornada forjou o meu maior diferencial competitivo: <strong>resiliência extrema</strong>, <strong>inteligência emocional</strong>, <strong>gestão de crises em tempo real</strong>, <strong>liderança de equipes</strong> e a disciplina obsessiva do <em>mise en place</em> — organização metodológica que hoje aplico rigorosamente no planejamento de sistemas, arquitetura de APIs e Clean Code.
+            </p>
+          </div>
+
+          <!-- Capítulo 3: A Transição Consciente -->
+          <div class="about-chapter">
+            <span class="about-chapter-tag">2023 — PRESENTE // ENGENHARIA DE SOFTWARE</span>
+            <h3 class="about-chapter-title">A Transição Consciente &amp; O Foco em Back-end</h3>
+            <p>
+              Em 2023, tomei a decisão planejada de voltar às minhas origens técnicas e fazer a transição definitiva para o desenvolvimento de software. Ingressei na graduação em <strong>Análise e Desenvolvimento de Sistemas (UNAMA)</strong> e fui selecionado para o programa de imersão <strong>AWS re/Start (300h)</strong>, aprofundando conceitos de nuvem, Linux, redes, segurança e automações.
+            </p>
+            <p>
+              Hoje atuo com determinação como <strong>Desenvolvedor Back-end Júnior</strong>, construindo APIs concorrentes e microsserviços em <strong>Java 21 (Spring Boot 3)</strong> e <strong>Go (Golang 1.22+)</strong>, orquestrando containers com <strong>Docker Swarm</strong> na nuvem <strong>AWS</strong> e criando interfaces modernas com <strong>Angular 21 &amp; TypeScript</strong>. Além do código, participo ativamente da comunidade técnica de Belém (<strong>AWS User Group Belém</strong>), guiado pela honestidade técnica e pela paixão de construir sistemas que geram impacto real.
+            </p>
+          </div>
         </div>
-        <div class="stack-box">
-          <h4 class="stack-title">NÚCLEO TÉCNICO</h4>
-          <ul class="stack-list">
-            <li><strong>Linguagens:</strong> Java 17/21, Go (Golang), TypeScript, SQL</li>
-            <li><strong>Frameworks:</strong> Spring Boot 3, Angular 21, Gin/Fiber</li>
-            <li><strong>Bancos de Dados:</strong> PostgreSQL 16, Redis, Firestore</li>
-            <li><strong>SysOps/Cloud:</strong> Docker, Docker Swarm, Traefik, AWS Cloud</li>
-          </ul>
+
+        <!-- Box Lateral de Competências & Formações -->
+        <div class="stack-box-column">
+          <div class="stack-box">
+            <h4 class="stack-title">NÚCLEO TÉCNICO</h4>
+            <ul class="stack-list">
+              <li><strong>Back-end &amp; Engines:</strong> Java 17/21, Spring Boot 3, Go (Golang 1.22+), Ebitengine (Go), APIs RESTful</li>
+              <li><strong>Cloud &amp; DevOps:</strong> AWS Cloud (EC2, S3, RDS), Docker, Docker Swarm, Linux Ubuntu, Traefik v2</li>
+              <li><strong>Front-end:</strong> Angular 21+, TypeScript, Signals, HTML5 &amp; CSS3</li>
+              <li><strong>Bancos de Dados:</strong> PostgreSQL 16 (ACID), AWS RDS, Redis (Cache &amp; Filas), Firestore</li>
+              <li><strong>Automações:</strong> n8n Workflows, Bash Scripting, Python</li>
+            </ul>
+          </div>
+
+          <div class="stack-box">
+            <h4 class="stack-title">FORMAÇÃO &amp; COMUNIDADE</h4>
+            <ul class="stack-list">
+              <li><strong>Graduação:</strong> Análise e Desenvolvimento de Sistemas — UNAMA</li>
+              <li><strong>AWS re/Start:</strong> 300h intensivas de Cloud, Linux, Redes e Segurança</li>
+              <li><strong>Comunidade Tech:</strong> Membro ativo do 7º Meetup AWS User Group Belém</li>
+              <li><strong>Fundamentos:</strong> 4 anos de experiência raiz com Hardware e Redes (Interconect)</li>
+            </ul>
+          </div>
+
+          <div class="stack-box">
+            <h4 class="stack-title">DIFERENCIAIS HUMANOS (SOFT SKILLS)</h4>
+            <ul class="stack-list">
+              <li><strong>Resiliência Sob Pressão:</strong> Maturidade forjada em 15+ anos na gestão de brigadas</li>
+              <li><strong>Cultura de Processos:</strong> Método <em>mise en place</em> aplicado ao Clean Code e arquitetura</li>
+              <li><strong>Comunicação Transparente:</strong> Clareza técnica, honestidade e facilidade de trabalho em equipe</li>
+              <li><strong>Capacidade de Aprendizado Rápido:</strong> Foco em fundamentos de computação e soluções práticas</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
