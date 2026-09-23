@@ -1,0 +1,15 @@
+# Binários e builds
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+dist/
+
+# Vercel
+.vercel
+
+# Sistema
+.DS_Store
+Thumbs.db

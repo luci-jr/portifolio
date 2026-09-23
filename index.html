@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucivaldo Junior | Portfólio — A Trindade Dev</title>
+  <meta name="description" content="Portfólio de Lucivaldo Junior — Desenvolvedor Back-end (Java/Go), DevOps e Frontend/Gamer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="mode-backend">
+  <!-- Efeito Scanlines CRT retrô -->
+  <div class="crt-overlay" id="crtOverlay"></div>
+
+  <!-- Barra de Telemetria Superior -->
+  <header class="top-nav">
+    <div class="brand">
+      <span class="pixel-bracket">[</span>
+      <span class="brand-name">LUCI.DEV</span>
+      <span class="pixel-bracket">]</span>
+      <span class="domain-tag">lucivaldo.cloud</span>
+    </div>
+
+    <!-- Seletor de Classes Estilo Arcade -->
+    <nav class="class-selector" aria-label="Seletor de Especialidade">
+      <button class="class-btn active" data-class="backend" id="btn-backend">
+        <span class="key-hint">1</span> ☕ BACKEND
+      </button>
+      <button class="class-btn" data-class="devops" id="btn-devops">
+        <span class="key-hint">2</span> 🐧 DEVOPS
+      </button>
+      <button class="class-btn" data-class="frontend" id="btn-frontend">
+        <span class="key-hint">3</span> 🕹️ FRONT & GAME
+      </button>
+    </nav>
+
+    <!-- Botão CRT Scanlines -->
+    <div class="system-controls">
+      <button id="crtToggle" class="crt-btn" title="Alternar Scanlines CRT">
+        CRT: <span id="crtStatus">ON</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION: Trindade Interativa (Estilo Adham Dannaway Retrô) -->
+    <section class="hero" id="heroSection">
+      <div class="hero-split-container" id="splitContainer">
+        <!-- Lado 1: Backend -->
+        <div class="split-slice slice-backend" data-target="backend">
+          <div class="slice-bg"></div>
+          <div class="slice-indicator">☕ ENGINE & APIS</div>
+        </div>
+        <!-- Lado 2: DevOps -->
+        <div class="split-slice slice-devops" data-target="devops">
+          <div class="slice-bg"></div>
+          <div class="slice-indicator">🐧 CLOUD & INFRA</div>
+        </div>
+        <!-- Lado 3: Frontend / Gamer -->
+        <div class="split-slice slice-frontend" data-target="frontend">
+          <div class="slice-bg"></div>
+          <div class="slice-indicator">🕹️ PIXEL & UI</div>
+        </div>
+      </div>
+
+      <!-- Conteúdo Dinâmico do Hero -->
+      <div class="hero-content">
+        <div class="badge-role" id="heroRoleBadge">CLASSE ATIVA: BACKEND ARCHITECT</div>
+        <h1 class="hero-title" id="heroTitle">Construindo Motores Concorrentes & APIs Resilientes.</h1>
+        <p class="hero-desc" id="heroDesc">
+          Foco em alta performance com Go e Java 21, arquitetura limpa,
+          microsserviços e baixa latência para sistemas de missão crítica.
+        </p>
+
+        <!-- Terminal Status Bar / Go Serverless Telemetry -->
+        <div class="terminal-telemetry">
+          <div class="term-header">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="term-title">nexus-telemetry.sh</span>
+          </div>
+          <div class="term-body">
+            <div class="term-line">
+              <span class="prompt">$</span> vercel-api --status
+            </div>
+            <div class="term-line term-output" id="telemetryData">
+              Carregando telemetria em Go... [BELÉM-PA: ONLINE]
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#projetos" class="pixel-btn primary">VER PROJETOS</a>
+          <a href="#sobre" class="pixel-btn secondary">SOBRE MIM</a>
+          <a href="#contato" class="pixel-btn outline">CONTATO</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS EM DESTAQUE -->
+    <section class="section projects-section" id="projetos">
+      <div class="section-header">
+        <h2 class="section-title"><span class="glow">></span> PROJETOS_SELECIONADOS</h2>
+        <p class="section-subtitle">Aplicações reais em produção, código limpo e arquitetura corporativa.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- 1. Engine de Apostas (Go) -->
+        <article class="project-card" data-category="backend">
+          <div class="card-tag">BACKEND / GO</div>
+          <h3 class="card-title">Engine de Apostas (iGaming)</h3>
+          <p class="card-desc">
+            Motor de apostas concorrente em Go 1.22+ com Goroutines, Channels,
+            zero-allocation slices, Clean Architecture e tolerância a falhas.
+          </p>
+          <div class="card-techs">
+            <span>Go 1.22+</span><span>Goroutines</span><span>Clean Arch</span><span>Docker</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/luci-jr" target="_blank" class="card-link">Repositório ↗</a>
+          </div>
+        </article>
+
+        <!-- 2. Infraestrutura Nexus (DevOps) -->
+        <article class="project-card" data-category="devops">
+          <div class="card-tag">DEVOPS / CLOUD</div>
+          <h3 class="card-title">Cluster Nexus Swarm</h3>
+          <p class="card-desc">
+            Infraestrutura conteinerizada com Docker Swarm, Traefik v2 (Proxy
+            Reverso & SSL automático), PostgreSQL 16, Redis e automações n8n.
+          </p>
+          <div class="card-techs">
+            <span>Docker Swarm</span><span>Traefik v2</span><span>AWS</span><span>PostgreSQL 16</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/luci-jr" target="_blank" class="card-link">Arquitetura ↗</a>
+          </div>
+        </article>
+
+        <!-- 3. PaiD'égua Runner (Game / WebAssembly) -->
+        <article class="project-card" data-category="frontend">
+          <div class="card-tag">GAME DEV / WASM</div>
+          <h3 class="card-title">PaiD'égua Runner</h3>
+          <p class="card-desc">
+            Jogo de ação e corrida em pixel art ambientado em Belém do Pará.
+            Desenvolvido em Go + Ebitengine e compilado para WebAssembly (WASM).
+          </p>
+          <div class="card-techs">
+            <span>Go 1.22+</span><span>Ebitengine v2</span><span>WebAssembly</span><span>Pixel Art</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://luci-jr.github.io/paidegua-runner/" target="_blank" class="card-link highlight">Jogar Agora 🎮</a>
+            <a href="https://github.com/luci-jr/paidegua-runner" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- 4. Comunidade Tech (Angular / Web) -->
+        <article class="project-card" data-category="frontend">
+          <div class="card-tag">FRONTEND / PLATAFORMA</div>
+          <h3 class="card-title">Comunidade Tech</h3>
+          <p class="card-desc">
+            Plataforma colaborativa para conectar e acelerar a jornada de
+            desenvolvedores, com compartilhamento de artigos, vagas e eventos.
+          </p>
+          <div class="card-techs">
+            <span>Angular 21+</span><span>TypeScript</span><span>Firebase</span><span>Tailwind</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://lucivaldo.cloud" target="_blank" class="card-link highlight">Acessar Plataforma 🌐</a>
+            <a href="https://github.com/luci-jr" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SOBRE & TRAJETÓRIA -->
+    <section class="section about-section" id="sobre">
+      <div class="section-header">
+        <h2 class="section-title"><span class="glow">></span> TRAJETORIA_PROFISSIONAL</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Desenvolvedor Back-end júnior focado em <strong>Java 21 (Spring Boot 3)</strong>
+            e <strong>Go (Golang 1.22+)</strong>, com sólidas noções de DevOps (Docker, Swarm e AWS)
+            e desenvolvimento web com <strong>Angular 21+</strong>.
+          </p>
+          <p>
+            Minha história une duas grandes forças: uma transição de carreira legítima de
+            <strong>15+ anos na gastronomia profissional</strong> (onde forjei resiliência extrema,
+            gestão operacional de crise e liderança sob pressão) com vivência prática em
+            <strong>redes e hardware</strong> desde os anos 2000 (Interconect).
+          </p>
+          <p>
+            Membro ativo da comunidade técnica regional (AWS User Group Belém) e
+            graduando em Análise e Desenvolvimento de Sistemas (UNAMA).
+          </p>
+        </div>
+        <div class="stack-box">
+          <h4 class="stack-title">NÚCLEO TÉCNICO</h4>
+          <ul class="stack-list">
+            <li><strong>Linguagens:</strong> Java 17/21, Go (Golang), TypeScript, SQL</li>
+            <li><strong>Frameworks:</strong> Spring Boot 3, Angular 21, Gin/Fiber</li>
+            <li><strong>Bancos de Dados:</strong> PostgreSQL 16, Redis, Firestore</li>
+            <li><strong>DevOps/Cloud:</strong> Docker, Docker Swarm, Traefik, AWS Cloud</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section contact-section" id="contato">
+      <div class="section-header">
+        <h2 class="section-title"><span class="glow">></span> CONECTAR_CANAL</h2>
+        <p class="section-subtitle">Vamos trocar uma ideia sobre oportunidades ou projetos?</p>
+      </div>
+      <div class="contact-links">
+        <a href="https://github.com/luci-jr" target="_blank" class="pixel-btn outline">GitHub: luci-jr</a>
+        <a href="https://linkedin.com/in/lucivaldo-junior" target="_blank" class="pixel-btn primary">LinkedIn</a>
+        <a href="mailto:contato@lucivaldo.cloud" class="pixel-btn secondary">Email Direto</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Lucivaldo Junior — Construído com Go, HTML5 & CSS Retrô | Belém do Pará - Brasil</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
