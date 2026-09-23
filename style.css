@@ -37,7 +37,8 @@ body.mode-backend {
   --accent-secondary: #34d399;
 }
 
-/* 🐧 MODO 2: DEVOPS (Cyber Blueprint / Cloud Docker & AWS) */
+/* 🐧 MODO 3: SYSOPS (Cyber Blueprint / Cloud Docker & AWS) */
+body.mode-sysops,
 body.mode-devops {
   --bg-color: #060e18;
   --bg-surface: #0c1a2d;
@@ -50,7 +51,7 @@ body.mode-devops {
   --accent-secondary: #38bdf8;
 }
 
-/* 🕹️ MODO 3: FRONTEND & GAMER (Arcade Neon 16-Bit / PaiD'égua Gold) */
+/* 🕹️ MODO 1: FRONTEND & GAMER (Arcade Neon 16-Bit / PaiD'égua Gold) */
 body.mode-frontend {
   --bg-color: #120a1c;
   --bg-surface: #1d122d;
@@ -259,7 +260,7 @@ body {
   height: 100%;
   position: relative;
   border-right: 1px solid var(--border-color);
-  transition: flex-grow 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s ease;
+  transition: opacity 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
   display: flex;
   align-items: flex-end;
@@ -273,8 +274,9 @@ body {
 
 .split-slice:hover,
 .split-slice.active {
-  flex-grow: 1.8;
-  opacity: 0.38;
+  opacity: 0.45;
+  border-color: var(--accent-color);
+  box-shadow: inset 0 0 35px var(--accent-glow);
 }
 
 .slice-indicator {
@@ -282,22 +284,30 @@ body {
   font-size: 1.5rem;
   letter-spacing: 2px;
   color: var(--text-main);
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.65);
   padding: 0.2rem 0.8rem;
   border: 1px solid var(--border-color);
   border-radius: 4px;
+  transition: border-color 0.25s ease, color 0.25s ease;
 }
 
-.slice-backend {
-  background: radial-gradient(circle at 30% 30%, rgba(16, 185, 129, 0.2), transparent 70%);
-}
-
-.slice-devops {
-  background: radial-gradient(circle at 50% 30%, rgba(0, 240, 255, 0.2), transparent 70%);
+.split-slice.active .slice-indicator,
+.split-slice:hover .slice-indicator {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .slice-frontend {
-  background: radial-gradient(circle at 70% 30%, rgba(245, 158, 11, 0.2), transparent 70%);
+  background: radial-gradient(circle at 30% 30%, rgba(245, 158, 11, 0.25), transparent 70%);
+}
+
+.slice-backend {
+  background: radial-gradient(circle at 50% 30%, rgba(16, 185, 129, 0.25), transparent 70%);
+}
+
+.slice-sysops,
+.slice-devops {
+  background: radial-gradient(circle at 70% 30%, rgba(0, 240, 255, 0.25), transparent 70%);
 }
 
 /* Conteúdo Central do Hero */
@@ -310,6 +320,16 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1.2rem;
+  pointer-events: none; /* Não bloqueia a detecção de mouse nas fatias */
+}
+
+/* Permite cliques apenas nos botões e interações reais */
+.hero-content .badge-role,
+.hero-content .terminal-telemetry,
+.hero-content .hero-actions,
+.hero-content a,
+.hero-content button {
+  pointer-events: auto;
 }
 
 .badge-role {

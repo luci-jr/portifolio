@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lucivaldo Junior | Portfólio — A Trindade Dev</title>
-  <meta name="description" content="Portfólio de Lucivaldo Junior — Desenvolvedor Back-end (Java/Go), DevOps e Frontend/Gamer." />
+  <meta name="description" content="Portfólio de Lucivaldo Junior — Frontend/Gamer, Desenvolvedor Back-end (Java/Go) e SysOps." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="mode-backend">
+<body class="mode-frontend">
   <!-- Efeito Scanlines CRT retrô -->
   <div class="crt-overlay" id="crtOverlay"></div>
 
@@ -20,19 +20,19 @@
       <span class="pixel-bracket">[</span>
       <span class="brand-name">LUCI.DEV</span>
       <span class="pixel-bracket">]</span>
-      <span class="domain-tag">lucivaldo.cloud</span>
+      <span class="domain-tag">portifolio.lucivaldo.cloud</span>
     </div>
 
-    <!-- Seletor de Classes Estilo Arcade -->
+    <!-- Seletor de Classes Estilo Arcade: 1. Frontend, 2. Backend, 3. SysOps -->
     <nav class="class-selector" aria-label="Seletor de Especialidade">
-      <button class="class-btn active" data-class="backend" id="btn-backend">
-        <span class="key-hint">1</span> ☕ BACKEND
+      <button class="class-btn active" data-class="frontend" id="btn-frontend">
+        <span class="key-hint">1</span> 🕹️ FRONT-END
       </button>
-      <button class="class-btn" data-class="devops" id="btn-devops">
-        <span class="key-hint">2</span> 🐧 DEVOPS
+      <button class="class-btn" data-class="backend" id="btn-backend">
+        <span class="key-hint">2</span> ☕ BACKEND
       </button>
-      <button class="class-btn" data-class="frontend" id="btn-frontend">
-        <span class="key-hint">3</span> 🕹️ FRONT & GAME
+      <button class="class-btn" data-class="sysops" id="btn-sysops">
+        <span class="key-hint">3</span> 🐧 SYSOPS
       </button>
     </nav>
 
@@ -45,33 +45,32 @@
   </header>
 
   <main>
-    <!-- HERO SECTION: Trindade Interativa (Estilo Adham Dannaway Retrô) -->
+    <!-- HERO SECTION: Trindade Interativa Estilo Adham Dannaway (Front-end, Backend, SysOps) -->
     <section class="hero" id="heroSection">
       <div class="hero-split-container" id="splitContainer">
-        <!-- Lado 1: Backend -->
+        <!-- Lado 1: Front-end / Game -->
+        <div class="split-slice slice-frontend active" data-target="frontend">
+          <div class="slice-bg"></div>
+          <div class="slice-indicator">🕹️ FRONT-END & GAME</div>
+        </div>
+        <!-- Lado 2: Backend -->
         <div class="split-slice slice-backend" data-target="backend">
           <div class="slice-bg"></div>
-          <div class="slice-indicator">☕ ENGINE & APIS</div>
+          <div class="slice-indicator">☕ BACKEND & APIS</div>
         </div>
-        <!-- Lado 2: DevOps -->
-        <div class="split-slice slice-devops" data-target="devops">
+        <!-- Lado 3: SysOps -->
+        <div class="split-slice slice-sysops" data-target="sysops">
           <div class="slice-bg"></div>
-          <div class="slice-indicator">🐧 CLOUD & INFRA</div>
-        </div>
-        <!-- Lado 3: Frontend / Gamer -->
-        <div class="split-slice slice-frontend" data-target="frontend">
-          <div class="slice-bg"></div>
-          <div class="slice-indicator">🕹️ PIXEL & UI</div>
+          <div class="slice-indicator">🐧 SYSOPS & CLOUD</div>
         </div>
       </div>
 
-      <!-- Conteúdo Dinâmico do Hero -->
+      <!-- Conteúdo Dinâmico do Hero (Inicia em Front-end) -->
       <div class="hero-content">
-        <div class="badge-role" id="heroRoleBadge">CLASSE ATIVA: BACKEND ARCHITECT</div>
-        <h1 class="hero-title" id="heroTitle">Construindo Motores Concorrentes & APIs Resilientes.</h1>
+        <div class="badge-role" id="heroRoleBadge">CLASSE ATIVA: PIXEL ARTISAN & WEB BUILDER</div>
+        <h1 class="hero-title" id="heroTitle">Criando Experiências Web Vivas & Jogos Retrô em WebAssembly.</h1>
         <p class="hero-desc" id="heroDesc">
-          Foco em alta performance com Go e Java 21, arquitetura limpa,
-          microsserviços e baixa latência para sistemas de missão crítica.
+          Ecossistema Angular 21+, TypeScript estrito, jogos 2D desenvolvidos em Go (Ebitengine/WASM) e a plataforma Comunidade Tech.
         </p>
 
         <!-- Terminal Status Bar / Go Serverless Telemetry -->
@@ -82,10 +81,10 @@
           </div>
           <div class="term-body">
             <div class="term-line">
-              <span class="prompt">$</span> vercel-api --status
+              <span class="prompt">$</span> ng serve --project=comunidade-tech
             </div>
             <div class="term-line term-output" id="telemetryData">
-              Carregando telemetria em Go... [BELÉM-PA: ONLINE]
+              ANGULAR 21: COMPILED | WASM: RUNNING (60 FPS) | FIREBASE: SYNC
             </div>
           </div>
         </div>
@@ -106,39 +105,24 @@
       </div>
 
       <div class="projects-grid">
-        <!-- 1. Engine de Apostas (Go) -->
-        <article class="project-card" data-category="backend">
-          <div class="card-tag">BACKEND / GO</div>
-          <h3 class="card-title">Engine de Apostas (iGaming)</h3>
+        <!-- 1. Comunidade Tech (Front-end / Plataforma) -->
+        <article class="project-card" data-category="frontend">
+          <div class="card-tag">FRONTEND / PLATAFORMA</div>
+          <h3 class="card-title">Comunidade Tech</h3>
           <p class="card-desc">
-            Motor de apostas concorrente em Go 1.22+ com Goroutines, Channels,
-            zero-allocation slices, Clean Architecture e tolerância a falhas.
+            Plataforma colaborativa para conectar e acelerar a jornada de
+            desenvolvedores, com compartilhamento de artigos, vagas e eventos.
           </p>
           <div class="card-techs">
-            <span>Go 1.22+</span><span>Goroutines</span><span>Clean Arch</span><span>Docker</span>
+            <span>Angular 21+</span><span>TypeScript</span><span>Firebase</span><span>Tailwind</span>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/luci-jr" target="_blank" class="card-link">Repositório ↗</a>
+            <a href="https://lucivaldo.cloud" target="_blank" class="card-link highlight">Acessar Plataforma 🌐</a>
+            <a href="https://github.com/luci-jr" target="_blank" class="card-link">GitHub ↗</a>
           </div>
         </article>
 
-        <!-- 2. Infraestrutura Nexus (DevOps) -->
-        <article class="project-card" data-category="devops">
-          <div class="card-tag">DEVOPS / CLOUD</div>
-          <h3 class="card-title">Cluster Nexus Swarm</h3>
-          <p class="card-desc">
-            Infraestrutura conteinerizada com Docker Swarm, Traefik v2 (Proxy
-            Reverso & SSL automático), PostgreSQL 16, Redis e automações n8n.
-          </p>
-          <div class="card-techs">
-            <span>Docker Swarm</span><span>Traefik v2</span><span>AWS</span><span>PostgreSQL 16</span>
-          </div>
-          <div class="card-actions">
-            <a href="https://github.com/luci-jr" target="_blank" class="card-link">Arquitetura ↗</a>
-          </div>
-        </article>
-
-        <!-- 3. PaiD'égua Runner (Game / WebAssembly) -->
+        <!-- 2. PaiD'égua Runner (Game / WebAssembly) -->
         <article class="project-card" data-category="frontend">
           <div class="card-tag">GAME DEV / WASM</div>
           <h3 class="card-title">PaiD'égua Runner</h3>
@@ -155,20 +139,35 @@
           </div>
         </article>
 
-        <!-- 4. Comunidade Tech (Angular / Web) -->
-        <article class="project-card" data-category="frontend">
-          <div class="card-tag">FRONTEND / PLATAFORMA</div>
-          <h3 class="card-title">Comunidade Tech</h3>
+        <!-- 3. Engine de Apostas (Go) -->
+        <article class="project-card" data-category="backend">
+          <div class="card-tag">BACKEND / GO</div>
+          <h3 class="card-title">Engine de Apostas (iGaming)</h3>
           <p class="card-desc">
-            Plataforma colaborativa para conectar e acelerar a jornada de
-            desenvolvedores, com compartilhamento de artigos, vagas e eventos.
+            Motor de apostas concorrente em Go 1.22+ com Goroutines, Channels,
+            zero-allocation slices, Clean Architecture e tolerância a falhas.
           </p>
           <div class="card-techs">
-            <span>Angular 21+</span><span>TypeScript</span><span>Firebase</span><span>Tailwind</span>
+            <span>Go 1.22+</span><span>Goroutines</span><span>Clean Arch</span><span>Docker</span>
           </div>
           <div class="card-actions">
-            <a href="https://lucivaldo.cloud" target="_blank" class="card-link highlight">Acessar Plataforma 🌐</a>
-            <a href="https://github.com/luci-jr" target="_blank" class="card-link">GitHub ↗</a>
+            <a href="https://github.com/luci-jr" target="_blank" class="card-link">Repositório ↗</a>
+          </div>
+        </article>
+
+        <!-- 4. Infraestrutura Nexus (SysOps / Cloud) -->
+        <article class="project-card" data-category="sysops">
+          <div class="card-tag">SYSOPS / CLOUD</div>
+          <h3 class="card-title">Cluster Nexus Swarm</h3>
+          <p class="card-desc">
+            Infraestrutura conteinerizada com Docker Swarm, Traefik v2 (Proxy
+            Reverso & SSL automático), PostgreSQL 16, Redis e automações n8n.
+          </p>
+          <div class="card-techs">
+            <span>Docker Swarm</span><span>Traefik v2</span><span>AWS</span><span>PostgreSQL 16</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/luci-jr" target="_blank" class="card-link">Arquitetura ↗</a>
           </div>
         </article>
       </div>
@@ -183,7 +182,7 @@
         <div class="about-text">
           <p>
             Desenvolvedor Back-end júnior focado em <strong>Java 21 (Spring Boot 3)</strong>
-            e <strong>Go (Golang 1.22+)</strong>, com sólidas noções de DevOps (Docker, Swarm e AWS)
+            e <strong>Go (Golang 1.22+)</strong>, com sólidas noções de SysOps (Docker, Swarm e AWS)
             e desenvolvimento web com <strong>Angular 21+</strong>.
           </p>
           <p>
@@ -203,7 +202,7 @@
             <li><strong>Linguagens:</strong> Java 17/21, Go (Golang), TypeScript, SQL</li>
             <li><strong>Frameworks:</strong> Spring Boot 3, Angular 21, Gin/Fiber</li>
             <li><strong>Bancos de Dados:</strong> PostgreSQL 16, Redis, Firestore</li>
-            <li><strong>DevOps/Cloud:</strong> Docker, Docker Swarm, Traefik, AWS Cloud</li>
+            <li><strong>SysOps/Cloud:</strong> Docker, Docker Swarm, Traefik, AWS Cloud</li>
           </ul>
         </div>
       </div>
