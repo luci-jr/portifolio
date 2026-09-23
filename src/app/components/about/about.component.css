@@ -103,10 +103,55 @@
 }
 
 .stack-box {
-  background: var(--bg-surface);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.stack-box:hover {
+  border-color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 
+    0 12px 36px rgba(0, 0, 0, 0.45),
+    0 0 20px var(--accent-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+/* Modo Light: Efeito Vidro Fosco + Glow Neon ao Hover */
+:host-context(.theme-light) .stack-box {
+  background: rgba(255, 255, 255, 0.58);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+:host-context(.theme-light) .stack-box:hover {
+  background: rgba(255, 255, 255, 0.82);
+  border-color: var(--accent-color);
+  box-shadow: 
+    0 0 20px var(--accent-glow),
+    0 14px 40px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+:host-context(.theme-light) .section-title:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 14px var(--accent-glow);
+}
+
+:host-context(.theme-light) .section-title:hover .glow {
+  color: var(--accent-color);
+  text-shadow: 0 0 14px var(--accent-glow);
 }
 
 .stack-title {

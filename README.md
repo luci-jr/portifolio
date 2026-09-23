@@ -34,14 +34,18 @@ Meu portfólio reflete a amplitude das disciplinas técnicas que aplico diariame
 
 ---
 
-## 🏛️ Destaques de Engenharia do Portfólio
+## 🏛️ Destaques de Engenharia & Design do Portfólio
 
-Este projeto não é apenas uma vitrine visual, mas sim uma demonstração viva de engenharia aplicada:
+Este projeto não é apenas uma vitrine visual, mas sim uma demonstração viva de engenharia aplicada, micro-interações refinadas e arquitetura moderna:
 
-- **Arquitetura Reativa (Signals):** O chaveamento deliberado de classes altera dinamicamente todo o tema visual, paleta de cores, telemetria e vitrine de projetos em tempo de execução sem recarregar a página.
+- **Arquitetura Reativa (Angular 21 & Signals):** O chaveamento deliberado de classes altera dinamicamente todo o tema visual, paleta de cores, telemetria de hardware e estados em tempo de execução sem recarregamento.
+- **Glassmorphism Paritário (Dark & Light Mode):** Sistema de camadas translúcidas em vidro fosco (`backdrop-filter: blur(12px)`), reflexo especular superior (`inset 0 1px 0 rgba(255, 255, 255, 0.95)`) e auras de néon calibradas que garantem experiência visual viva e impactante tanto no Modo Escuro quanto no Modo Claro.
+- **Carrossel Infinito Contínuo de Tecnologias (*Tech Marquee Ticker*):** Fita horizontal animada em CSS puro a 60 FPS com 18+ stacks operacionais em rotação perpétua ininterrupta, enriquecendo o Hero sem degradação de performance.
+- **Botões Retrô & Pílulas Neon Boleadas:** Design de botões arredondados em pílula com tubos luminosos de néon, prompt clássico de terminal (`>_`), efeito hover com aura expansiva e botões arcade com efeito tridimensional de capa e LED.
+- **Navegação Autônoma & Desacoplamento:** O seletor superior de especialidades e o filtro da vitrine de projetos operam de forma desacoplada, permitindo alternar a temática estética da página sem limitar a exploração dos projetos.
 - **Micro-interações Retrô dos Anos 90:** Design estético arcade/cyberpunk com efeito opcional de scanlines CRT, tipografia em estilo pixel art (*Press Start 2P*, *VT323*, *Fira Code*) e atalhos rápidos de teclado (`1`, `2`, `3`, `4`).
 - **Telemetria Serverless em Go Nativo:** Uma função serverless em Go (`/api/status`) responde diretamente na edge da Vercel, entregando métricas reais de latência, versão de runtime e localização regional de Belém-PA.
-- **WebAssembly em Produção:** Integração direta com jogos compilados de Go para WASM (*PaiD'égua Runner*), rodando diretamente no browser.
+- **WebAssembly em Produção:** Integração direta com jogos compilados de Go para WASM (*PaiD'égua Runner* / *Égua Mano Gamer*), rodando nativamente no navegador a 60 FPS.
 
 ---
 

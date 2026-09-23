@@ -1,4 +1,4 @@
-import { Component, inject, signal, computed, effect } from '@angular/core';
+import { Component, inject, signal, computed } from '@angular/core';
 import { PortfolioService } from '../../core/services/portfolio.service';
 import { Project, ProjectCategory } from '../../core/models/project.model';
 import { PROJECTS_DATA } from '../../data/projects.data';
@@ -17,16 +17,8 @@ export class ProjectsComponent {
   // Lista mestre de projetos importada do arquivo central
   readonly allProjects = signal<Project[]>(PROJECTS_DATA);
 
-  // Filtro de exibição ativo (inicia com o modo ativo do portfolio)
+  // Filtro de exibição ativo independente (não sincronizado com o hero)
   readonly activeFilter = signal<FilterOption>('frontend');
-
-  // Sincroniza o filtro automaticamente quando a classe do Hero muda
-  constructor() {
-    effect(() => {
-      const mode = this.portfolio.activeMode();
-      this.activeFilter.set(mode);
-    });
-  }
 
   // Lista computada e reativa baseada no filtro selecionado
   readonly filteredProjects = computed(() => {

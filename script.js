@@ -51,8 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroDesc = document.getElementById('heroDesc');
   const telemetryData = document.getElementById('telemetryData');
   const classButtons = document.querySelectorAll('.class-btn');
-  const splitSlices = document.querySelectorAll('.split-slice');
-  const splitContainer = document.getElementById('splitContainer');
   const crtToggle = document.getElementById('crtToggle');
   const crtOverlay = document.getElementById('crtOverlay');
   const crtStatus = document.getElementById('crtStatus');
@@ -104,16 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Atualiza fatias do Hero
-    splitSlices.forEach(slice => {
-      const sliceTarget = slice.dataset.target === 'devops' ? 'sysops' : slice.dataset.target;
-      if (sliceTarget === modeKey) {
-        slice.classList.add('active');
-      } else {
-        slice.classList.remove('active');
-      }
-    });
-
     // Atualiza conteúdo com micro-animação
     const config = classConfigs[modeKey];
     roleBadge.textContent = config.role;
@@ -126,9 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
       promptCommand.innerHTML = `<span class="prompt">$</span> ${config.command}`;
     }
     telemetryData.textContent = config.defaultOutput;
-
-    // Sincroniza o filtro da vitrine de projetos com a classe ativa
-    filterProjects(modeKey);
   }
 
   // Event Listeners nos Botões do Menu Superior
@@ -142,16 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       filterProjects(btn.dataset.filter);
-    });
-  });
-
-  // Navegação Deliberada: Ativação por clique nas fatias, botões e atalhos de teclado
-  // (Removido mousemove involuntário conforme solicitado pelo desenvolvedor)
-
-  // Suporte a clique direto nas fatias
-  splitSlices.forEach(slice => {
-    slice.addEventListener('click', () => {
-      setMode(slice.dataset.target);
     });
   });
 

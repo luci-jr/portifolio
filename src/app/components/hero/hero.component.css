@@ -1,94 +1,44 @@
 .hero {
   position: relative;
-  min-height: 85vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem 1.5rem;
+  padding: 2.8rem 0 0.8rem 0;
   overflow: hidden;
-}
-
-.hero-split-container {
-  position: absolute;
-  top: 0;
-  left: 0;
+  background: transparent;
   width: 100%;
-  height: 100%;
-  display: flex;
+}
+
+/* Aura e Feixe de Luz Ambiente Dinâmica no Centro do Hero (Suave, exclusiva do topo) */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 560px;
+  height: 360px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
   opacity: 0.22;
+  filter: blur(60px);
+  pointer-events: none;
   z-index: 1;
+  transition: all 0.45s ease;
 }
 
-.split-slice {
-  flex: 1;
-  height: 100%;
-  position: relative;
-  border-right: 1px solid var(--border-color);
-  transition: opacity 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  display: flex;
-  align-items: flex-end;
-  padding-bottom: 2.2rem;
-  justify-content: center;
+:host-context(.theme-light) .hero::before {
+  opacity: 0.12;
+  filter: blur(65px);
 }
-
-.split-slice:last-child {
-  border-right: none;
-}
-
-/* O hover apenas dá feedback luminoso, SEM alterar a largura ou a classe */
-.split-slice:hover {
-  opacity: 0.35;
-  border-color: var(--accent-color);
-}
-
-.split-slice.active {
-  opacity: 0.45;
-  border-color: var(--accent-color);
-  box-shadow: inset 0 0 35px var(--accent-glow);
-}
-
-.slice-indicator {
-  font-family: var(--font-retro);
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-  color: var(--text-main);
-  background: rgba(0, 0, 0, 0.7);
-  padding: 0.25rem 0.85rem;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  transition: border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.split-slice:hover .slice-indicator,
-.split-slice.active .slice-indicator {
-  border-color: var(--accent-color);
-  color: var(--accent-color);
-  box-shadow: 0 0 10px var(--accent-glow);
-}
-
-.slice-frontend {
-  background: radial-gradient(circle at 30% 30%, rgba(245, 158, 11, 0.25), transparent 70%);
-}
-
-.slice-backend {
-  background: radial-gradient(circle at 50% 30%, rgba(16, 185, 129, 0.25), transparent 70%);
-}
-
-.slice-sysops {
-  background: radial-gradient(circle at 70% 30%, rgba(0, 240, 255, 0.25), transparent 70%);
-}
-
-.slice-gamer {
-  background: radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.25), transparent 70%);
-}
-
 /* Conteúdo Central do Hero */
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 860px;
+  width: 100%;
+  padding: 0 1.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -100,6 +50,7 @@
 .hero-content .badge-role,
 .hero-content .terminal-telemetry,
 .hero-content .hero-actions,
+.hero-content .tech-marquee-wrapper,
 .hero-content a,
 .hero-content button {
   pointer-events: auto;
@@ -139,22 +90,24 @@
 .terminal-telemetry {
   width: 100%;
   max-width: 580px;
-  background: var(--terminal-bg);
-  border: 1px solid var(--terminal-border);
-  border-radius: 8px;
+  background: rgba(8, 12, 18, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
   text-align: left;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   margin: 0.8rem 0;
   overflow: hidden;
 }
 
 .term-header {
-  background: #0d121a;
+  background: rgba(13, 18, 26, 0.8);
   padding: 0.5rem 0.8rem;
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  border-bottom: 1px solid var(--terminal-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .dot {
@@ -196,17 +149,170 @@
 
 .hero-actions {
   display: flex;
-  gap: 1rem;
+  gap: 1.1rem;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-prompt {
+  color: var(--accent-color);
+  font-weight: 800;
+  text-shadow: 0 0 10px var(--accent-color);
+  animation: prompt-blink 1.4s infinite;
+}
+
+@keyframes prompt-blink {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.92);
+  }
+}
+
+/* ==========================================================================
+   CARROSSEL INFINITO DE TECNOLOGIAS (TECH MARQUEE TICKER)
+   ========================================================================== */
+.tech-marquee-wrapper {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+.marquee-tag {
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.marquee-tag::before,
+.marquee-tag::after {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: var(--border-color);
+  opacity: 0.6;
+}
+
+.tech-marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0.6rem 0;
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.6) 4%, black 12%, black 88%, rgba(0, 0, 0, 0.6) 96%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.6) 4%, black 12%, black 88%, rgba(0, 0, 0, 0.6) 96%, transparent 100%);
+}
+
+/* Efeito suave de desvanecimento nas bordas da tela (fade-out sumindo) */
+.tech-marquee-container::before,
+.tech-marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tech-marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-color), transparent);
+}
+
+.tech-marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-color), transparent);
+}
+
+.tech-marquee-track {
+  display: flex;
+  gap: 0.85rem;
+  width: max-content;
+  animation: marquee-scroll 55s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.tech-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.48rem 1rem;
+  background: rgba(18, 24, 38, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  font-family: var(--font-code);
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: default;
+}
+
+.tech-item:hover {
+  transform: translateY(-3px) scale(1.04);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+.tech-icon {
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modo Retrô em Light Mode com Efeito Vidro e Glow */
+:host-context(.theme-light) .tech-item {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  color: var(--text-main);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+:host-context(.theme-light) .tech-item:hover {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  box-shadow: 0 0 18px var(--accent-glow), 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 @media (max-width: 768px) {
   .hero-title {
     font-size: 1.8rem;
-  }
-  .hero-split-container {
-    display: none;
   }
 }

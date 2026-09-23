@@ -184,7 +184,9 @@
 .class-selector {
   display: flex;
   gap: 0.5rem;
-  background: var(--bg-surface);
+  background: rgba(18, 24, 38, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 0.3rem;
   border-radius: 6px;
   border: 1px solid var(--border-color);
