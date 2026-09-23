@@ -1,0 +1,287 @@
+.projects-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.section-header {
+  margin-bottom: 2.8rem;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  position: relative;
+  cursor: default;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-bottom: 0.4rem;
+}
+
+/* Barra Laser Neon inferior expansível */
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background: var(--accent-color);
+  box-shadow: 0 0 8px var(--accent-color);
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
+  border-radius: 2px;
+}
+
+/* Cursor de Prompt Retrô > com pulso de LED */
+.section-title .glow {
+  color: var(--accent-color);
+  display: inline-block;
+  transition: transform 0.25s ease, text-shadow 0.25s ease, color 0.25s ease;
+  animation: prompt-cursor-pulse 2.2s infinite ease-in-out;
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+@keyframes prompt-cursor-pulse {
+  0%, 100% {
+    opacity: 0.7;
+    text-shadow: 0 0 6px var(--accent-glow);
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 14px var(--accent-color), 0 0 24px var(--accent-glow);
+    transform: translateX(3px);
+  }
+}
+
+/* Hover no Título da Seção: acende LED total, projeta laser e avança cursor */
+.section-title:hover {
+  color: #ffffff;
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.85),
+    0 0 14px var(--accent-color),
+    0 0 28px var(--accent-glow);
+  transform: translateX(3px);
+}
+
+.section-title:hover::after {
+  width: 100%;
+  box-shadow:
+    0 0 12px var(--accent-color),
+    0 0 24px var(--accent-glow);
+}
+
+.section-title:hover .glow {
+  animation: none;
+  color: #ffffff;
+  transform: translateX(6px) scale(1.2);
+  text-shadow:
+    0 0 8px #ffffff,
+    0 0 16px var(--accent-color),
+    0 0 28px var(--accent-glow);
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 0.4rem;
+}
+
+/* Filtros de Segmento dos Projetos */
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.filter-btn {
+  background: var(--bg-surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-code);
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.5px;
+}
+
+.filter-btn:hover {
+  color: var(--text-main);
+  border-color: var(--accent-color);
+  background: var(--bg-surface-hover);
+  transform: translateY(-1px);
+}
+
+.filter-btn.active {
+  background: var(--accent-color);
+  color: #000;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 14px var(--accent-glow);
+}
+
+/* Grid de Projetos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 24px var(--accent-glow);
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.card-media {
+  width: 100%;
+  height: 150px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1.1rem;
+  border: 1px solid var(--border-color);
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.project-card:hover .card-media img {
+  transform: scale(1.05);
+}
+
+.card-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 1px;
+  margin-bottom: 0.6rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--text-main);
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.card-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.card-techs span {
+  font-size: 0.72rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: var(--text-muted);
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-code);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text-main);
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--bg-surface);
+  transition: all 0.22s ease;
+  position: relative;
+}
+
+.card-link .card-btn-icon {
+  flex-shrink: 0;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  filter: drop-shadow(0 0 2px rgba(255, 170, 0, 0.4));
+}
+
+.card-link:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  box-shadow: 0 0 10px var(--accent-glow);
+  transform: translateY(-2px);
+}
+
+.card-link:hover .card-btn-icon {
+  transform: rotate(-10deg) scale(1.18);
+  filter: drop-shadow(0 0 6px var(--accent-glow));
+}
+
+.card-link.highlight {
+  background: var(--accent-color);
+  color: #000;
+  border-color: var(--accent-color);
+  font-weight: 700;
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-muted);
+}

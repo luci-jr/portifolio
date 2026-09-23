@@ -1,0 +1,351 @@
+.contact-section {
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.contact-section .section-header {
+  text-align: center;
+  margin-bottom: 2.8rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  position: relative;
+  cursor: default;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-bottom: 0.4rem;
+}
+
+/* Barra Laser Neon inferior expansível */
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 2px;
+  background: var(--accent-color);
+  box-shadow: 0 0 8px var(--accent-color);
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
+  border-radius: 2px;
+}
+
+/* Cursor de Prompt Retrô > com pulso de LED */
+.section-title .glow {
+  color: var(--accent-color);
+  display: inline-block;
+  transition: transform 0.25s ease, text-shadow 0.25s ease, color 0.25s ease;
+  animation: prompt-cursor-pulse 2.2s infinite ease-in-out;
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+@keyframes prompt-cursor-pulse {
+  0%, 100% {
+    opacity: 0.7;
+    text-shadow: 0 0 6px var(--accent-glow);
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 14px var(--accent-color), 0 0 24px var(--accent-glow);
+    transform: translateX(3px);
+  }
+}
+
+/* Hover no Título da Seção: acende LED total, projeta laser e avança cursor */
+.section-title:hover {
+  color: #ffffff;
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.85),
+    0 0 14px var(--accent-color),
+    0 0 28px var(--accent-glow);
+}
+
+.section-title:hover::after {
+  width: 85%;
+  box-shadow:
+    0 0 12px var(--accent-color),
+    0 0 24px var(--accent-glow);
+}
+
+.section-title:hover .glow {
+  animation: none;
+  color: #ffffff;
+  transform: translateX(6px) scale(1.2);
+  text-shadow:
+    0 0 8px #ffffff,
+    0 0 16px var(--accent-color),
+    0 0 28px var(--accent-glow);
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 0.4rem;
+}
+
+/* ==========================================================================
+   BOTÕES DAS EMPRESAS ESTILO RETRÔ DE JOGOS (ARCADE CABINET PUSH BUTTONS)
+   ========================================================================== */
+.arcade-buttons-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Animação Contínua de Leve Suspensão e Flutuação dos Botões (igual ao footer) */
+@keyframes contact-led-float {
+  0%, 100% {
+    transform: translateY(0);
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
+  }
+  50% {
+    transform: translateY(-5px);
+    filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.55));
+  }
+}
+
+.arcade-btn {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+  animation: contact-led-float 3.5s ease-in-out infinite;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease;
+}
+
+/* Oscilação assíncrona orgânica entre os botões */
+.arcade-btn:nth-child(1) {
+  animation-duration: 3.3s;
+  animation-delay: -0.4s;
+}
+
+.arcade-btn:nth-child(2) {
+  animation-duration: 4.1s;
+  animation-delay: -1.9s;
+}
+
+.arcade-btn:nth-child(3) {
+  animation-duration: 3.6s;
+  animation-delay: -2.8s;
+}
+
+.arcade-btn:hover {
+  animation-play-state: paused;
+  transform: translateY(-7px) scale(1.02);
+  filter: drop-shadow(0 16px 26px rgba(0, 0, 0, 0.65));
+}
+
+.arcade-btn:active {
+  transform: translateY(2px) scale(0.98);
+}
+
+.btn-cap {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.95rem 1.8rem;
+  font-family: var(--font-code);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 28px;
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fita de LED inferior sutil embutida no botão (igual ao footer) */
+.btn-cap::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, currentColor 50%, transparent 100%);
+  box-shadow: 0 0 10px currentColor;
+  opacity: 0.6;
+  transition: all 0.35s ease;
+  pointer-events: none;
+}
+
+.arcade-btn:hover .btn-cap::after {
+  opacity: 1;
+  left: 10%;
+  right: 10%;
+  box-shadow: 0 0 14px currentColor, 0 0 25px currentColor;
+}
+
+/* Diodo Emissor de Luz (LED) Embutido no Botão */
+.btn-led {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: inline-block;
+  background: #334155;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.25s ease;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.arcade-icon {
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.btn-text {
+  font-family: var(--font-code);
+  font-size: 0.88rem;
+  letter-spacing: 0.8px;
+}
+
+/* 1. GITHUB ARCADE BUTTON (LED Ciano / Chassi Dark Cyberpunk) */
+.btn-github .btn-cap {
+  background: rgba(17, 24, 39, 0.8);
+  color: #f3f4f6;
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 8px 24px rgba(0, 0, 0, 0.45),
+    0 0 12px rgba(56, 189, 248, 0.2);
+}
+
+.btn-github .btn-led {
+  background: #0284c7;
+  box-shadow: 0 0 5px #38bdf8;
+}
+
+.btn-github:hover .btn-cap {
+  border-color: #38bdf8;
+  color: #38bdf8;
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 14px 30px rgba(0, 0, 0, 0.6),
+    0 0 24px rgba(56, 189, 248, 0.65),
+    inset 0 0 14px rgba(56, 189, 248, 0.2);
+}
+
+.btn-github:hover .btn-led {
+  background: #38bdf8;
+  box-shadow: 
+    0 0 8px #38bdf8,
+    0 0 16px #38bdf8,
+    0 0 24px #38bdf8;
+}
+
+.btn-github:hover .arcade-icon {
+  transform: rotate(-8deg) scale(1.15);
+}
+
+/* 2. LINKEDIN ARCADE BUTTON (LED Azul Elétrico / Chassi Retrô) */
+.btn-linkedin .btn-cap {
+  background: rgba(2, 132, 199, 0.18);
+  color: #ffffff;
+  border-color: rgba(56, 139, 253, 0.45);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 8px 24px rgba(0, 0, 0, 0.45),
+    0 0 12px rgba(2, 132, 199, 0.25);
+}
+
+.btn-linkedin .btn-led {
+  background: #60a5fa;
+  box-shadow: 0 0 5px #93c5fd;
+}
+
+.btn-linkedin:hover .btn-cap {
+  border-color: #7dd3fc;
+  background: rgba(2, 132, 199, 0.35);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 14px 30px rgba(0, 0, 0, 0.6),
+    0 0 24px rgba(56, 189, 248, 0.75),
+    inset 0 0 14px rgba(56, 189, 248, 0.2);
+}
+
+.btn-linkedin:hover .btn-led {
+  background: #ffffff;
+  box-shadow: 
+    0 0 8px #60a5fa,
+    0 0 18px #38bdf8,
+    0 0 26px #0284c7;
+}
+
+.btn-linkedin:hover .arcade-icon {
+  transform: scale(1.15);
+}
+
+/* 3. EMAIL ARCADE BUTTON (LED Esmeralda Neon / Terminal) */
+.btn-email .btn-cap {
+  background: rgba(5, 150, 105, 0.18);
+  color: #ffffff;
+  border-color: rgba(52, 211, 153, 0.45);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 8px 24px rgba(0, 0, 0, 0.45),
+    0 0 12px rgba(16, 185, 129, 0.25);
+}
+
+.btn-email .btn-led {
+  background: #a7f3d0;
+  box-shadow: 0 0 5px #34d399;
+}
+
+.btn-email:hover .btn-cap {
+  border-color: #6ee7b7;
+  background: rgba(5, 150, 105, 0.35);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 14px 30px rgba(0, 0, 0, 0.6),
+    0 0 24px rgba(16, 185, 129, 0.75),
+    inset 0 0 14px rgba(16, 185, 129, 0.2);
+}
+
+.btn-email:hover .btn-led {
+  background: #ffffff;
+  box-shadow: 
+    0 0 8px #34d399,
+    0 0 18px #10b981,
+    0 0 26px #059669;
+}
+
+.btn-email:hover .arcade-icon {
+  transform: translateY(-2px) scale(1.15);
+}
+
+@media (max-width: 600px) {
+  .arcade-buttons-grid {
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+  }
+
+  .arcade-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .btn-cap {
+    justify-content: center;
+    width: 100%;
+  }
+}

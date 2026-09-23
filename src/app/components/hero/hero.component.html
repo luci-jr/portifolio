@@ -1,0 +1,85 @@
+<section class="hero" id="heroSection">
+  <!-- Fatias Visuais da Trindade + Gamer (Troca por clique deliberado, sem pular no mouse) -->
+  <div class="hero-split-container">
+    <!-- Lado 1: Front-end -->
+    <div
+      class="split-slice slice-frontend"
+      [class.active]="portfolio.activeMode() === 'frontend'"
+      (click)="setMode('frontend')"
+      role="button"
+      tabindex="0"
+      aria-label="Selecionar modo Front-end"
+    >
+      <div class="slice-bg"></div>
+      <div class="slice-indicator">🌐 FRONT-END & WEB</div>
+    </div>
+
+    <!-- Lado 2: Backend -->
+    <div
+      class="split-slice slice-backend"
+      [class.active]="portfolio.activeMode() === 'backend'"
+      (click)="setMode('backend')"
+      role="button"
+      tabindex="0"
+      aria-label="Selecionar modo Backend"
+    >
+      <div class="slice-bg"></div>
+      <div class="slice-indicator">☕ BACKEND & APIS</div>
+    </div>
+
+    <!-- Lado 3: SysOps -->
+    <div
+      class="split-slice slice-sysops"
+      [class.active]="portfolio.activeMode() === 'sysops'"
+      (click)="setMode('sysops')"
+      role="button"
+      tabindex="0"
+      aria-label="Selecionar modo SysOps"
+    >
+      <div class="slice-bg"></div>
+      <div class="slice-indicator">🐧 SYSOPS & CLOUD</div>
+    </div>
+
+    <!-- Lado 4: Gamer -->
+    <div
+      class="split-slice slice-gamer"
+      [class.active]="portfolio.activeMode() === 'gamer'"
+      (click)="setMode('gamer')"
+      role="button"
+      tabindex="0"
+      aria-label="Selecionar modo Gamer"
+    >
+      <div class="slice-bg"></div>
+      <div class="slice-indicator">🕹️ GAMER & ENGINES</div>
+    </div>
+  </div>
+
+  <!-- Conteúdo Central Reativo do Hero -->
+  <div class="hero-content">
+    <div class="badge-role">{{ portfolio.currentConfig().role }}</div>
+    <h1 class="hero-title">{{ portfolio.currentConfig().title }}</h1>
+    <p class="hero-desc">{{ portfolio.currentConfig().desc }}</p>
+
+    <!-- Terminal de Telemetria com Go Serverless -->
+    <div class="terminal-telemetry">
+      <div class="term-header">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="term-title">nexus-telemetry.sh</span>
+      </div>
+      <div class="term-body">
+        <div class="term-line">
+          <span class="prompt">$</span> {{ portfolio.currentConfig().command }}
+        </div>
+        <div class="term-line term-output">
+          {{ telemetryService.telemetry() }}
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="#projetos" class="pixel-btn primary">VER PROJETOS</a>
+      <a href="#sobre" class="pixel-btn secondary">SOBRE MIM</a>
+      <a href="#contato" class="pixel-btn outline">CONTATOS</a>
+    </div>
+  </div>
+</section>

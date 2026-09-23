@@ -1,0 +1,22 @@
+<!-- Efeito Scanlines CRT Retrô -->
+<div class="crt-overlay" [class.disabled]="!portfolio.crtEnabled()"></div>
+
+<!-- Barra de Navegação Superior e Seletor Arcade (Front-end, Backend, SysOps, Gamer) -->
+<app-navbar></app-navbar>
+
+<main>
+  <!-- Página Inicial / Hero Trindade + Gamer -->
+  <app-hero></app-hero>
+
+  <!-- Projetos Segmentados por Stacks -->
+  <app-projects></app-projects>
+
+  <!-- Trajetória Profissional, Bio e Núcleo Técnico -->
+  <app-about></app-about>
+
+  <!-- Seção Exclusiva de Contatos -->
+  <app-contact></app-contact>
+</main>
+
+<!-- Rodapé Retrô -->
+<app-footer></app-footer>

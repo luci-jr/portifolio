@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucivaldo Junior | Portfólio — A Trindade Dev</title>
-  <meta name="description" content="Portfólio de Lucivaldo Junior — Frontend/Gamer, Desenvolvedor Back-end (Java/Go) e SysOps." />
+  <title>Lucivaldo Junior | Portfólio — Desenvolvedor de Software</title>
+  <meta name="description" content="Portfólio de Lucivaldo Junior — Front-end (Angular), Backend (Java/Go), SysOps e Game Dev." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
 </head>
 <body class="mode-frontend">
   <!-- Efeito Scanlines CRT retrô -->
@@ -17,16 +20,37 @@
   <!-- Barra de Telemetria Superior -->
   <header class="top-nav">
     <div class="brand">
-      <span class="pixel-bracket">[</span>
-      <span class="brand-name">LUCI.DEV</span>
-      <span class="pixel-bracket">]</span>
-      <span class="domain-tag">portifolio.lucivaldo.cloud</span>
+      <div class="dev-name-glow" title="Lucivaldo Junior — Back-end, SysOps & Front-end">
+        <span class="nav-led-dot" title="Status: ONLINE"></span>
+        <span class="pixel-bracket">[</span>
+        <span class="brand-name">Lucivaldo Junior</span>
+        <span class="pixel-bracket">]</span>
+      </div>
+
+      <!-- Redes Sociais Rápidas ao lado do Nome -->
+      <div class="nav-social-links" aria-label="Redes Sociais Rápidas">
+        <a href="https://github.com/luci-jr" target="_blank" class="nav-social-btn nav-btn-github" title="Acessar GitHub de Lucivaldo Junior" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/lucivaldo-junior" target="_blank" class="nav-social-btn nav-btn-linkedin" title="Acessar LinkedIn de Lucivaldo Junior" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+        <a href="mailto:lucivaldojr25@gmail.com" class="nav-social-btn nav-btn-email" title="Enviar Email para lucivaldojr25@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+            <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+          </svg>
+        </a>
+      </div>
     </div>
 
-    <!-- Seletor de Classes Estilo Arcade: 1. Frontend, 2. Backend, 3. SysOps -->
+    <!-- Seletor de Classes: 1. Front-end, 2. Backend, 3. SysOps, 4. Gamer -->
     <nav class="class-selector" aria-label="Seletor de Especialidade">
       <button class="class-btn active" data-class="frontend" id="btn-frontend">
-        <span class="key-hint">1</span> 🕹️ FRONT-END
+        <span class="key-hint">1</span> 🌐 FRONT-END
       </button>
       <button class="class-btn" data-class="backend" id="btn-backend">
         <span class="key-hint">2</span> ☕ BACKEND
@@ -34,10 +58,19 @@
       <button class="class-btn" data-class="sysops" id="btn-sysops">
         <span class="key-hint">3</span> 🐧 SYSOPS
       </button>
+      <button class="class-btn" data-class="gamer" id="btn-gamer">
+        <span class="key-hint">4</span> 🕹️ GAMER
+      </button>
     </nav>
 
-    <!-- Botão CRT Scanlines -->
+    <!-- Controles do Sistema: Alternador de Tema (Dark/Light) & Scanlines CRT -->
     <div class="system-controls">
+      <!-- Botão Alternador Tema Dark / Light -->
+      <button id="themeToggle" class="crt-btn theme-toggle-btn" title="Alternar Modo Claro / Escuro">
+        <span id="themeIcon">🌙</span> <span id="themeStatus">DARK</span>
+      </button>
+
+      <!-- Botão CRT Scanlines -->
       <button id="crtToggle" class="crt-btn" title="Alternar Scanlines CRT">
         CRT: <span id="crtStatus">ON</span>
       </button>
@@ -45,13 +78,13 @@
   </header>
 
   <main>
-    <!-- HERO SECTION: Trindade Interativa Estilo Adham Dannaway (Front-end, Backend, SysOps) -->
+    <!-- HERO SECTION: Trindade Interativa Estilo Adham Dannaway (Front-end, Backend, SysOps, Gamer) -->
     <section class="hero" id="heroSection">
       <div class="hero-split-container" id="splitContainer">
-        <!-- Lado 1: Front-end / Game -->
+        <!-- Lado 1: Front-end -->
         <div class="split-slice slice-frontend active" data-target="frontend">
           <div class="slice-bg"></div>
-          <div class="slice-indicator">🕹️ FRONT-END & GAME</div>
+          <div class="slice-indicator">🌐 FRONT-END & WEB</div>
         </div>
         <!-- Lado 2: Backend -->
         <div class="split-slice slice-backend" data-target="backend">
@@ -63,14 +96,19 @@
           <div class="slice-bg"></div>
           <div class="slice-indicator">🐧 SYSOPS & CLOUD</div>
         </div>
+        <!-- Lado 4: Gamer -->
+        <div class="split-slice slice-gamer" data-target="gamer">
+          <div class="slice-bg"></div>
+          <div class="slice-indicator">🕹️ GAMER & ENGINES</div>
+        </div>
       </div>
 
       <!-- Conteúdo Dinâmico do Hero (Inicia em Front-end) -->
       <div class="hero-content">
-        <div class="badge-role" id="heroRoleBadge">CLASSE ATIVA: PIXEL ARTISAN & WEB BUILDER</div>
-        <h1 class="hero-title" id="heroTitle">Criando Experiências Web Vivas & Jogos Retrô em WebAssembly.</h1>
+        <div class="badge-role" id="heroRoleBadge">CLASSE ATIVA: WEB DEVELOPER & UI BUILDER</div>
+        <h1 class="hero-title" id="heroTitle">Criando Aplicações Web Escaláveis & Interfaces Reativas.</h1>
         <p class="hero-desc" id="heroDesc">
-          Ecossistema Angular 21+, TypeScript estrito, jogos 2D desenvolvidos em Go (Ebitengine/WASM) e a plataforma Comunidade Tech.
+          Ecossistema Angular 21+, TypeScript estrito, componentização standalone, Signals reativos e a plataforma Comunidade Tech.
         </p>
 
         <!-- Terminal Status Bar / Go Serverless Telemetry -->
@@ -84,7 +122,7 @@
               <span class="prompt">$</span> ng serve --project=comunidade-tech
             </div>
             <div class="term-line term-output" id="telemetryData">
-              ANGULAR 21: COMPILED | WASM: RUNNING (60 FPS) | FIREBASE: SYNC
+              ANGULAR 21: COMPILED | STANDALONE SIGNALS | FIREBASE: SYNC
             </div>
           </div>
         </div>
@@ -97,77 +135,202 @@
       </div>
     </section>
 
-    <!-- PROJETOS EM DESTAQUE -->
+    <!-- PROJETOS SEGMENTADOS POR CATEGORIA -->
     <section class="section projects-section" id="projetos">
       <div class="section-header">
-        <h2 class="section-title"><span class="glow">></span> PROJETOS_SELECIONADOS</h2>
-        <p class="section-subtitle">Aplicações reais em produção, código limpo e arquitetura corporativa.</p>
+        <h2 class="section-title"><span class="glow">></span> MEUS_PROJETOS</h2>
+        <p class="section-subtitle">Aplicações reais categorizadas por área de atuação e stack especializada.</p>
+
+        <!-- Abas de Filtro de Projetos -->
+        <div class="project-filters" aria-label="Filtro de Projetos por Segmento">
+          <button class="filter-btn active" data-filter="frontend">🌐 FRONT-END</button>
+          <button class="filter-btn" data-filter="backend">☕ BACKEND</button>
+          <button class="filter-btn" data-filter="sysops">🐧 SYSOPS</button>
+          <button class="filter-btn" data-filter="gamer">🕹️ GAMER</button>
+          <button class="filter-btn" data-filter="all">⚡ TODOS</button>
+        </div>
       </div>
 
-      <div class="projects-grid">
-        <!-- 1. Comunidade Tech (Front-end / Plataforma) -->
+      <div class="projects-grid" id="projectsGrid">
+        <!-- 1. FRONT-END: Comunidade Tech -->
         <article class="project-card" data-category="frontend">
-          <div class="card-tag">FRONTEND / PLATAFORMA</div>
+          <div class="card-media">
+            <img src="public/comunidade-tech-preview.webp" alt="Comunidade Tech - Plataforma Web" loading="lazy">
+          </div>
+          <div class="card-tag">🌐 FRONTEND / COMUNIDADE</div>
           <h3 class="card-title">Comunidade Tech</h3>
           <p class="card-desc">
-            Plataforma colaborativa para conectar e acelerar a jornada de
-            desenvolvedores, com compartilhamento de artigos, vagas e eventos.
+            Plataforma colaborativa completa para orientar, centralizar e acelerar a jornada de quem está ingressando na área de Tecnologia da Informação.
           </p>
           <div class="card-techs">
-            <span>Angular 21+</span><span>TypeScript</span><span>Firebase</span><span>Tailwind</span>
+            <span>Angular 21+</span><span>TypeScript</span><span>Firebase</span><span>Tailwind CSS</span>
           </div>
           <div class="card-actions">
-            <a href="https://lucivaldo.cloud" target="_blank" class="card-link highlight">Acessar Plataforma 🌐</a>
-            <a href="https://github.com/luci-jr" target="_blank" class="card-link">GitHub ↗</a>
+            <a href="https://comunidade.tech.lucivaldo.cloud/inicio" target="_blank" class="card-link highlight">Acessar Plataforma 🌐</a>
+            <a href="https://github.com/luci-jr/comunidade-tech" target="_blank" class="card-link">
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub ↗</span>
+            </a>
           </div>
         </article>
 
-        <!-- 2. PaiD'égua Runner (Game / WebAssembly) -->
-        <article class="project-card" data-category="frontend">
-          <div class="card-tag">GAME DEV / WASM</div>
-          <h3 class="card-title">PaiD'égua Runner</h3>
-          <p class="card-desc">
-            Jogo de ação e corrida em pixel art ambientado em Belém do Pará.
-            Desenvolvido em Go + Ebitengine e compilado para WebAssembly (WASM).
-          </p>
-          <div class="card-techs">
-            <span>Go 1.22+</span><span>Ebitengine v2</span><span>WebAssembly</span><span>Pixel Art</span>
-          </div>
-          <div class="card-actions">
-            <a href="https://luci-jr.github.io/paidegua-runner/" target="_blank" class="card-link highlight">Jogar Agora 🎮</a>
-            <a href="https://github.com/luci-jr/paidegua-runner" target="_blank" class="card-link">GitHub ↗</a>
-          </div>
-        </article>
-
-        <!-- 3. Engine de Apostas (Go) -->
+        <!-- 2. BACKEND: API RESTful Go & React Retro Synthwave -->
         <article class="project-card" data-category="backend">
-          <div class="card-tag">BACKEND / GO</div>
-          <h3 class="card-title">Engine de Apostas (iGaming)</h3>
+          <div class="card-media">
+            <img src="https://raw.githubusercontent.com/luci-jr/api-rest_e_frontend_em_react/main/assets/react-app-retro.png" alt="API RESTful Go e React Retro Arcade" loading="lazy">
+          </div>
+          <div class="card-tag">☕ BACKEND / GO REST</div>
+          <h3 class="card-title">API RESTful Go & Synthwave Arcade</h3>
           <p class="card-desc">
-            Motor de apostas concorrente em Go 1.22+ com Goroutines, Channels,
-            zero-allocation slices, Clean Architecture e tolerância a falhas.
+            API RESTful robusta em Go 1.22+ com Gorilla Mux, middlewares, CORS e persistência PostgreSQL via GORM, 100% conteinerizada em Docker Compose e integrada a front-end React Retro.
           </p>
           <div class="card-techs">
-            <span>Go 1.22+</span><span>Goroutines</span><span>Clean Arch</span><span>Docker</span>
+            <span>Go 1.22+</span><span>GORM</span><span>PostgreSQL</span><span>Docker Compose</span><span>React Retro</span>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/luci-jr" target="_blank" class="card-link">Repositório ↗</a>
+            <a href="https://github.com/luci-jr/api-rest_e_frontend_em_react" target="_blank" class="card-link highlight">
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub ↗</span>
+            </a>
           </div>
         </article>
 
-        <!-- 4. Infraestrutura Nexus (SysOps / Cloud) -->
-        <article class="project-card" data-category="sysops">
-          <div class="card-tag">SYSOPS / CLOUD</div>
-          <h3 class="card-title">Cluster Nexus Swarm</h3>
+        <!-- 3. BACKEND: Retro Store (Inventário Arcade MVC) -->
+        <article class="project-card" data-category="backend">
+          <div class="card-media">
+            <img src="https://raw.githubusercontent.com/luci-jr/retro-store/main/images/retro-store-logo.png" alt="Retro Store" loading="lazy">
+          </div>
+          <div class="card-tag">☕ BACKEND / GO MVC</div>
+          <h3 class="card-title">Retro Store (Inventário Arcade)</h3>
           <p class="card-desc">
-            Infraestrutura conteinerizada com Docker Swarm, Traefik v2 (Proxy
-            Reverso & SSL automático), PostgreSQL 16, Redis e automações n8n.
+            Aplicação web de inventário retrô desenvolvida em Go (Golang) com arquitetura MVC, rotas HTTP nativas, banco relacional PostgreSQL e contêiner Docker.
           </p>
           <div class="card-techs">
-            <span>Docker Swarm</span><span>Traefik v2</span><span>AWS</span><span>PostgreSQL 16</span>
+            <span>Go (Golang)</span><span>PostgreSQL</span><span>Docker</span><span>MVC</span><span>HTML5/CSS3</span>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/luci-jr" target="_blank" class="card-link">Arquitetura ↗</a>
+            <a href="https://github.com/luci-jr/retro-store" target="_blank" class="card-link highlight">
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub ↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 4. BACKEND: Retro Bank (Core Banking CLI) -->
+        <article class="project-card" data-category="backend">
+          <div class="card-tag">☕ BACKEND / GO CORE</div>
+          <h3 class="card-title">Retro Bank (Core Banking CLI)</h3>
+          <p class="card-desc">
+            Simulador de core banking via terminal desenvolvido em Go. Focado na aplicação de conceitos de Orientação a Objetos, Structs, Interfaces e regras de negócio com concorrência.
+          </p>
+          <div class="card-techs">
+            <span>Go (Golang)</span><span>POO</span><span>Structs & Interfaces</span><span>Terminal CLI</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/luci-jr/Retro-Bank" target="_blank" class="card-link highlight">
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub ↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 5. BACKEND: Monitor de Sites & Uptime -->
+        <article class="project-card" data-category="backend">
+          <div class="card-tag">☕ BACKEND / CONCORRÊNCIA</div>
+          <h3 class="card-title">Monitor de Sites & Uptime</h3>
+          <p class="card-desc">
+            Monitor de resiliência e disponibilidade de serviços HTTP em Go com interface no terminal, requisições periódicas automatizadas, sistema de logs e persistência simples em arquivos.
+          </p>
+          <div class="card-techs">
+            <span>Go (Golang)</span><span>HTTP Client</span><span>Concurrency</span><span>File Logging</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/luci-jr/Monitor-de-sites" target="_blank" class="card-link highlight">
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub ↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 6. GAMER: Égua Mano Gamer (Go + Ebitengine v2 / WebAssembly) -->
+        <article class="project-card" data-category="gamer">
+          <div class="card-media">
+            <img src="https://raw.githubusercontent.com/luci-jr/egua-mano_gamer/main/assets/screenshot_browser_desktop.png" alt="Égua Mano Gamer" loading="lazy">
+          </div>
+          <div class="card-tag">🕹️ GAMER / WASM</div>
+          <h3 class="card-title">Égua Mano Gamer (WASM)</h3>
+          <p class="card-desc">
+            Jogo arcade 2D de plataforma com física customizada, temática regional de Belém do Pará, arte pixel art 16-bit e compilação nativa para WebAssembly a 60 FPS no navegador.
+          </p>
+          <div class="card-techs">
+            <span>Go 1.22+</span><span>Ebitengine v2</span><span>WebAssembly</span><span>Pixel Art 16-bit</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://luci-jr.github.io/egua-mano_gamer/" target="_blank" class="card-link highlight">Jogar Agora 🕹️</a>
+            <a href="https://github.com/luci-jr/egua-mano_gamer" target="_blank" class="card-link">
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub ↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 7. GAMER: Coleção Retro (Arcade Organizer Angular 19) -->
+        <article class="project-card" data-category="gamer">
+          <div class="card-media">
+            <img src="https://raw.githubusercontent.com/luci-jr/colecao-retro/main/screenshot.png" alt="Coleção Retro" loading="lazy">
+          </div>
+          <div class="card-tag">🕹️ GAMER / ANGULAR 19</div>
+          <h3 class="card-title">Coleção Retro (Arcade Organizer)</h3>
+          <p class="card-desc">
+            Gerenciador e organizador de jogos clássicos desenvolvido para praticar os recursos modernos do Angular 19 (Signals e Control Flow), com tema retrô dark neon inspirado em fliperamas.
+          </p>
+          <div class="card-techs">
+            <span>Angular 19</span><span>Signals</span><span>Control Flow</span><span>Arcade Neon UI</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/luci-jr/colecao-retro" target="_blank" class="card-link highlight">
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub ↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 8. SYSOPS: Startup Jarva's (AWS Cloud Architecture) -->
+        <article class="project-card" data-category="sysops">
+          <div class="card-media">
+            <img src="https://github.com/user-attachments/assets/dc2e1360-263c-47af-b3fc-912f140d9fa7" alt="Startup Jarva's AWS Architecture" loading="lazy">
+          </div>
+          <div class="card-tag">🐧 SYSOPS / AWS CLOUD</div>
+          <h3 class="card-title">Startup Jarva's (AWS Architecture)</h3>
+          <p class="card-desc">
+            Solução AWS serverless para armazenamento seguro e escalável de documentos em plataforma SaaS, combinando autenticação, isolamento multi-tenant, acesso temporário e IaC.
+          </p>
+          <div class="card-techs">
+            <span>AWS Cloud</span><span>Serverless</span><span>S3 & IAM</span><span>IaC</span><span>Cloud Architecture</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/luci-jr/jarvas-aws-architecture" target="_blank" class="card-link highlight">
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub: AWS IaC ↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 9. SYSOPS: Cluster Nexus Swarm & SysOps Hub -->
+        <article class="project-card" data-category="sysops">
+          <div class="card-tag">🐧 SYSOPS / EM DESENVOLVIMENTO</div>
+          <h3 class="card-title">Cluster Nexus Swarm & SysOps Hub</h3>
+          <p class="card-desc">
+            Próximo projeto de infraestrutura em desenvolvimento: ambiente de orquestração corporativo com Docker Swarm, Traefik v2 (TLS automático), Linux Ubuntu e automações n8n.
+          </p>
+          <div class="card-techs">
+            <span>Docker Swarm</span><span>Traefik v2</span><span>Linux Ubuntu</span><span>n8n</span><span>DevOps</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/luci-jr" target="_blank" class="card-link highlight">
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub ↗</span>
+            </a>
           </div>
         </article>
       </div>
@@ -176,7 +339,7 @@
     <!-- SOBRE & TRAJETÓRIA -->
     <section class="section about-section" id="sobre">
       <div class="section-header">
-        <h2 class="section-title"><span class="glow">></span> TRAJETORIA_PROFISSIONAL</h2>
+        <h2 class="section-title"><span class="glow">></span> MINHA_TRAJETORIA</h2>
       </div>
       <div class="about-grid">
         <div class="about-text">
@@ -211,19 +374,51 @@
     <!-- CONTATO -->
     <section class="section contact-section" id="contato">
       <div class="section-header">
-        <h2 class="section-title"><span class="glow">></span> CONECTAR_CANAL</h2>
+        <h2 class="section-title"><span class="glow">></span> CONTATOS</h2>
         <p class="section-subtitle">Vamos trocar uma ideia sobre oportunidades ou projetos?</p>
       </div>
-      <div class="contact-links">
-        <a href="https://github.com/luci-jr" target="_blank" class="pixel-btn outline">GitHub: luci-jr</a>
-        <a href="https://linkedin.com/in/lucivaldo-junior" target="_blank" class="pixel-btn primary">LinkedIn</a>
-        <a href="mailto:contato@lucivaldo.cloud" class="pixel-btn secondary">Email Direto</a>
+      <div class="arcade-buttons-grid">
+        <!-- 1. GITHUB Arcade Button -->
+        <a href="https://github.com/luci-jr" target="_blank" class="arcade-btn btn-github" title="Acessar GitHub de Lucivaldo Junior">
+          <div class="btn-cap">
+            <span class="btn-led led-github"></span>
+            <svg class="arcade-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span class="btn-text">GITHUB: luci-jr</span>
+          </div>
+        </a>
+
+        <!-- 2. LINKEDIN Arcade Button -->
+        <a href="https://linkedin.com/in/lucivaldo-junior" target="_blank" class="arcade-btn btn-linkedin" title="Acessar LinkedIn de Lucivaldo Junior">
+          <div class="btn-cap">
+            <span class="btn-led led-linkedin"></span>
+            <svg class="arcade-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            <span class="btn-text">LINKEDIN: Lucivaldo</span>
+          </div>
+        </a>
+
+        <!-- 3. EMAIL Arcade Button -->
+        <a href="mailto:lucivaldojr25@gmail.com" class="arcade-btn btn-email" title="Enviar Email para lucivaldojr25@gmail.com">
+          <div class="btn-cap">
+            <span class="btn-led led-email"></span>
+            <svg class="arcade-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+            </svg>
+            <span class="btn-text">EMAIL: lucivaldojr25</span>
+          </div>
+        </a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2026 Lucivaldo Junior — Construído com Go, HTML5 & CSS Retrô | Belém do Pará - Brasil</p>
+    <div class="footer-led-plate">
+      <span class="footer-led-indicator" title="Status do Sistema: ONLINE"></span>
+      <p class="footer-text">© 2026 <a href="https://github.com/luci-jr" target="_blank" rel="noopener noreferrer" class="footer-author-link" title="Acessar GitHub de Lucivaldo Junior">Lucivaldo Junior</a> — Desenvolvido com Angular 21, TypeScript & Go | Belém do Pará - Brasil</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>

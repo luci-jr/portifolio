@@ -1,0 +1,546 @@
+/* ==========================================================================
+   PORTFÓLIO RETRÔ / DEV TRINDADE — LUCIVALDO JUNIOR
+   Arquitetura de Estilos Globais do Angular 21 (Front-end, Backend, SysOps)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Press+Start+2P&family=VT323&display=swap');
+
+:root {
+  --font-code: 'Fira Code', monospace;
+  --font-retro: 'VT323', monospace;
+  --font-pixel: 'Press Start 2P', monospace;
+
+  /* Padrão Base (Front-end Mode) */
+  --bg-color: #120a1c;
+  --bg-surface: #1d122d;
+  --bg-surface-hover: #291a3f;
+  --border-color: #3b205f;
+  --text-main: #fff7ed;
+  --text-muted: #fca5a5;
+  --accent-color: #f59e0b; /* Dourado / Âmbar */
+  --accent-glow: rgba(245, 158, 11, 0.45);
+  --accent-secondary: #ec4899;
+
+  --terminal-bg: #090610;
+  --terminal-border: #26163b;
+}
+
+/* 🌐 MODO 1: FRONTEND & GAMER (Arcade Neon 16-Bit / PaiD'égua Gold) */
+:host.mode-frontend,
+body.mode-frontend,
+.mode-frontend {
+  --bg-color: #120a1c;
+  --bg-surface: #1d122d;
+  --bg-surface-hover: #291a3f;
+  --border-color: #3b205f;
+  --text-main: #fff7ed;
+  --text-muted: #fca5a5;
+  --accent-color: #f59e0b;
+  --accent-glow: rgba(245, 158, 11, 0.45);
+  --accent-secondary: #ec4899;
+  --terminal-bg: #090610;
+  --terminal-border: #26163b;
+}
+
+/* ☕ MODO 2: BACKEND (Terminal Hacker / Matrix / Go & Java) */
+:host.mode-backend,
+body.mode-backend,
+.mode-backend {
+  --bg-color: #090d12;
+  --bg-surface: #10161f;
+  --bg-surface-hover: #17202c;
+  --border-color: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent-color: #10b981;
+  --accent-glow: rgba(16, 185, 129, 0.4);
+  --accent-secondary: #34d399;
+  --terminal-bg: #06090e;
+  --terminal-border: #1b2533;
+}
+
+/* 🐧 MODO 3: SYSOPS (Cyber Blueprint / Cloud Docker & AWS) */
+:host.mode-sysops,
+body.mode-sysops,
+.mode-sysops {
+  --bg-color: #060e18;
+  --bg-surface: #0c1a2d;
+  --bg-surface-hover: #132742;
+  --border-color: #1e3a5f;
+  --text-main: #f0f9ff;
+  --text-muted: #7dd3fc;
+  --accent-color: #00f0ff;
+  --accent-glow: rgba(0, 240, 255, 0.4);
+  --accent-secondary: #38bdf8;
+  --terminal-bg: #030810;
+  --terminal-border: #112642;
+}
+
+/* 🕹️ MODO 4: GAMER (Neon Arcade / Pixel Art / WebAssembly) */
+:host.mode-gamer,
+body.mode-gamer,
+.mode-gamer {
+  --bg-color: #150624;
+  --bg-surface: #22093a;
+  --bg-surface-hover: #310e52;
+  --border-color: #4c1580;
+  --text-main: #fff7ed;
+  --text-muted: #f472b6;
+  --accent-color: #ec4899; /* Rosa Neon Arcade */
+  --accent-glow: rgba(236, 72, 153, 0.45);
+  --accent-secondary: #f59e0b;
+  --terminal-bg: #0e0318;
+  --terminal-border: #330b54;
+}
+
+/* ==========================================================================
+   TEMA CLARO (LIGHT MODE)
+   ========================================================================== */
+:host.theme-light,
+body.theme-light,
+.theme-light {
+  --bg-color: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #f1f5f9;
+  --border-color: #cbd5e1;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --terminal-bg: #ffffff;
+  --terminal-border: #cbd5e1;
+}
+
+:host.theme-light.mode-backend,
+body.theme-light.mode-backend,
+.theme-light.mode-backend {
+  --bg-color: #f0fdf4;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #dcfce7;
+  --border-color: #86efac;
+  --text-main: #052e16;
+  --text-muted: #166534;
+  --accent-color: #059669;
+  --accent-glow: rgba(5, 150, 105, 0.25);
+  --accent-secondary: #047857;
+  --terminal-bg: #ffffff;
+  --terminal-border: #86efac;
+}
+
+:host.theme-light.mode-sysops,
+body.theme-light.mode-sysops,
+.theme-light.mode-sysops {
+  --bg-color: #f0f9ff;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #e0f2fe;
+  --border-color: #7dd3fc;
+  --text-main: #082f49;
+  --text-muted: #0369a1;
+  --accent-color: #0284c7;
+  --accent-glow: rgba(2, 132, 199, 0.25);
+  --accent-secondary: #0369a1;
+  --terminal-bg: #ffffff;
+  --terminal-border: #7dd3fc;
+}
+
+:host.theme-light.mode-frontend,
+body.theme-light.mode-frontend,
+.theme-light.mode-frontend {
+  --bg-color: #fffbeb;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #fef3c7;
+  --border-color: #fcd34d;
+  --text-main: #451a03;
+  --text-muted: #92400e;
+  --accent-color: #d97706;
+  --accent-glow: rgba(217, 119, 6, 0.25);
+  --accent-secondary: #b45309;
+  --terminal-bg: #ffffff;
+  --terminal-border: #fcd34d;
+}
+
+:host.theme-light.mode-gamer,
+body.theme-light.mode-gamer,
+.theme-light.mode-gamer {
+  --bg-color: #fdf2f8;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #fce7f3;
+  --border-color: #f472b6;
+  --text-main: #500724;
+  --text-muted: #9d174d;
+  --accent-color: #db2777;
+  --accent-glow: rgba(219, 39, 119, 0.25);
+  --accent-secondary: #be185d;
+  --terminal-bg: #ffffff;
+  --terminal-border: #f472b6;
+}
+
+:host.theme-light .crt-overlay,
+body.theme-light .crt-overlay {
+  opacity: 0.05;
+}
+
+:host.theme-light .top-nav,
+body.theme-light .top-nav {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-bottom: 2px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+:host.theme-light .hero-terminal,
+body.theme-light .hero-terminal,
+:host.theme-light .terminal-telemetry,
+body.theme-light .terminal-telemetry {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+:host.theme-light .term-header,
+body.theme-light .term-header {
+  background: var(--bg-surface-hover);
+  border-bottom: 1px solid var(--terminal-border);
+}
+
+:host.theme-light .term-title,
+body.theme-light .term-title {
+  color: var(--text-muted);
+}
+
+:host.theme-light .hero-title,
+body.theme-light .hero-title {
+  text-shadow: none;
+}
+
+:host.theme-light .badge-role,
+body.theme-light .badge-role {
+  background: var(--bg-surface);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+:host.theme-light .slice-indicator,
+body.theme-light .slice-indicator {
+  background: var(--bg-surface);
+  color: var(--text-main);
+}
+
+:host.theme-light .card-media,
+body.theme-light .card-media {
+  background: var(--bg-surface-hover);
+}
+
+:host.theme-light .card-techs span,
+body.theme-light .card-techs span {
+  background: var(--bg-surface-hover);
+  color: var(--text-main);
+}
+
+:host.theme-light .class-btn .key-hint,
+body.theme-light .class-btn .key-hint {
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: var(--text-main);
+}
+
+:host.theme-light .class-btn.active .key-hint,
+body.theme-light .class-btn.active .key-hint {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.35);
+  color: #000;
+}
+
+:host.theme-light .btn-github .btn-cap,
+body.theme-light .btn-github .btn-cap {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #38bdf8;
+  box-shadow: 0 6px 18px rgba(56, 189, 248, 0.25);
+}
+
+:host.theme-light .btn-linkedin .btn-cap,
+body.theme-light .btn-linkedin .btn-cap {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #388bfd;
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.25);
+}
+
+:host.theme-light .btn-email .btn-cap,
+body.theme-light .btn-email .btn-cap {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #10b981;
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.25);
+}
+
+:host.theme-light .footer,
+body.theme-light .footer {
+  background: var(--bg-surface);
+  color: var(--text-muted);
+}
+
+:host.theme-light .footer:hover,
+body.theme-light .footer:hover {
+  background: var(--bg-surface-hover);
+}
+
+:host.theme-light .footer-led-plate,
+body.theme-light .footer-led-plate {
+  background: var(--bg-surface);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), 0 0 15px var(--accent-glow);
+}
+
+:host.theme-light .footer-led-plate:hover,
+body.theme-light .footer-led-plate:hover {
+  background: var(--bg-surface-hover);
+}
+
+/* Reset Global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-code);
+  line-height: 1.6;
+  min-height: 100vh;
+  transition: background-color 0.4s ease, color 0.3s ease;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ==========================================================================
+   SCANLINES CRT (Efeito Monitor de Tubo Retrô)
+   ========================================================================== */
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.28) 50%
+  ),
+  radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0) 65%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  background-size: 100% 4px, 100% 100%;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.crt-overlay.disabled {
+  display: none;
+}
+
+/* ==========================================================================
+   BOTÕES RETRÔ / PIXEL ART
+   ========================================================================== */
+.pixel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.4rem;
+  font-family: var(--font-code);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.pixel-btn.primary {
+  background: var(--accent-color);
+  color: #000;
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.pixel-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px var(--accent-glow);
+}
+
+.pixel-btn.secondary {
+  background: var(--bg-surface);
+  color: var(--text-main);
+  border: 2px solid var(--border-color);
+}
+
+.pixel-btn.secondary:hover {
+  border-color: var(--accent-color);
+  background: var(--bg-surface-hover);
+  transform: translateY(-2px);
+}
+
+.pixel-btn.outline {
+  background: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.pixel-btn.outline:hover {
+  background: var(--accent-color);
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   SEÇÕES GERAIS
+   ========================================================================== */
+.section {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Animação Contínua de Flutuação Sutil para o Nome (sem borda) */
+@keyframes brand-name-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Breve efeito de ignição LED ao passar o mouse */
+@keyframes led-brief-ignite {
+  0% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 2px var(--accent-glow));
+  }
+  30% {
+    opacity: 1;
+    filter: drop-shadow(0 0 16px var(--accent-color)) drop-shadow(0 0 25px var(--accent-glow));
+  }
+  60% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px var(--accent-glow));
+  }
+}
+
+/* Micro LED status diode */
+.nav-led-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  box-shadow: 0 0 6px var(--accent-color);
+  display: inline-block;
+  margin-right: 0.35rem;
+  transition: all 0.3s ease;
+  animation: led-dot-pulse 2.2s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+@keyframes led-dot-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(0.9);
+    box-shadow: 0 0 4px var(--accent-color);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+    box-shadow: 0 0 8px var(--accent-color), 0 0 14px var(--accent-glow);
+  }
+}
+
+.dev-name-glow {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  animation: brand-name-float 3.5s ease-in-out infinite;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Breve fita de LED sutil na base (sem borda de caixa) */
+.dev-name-glow::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 20%;
+  right: 20%;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent 0%, var(--accent-color) 50%, transparent 100%);
+  box-shadow: 0 0 8px var(--accent-color), 0 0 16px var(--accent-glow);
+  opacity: 0;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  pointer-events: none;
+}
+
+.dev-name-glow .pixel-bracket {
+  color: var(--accent-color);
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.dev-name-glow .brand-name {
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+/* Hover: flutua mais alto, acende o micro LED e ativa o breve efeito de ignição LED */
+.dev-name-glow:hover {
+  animation: brand-name-float 3.5s ease-in-out infinite paused, led-brief-ignite 0.45s ease-out;
+  transform: translateY(-6px);
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.dev-name-glow:hover::after {
+  opacity: 0.75;
+  left: 10%;
+  right: 10%;
+}
+
+.dev-name-glow:hover .nav-led-dot {
+  background: #ffffff;
+  box-shadow: 0 0 8px #ffffff, 0 0 16px var(--accent-color), 0 0 24px var(--accent-glow);
+  transform: scale(1.25);
+}
+
+.dev-name-glow:hover .pixel-bracket {
+  color: var(--accent-color);
+  text-shadow:
+    0 0 8px var(--accent-color),
+    0 0 18px var(--accent-color),
+    0 0 32px var(--accent-glow);
+  transform: scale(1.15);
+}
+
+.dev-name-glow:hover .brand-name {
+  color: #ffffff;
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.95),
+    0 0 14px var(--accent-color),
+    0 0 24px var(--accent-color),
+    0 0 38px var(--accent-glow);
+}

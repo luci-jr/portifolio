@@ -1,0 +1,92 @@
+<section class="section projects-section" id="projetos">
+  <div class="section-header">
+    <h2 class="section-title"><span class="glow">></span> PROJETOS</h2>
+    <p class="section-subtitle">
+      Aplicações reais em produção, código limpo e arquitetura corporativa.
+    </p>
+
+    <!-- Abas de Filtro de Projetos por Segmento -->
+    <div class="project-filters" aria-label="Filtro de Projetos por Segmento">
+      <button
+        class="filter-btn"
+        [class.active]="activeFilter() === 'frontend'"
+        (click)="setFilter('frontend')"
+        type="button"
+      >
+        🌐 FRONT-END
+      </button>
+      <button
+        class="filter-btn"
+        [class.active]="activeFilter() === 'backend'"
+        (click)="setFilter('backend')"
+        type="button"
+      >
+        ☕ BACKEND
+      </button>
+      <button
+        class="filter-btn"
+        [class.active]="activeFilter() === 'sysops'"
+        (click)="setFilter('sysops')"
+        type="button"
+      >
+        🐧 SYSOPS
+      </button>
+      <button
+        class="filter-btn"
+        [class.active]="activeFilter() === 'gamer'"
+        (click)="setFilter('gamer')"
+        type="button"
+      >
+        🕹️ GAMER
+      </button>
+      <button
+        class="filter-btn"
+        [class.active]="activeFilter() === 'all'"
+        (click)="setFilter('all')"
+        type="button"
+      >
+        ⚡ TODOS
+      </button>
+    </div>
+  </div>
+
+  <!-- Grade Reativa de Projetos usando Control Flow do Angular 21 -->
+  <div class="projects-grid">
+    @for (project of filteredProjects(); track project.id) {
+      <article class="project-card" [attr.data-category]="project.category">
+        @if (project.imageUrl) {
+          <div class="card-media">
+            <img [src]="project.imageUrl" [alt]="project.title" loading="lazy" />
+          </div>
+        }
+        <div class="card-tag">{{ project.tag }}</div>
+        <h3 class="card-title">{{ project.title }}</h3>
+        <p class="card-desc">{{ project.description }}</p>
+
+        <div class="card-techs">
+          @for (tech of project.techs; track tech) {
+            <span>{{ tech }}</span>
+          }
+        </div>
+
+        <div class="card-actions">
+          @if (project.liveUrl) {
+            <a [href]="project.liveUrl" target="_blank" class="card-link highlight">
+              {{ project.liveLabel || 'Acessar ↗' }}
+            </a>
+          }
+          @if (project.repoUrl) {
+            <a [href]="project.repoUrl" target="_blank" class="card-link" [class.highlight]="!project.liveUrl">
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub ↗</span>
+            </a>
+          }
+        </div>
+      </article>
+    } @empty {
+      <div class="empty-state">
+        <p>Nenhum projeto encontrado nesta categoria no momento.</p>
+      </div>
+    }
+  </div>
+</section>

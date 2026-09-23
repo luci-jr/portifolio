@@ -1,3 +1,3 @@
-module github.com/luci-jr/luci-jr_portfolio
+module github.com/luci-jr/portifolio
 
 go 1.22

@@ -1,0 +1,363 @@
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1.5rem;
+  background-color: rgba(11, 15, 20, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--border-color);
+  transition: border-color 0.3s ease;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.pixel-bracket {
+  color: var(--accent-color);
+}
+
+.brand-name {
+  color: var(--text-main);
+  letter-spacing: 1px;
+}
+
+.domain-tag {
+  font-size: 0.75rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--accent-color);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  margin-left: 0.4rem;
+}
+
+/* ==========================================================================
+   EFEITO LED NEON GLOW PARA LUCIVALDO JUNIOR
+   ========================================================================== */
+/* Animação Contínua de Flutuação Sutil para o Nome (sem borda) */
+@keyframes brand-name-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Breve efeito de ignição LED ao passar o mouse (suave) */
+@keyframes led-brief-ignite {
+  0% {
+    opacity: 0.85;
+    filter: drop-shadow(0 0 1px var(--accent-glow));
+  }
+  30% {
+    opacity: 1;
+    filter: drop-shadow(0 0 6px var(--accent-color)) drop-shadow(0 0 10px var(--accent-glow));
+  }
+  60% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 3px var(--accent-glow));
+  }
+}
+
+/* Micro LED status diode */
+.nav-led-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  box-shadow: 0 0 6px var(--accent-color);
+  display: inline-block;
+  margin-right: 0.35rem;
+  transition: all 0.3s ease;
+  animation: led-dot-pulse 2.2s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+@keyframes led-dot-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(0.9);
+    box-shadow: 0 0 4px var(--accent-color);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+    box-shadow: 0 0 8px var(--accent-color), 0 0 14px var(--accent-glow);
+  }
+}
+
+.dev-name-glow {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  cursor: default;
+  user-select: none;
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  animation: brand-name-float 3.5s ease-in-out infinite;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Breve fita de LED sutil na base (sem borda de caixa) */
+.dev-name-glow::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 20%;
+  right: 20%;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent 0%, var(--accent-color) 50%, transparent 100%);
+  box-shadow: 0 0 6px var(--accent-color), 0 0 10px var(--accent-glow);
+  opacity: 0;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  pointer-events: none;
+}
+
+.dev-name-glow .pixel-bracket {
+  color: var(--accent-color);
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.dev-name-glow .brand-name {
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+/* Hover: flutua mais alto, acende o micro LED e ativa o breve efeito de ignição LED atenuado */
+.dev-name-glow:hover {
+  animation: brand-name-float 3.5s ease-in-out infinite paused, led-brief-ignite 0.45s ease-out;
+  transform: translateY(-4px);
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.dev-name-glow:hover::after {
+  opacity: 0.65;
+  left: 12%;
+  right: 12%;
+}
+
+.dev-name-glow:hover .nav-led-dot {
+  background: #ffffff;
+  box-shadow: 0 0 6px #ffffff, 0 0 10px var(--accent-color), 0 0 16px var(--accent-glow);
+  transform: scale(1.2);
+}
+
+.dev-name-glow:hover .pixel-bracket {
+  color: var(--accent-color);
+  text-shadow:
+    0 0 6px var(--accent-color),
+    0 0 12px var(--accent-glow);
+  transform: scale(1.1);
+}
+
+.dev-name-glow:hover .brand-name {
+  color: #ffffff;
+  text-shadow:
+    0 0 4px rgba(255, 255, 255, 0.85),
+    0 0 10px var(--accent-color),
+    0 0 20px var(--accent-glow);
+}
+
+/* Seletor de Classes */
+.class-selector {
+  display: flex;
+  gap: 0.5rem;
+  background: var(--bg-surface);
+  padding: 0.3rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.class-btn {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  padding: 0.4rem 0.85rem;
+  font-family: var(--font-code);
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.25s ease;
+}
+
+.class-btn .key-hint {
+  font-size: 0.65rem;
+  padding: 0.05rem 0.3rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.class-btn:hover {
+  color: var(--text-main);
+  border-color: var(--accent-color);
+  background: var(--bg-surface-hover);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.class-btn.active {
+  background: var(--accent-color);
+  color: #000;
+  font-weight: 700;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 14px var(--accent-glow);
+}
+
+.class-btn.active .key-hint {
+  background: rgba(0, 0, 0, 0.25);
+  border-color: rgba(0, 0, 0, 0.4);
+  color: #000;
+}
+
+.system-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Animação de Flutuação Suave para os Ícones */
+@keyframes nav-social-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3.5px);
+  }
+}
+
+.nav-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 4px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, background-color 0.22s ease;
+  position: relative;
+  overflow: hidden;
+  animation: nav-social-float 3.2s ease-in-out infinite;
+}
+
+/* Flutuação Assíncrona Orgânica: cada ícone opera em frequência e fase própria */
+.nav-social-btn:nth-child(1) {
+  animation-duration: 3.1s;
+  animation-delay: -0.5s;
+}
+
+.nav-social-btn:nth-child(2) {
+  animation-duration: 3.9s;
+  animation-delay: -1.8s;
+}
+
+.nav-social-btn:nth-child(3) {
+  animation-duration: 3.4s;
+  animation-delay: -2.7s;
+}
+
+.nav-social-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-social-btn:hover {
+  animation-play-state: paused;
+  transform: translateY(-5px);
+}
+
+/* Efeito LED nos ícones de redes da Navbar */
+.nav-social-btn.nav-btn-github:hover {
+  color: #38bdf8;
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.65), inset 0 0 6px rgba(56, 189, 248, 0.3);
+}
+
+.nav-social-btn.nav-btn-linkedin:hover {
+  color: #60a5fa;
+  border-color: #388bfd;
+  background: rgba(10, 102, 194, 0.15);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.75), inset 0 0 6px rgba(10, 102, 194, 0.3);
+}
+
+.nav-social-btn.nav-btn-email:hover {
+  color: #34d399;
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.65), inset 0 0 6px rgba(16, 185, 129, 0.3);
+}
+
+.crt-btn {
+  background: var(--bg-surface);
+  color: var(--accent-color);
+  border: 1px solid var(--border-color);
+  padding: 0.4rem 0.75rem;
+  font-family: var(--font-code);
+  font-size: 0.78rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.crt-btn:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+@media (max-width: 768px) {
+  .top-nav {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .class-selector {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .class-btn {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.5rem;
+  }
+}
