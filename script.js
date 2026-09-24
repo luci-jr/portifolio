@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // Filtro geral aveludado com leve respiração
           this.mainFilter = this.audioCtx.createBiquadFilter();
           this.mainFilter.type = 'lowpass';
-          this.mainFilter.frequency.setValueAtTime(750, this.audioCtx.currentTime);
+          this.mainFilter.frequency.setValueAtTime(920, this.audioCtx.currentTime);
           this.mainFilter.Q.setValueAtTime(1.1, this.audioCtx.currentTime);
           this.mainFilter.connect(this.audioMasterGain);
 
@@ -314,8 +314,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const now = this.audioCtx.currentTime;
       this.audioMasterGain.gain.cancelScheduledValues(now);
       this.audioMasterGain.gain.setValueAtTime(Math.max(0.001, this.audioMasterGain.gain.value), now);
-      // Resposta imediata ao clique (volume envolvente e presente)
-      this.audioMasterGain.gain.exponentialRampToValueAtTime(0.65, now + 0.12);
+      // Resposta imediata ao clique (volume envolvente, nítido e presente)
+      this.audioMasterGain.gain.exponentialRampToValueAtTime(0.85, now + 0.12);
 
       this.startAmbientProgression();
       this.startGentleBells();
@@ -395,10 +395,10 @@ document.addEventListener('DOMContentLoaded', () => {
         osc2.frequency.setValueAtTime(freq, now);
         osc2.detune.setValueAtTime(idx % 2 === 0 ? 3.5 : -3.5, now);
 
-        // Nível por voz com presença acústica equilibrada
+        // Nível por voz com presença acústica vibrante e nítida
         const isBass = idx < chordData.bass.length;
-        const targetVol1 = isBass ? 0.055 : 0.035;
-        const targetVol2 = isBass ? 0.020 : 0.015;
+        const targetVol1 = isBass ? 0.095 : 0.068;
+        const targetVol2 = isBass ? 0.032 : 0.024;
 
         // Ataque direto e acolhedor (0.35s)
         gain1.gain.setValueAtTime(0.0001, now);
@@ -473,11 +473,11 @@ document.addEventListener('DOMContentLoaded', () => {
         osc.frequency.setValueAtTime(freq, now);
 
         filter.type = 'lowpass';
-        filter.frequency.setValueAtTime(900, now);
+        filter.frequency.setValueAtTime(1250, now);
 
         // Ataque rápido e suave (0.05s) e cauda ágil (1.1s)
         gain.gain.setValueAtTime(0.0001, now);
-        gain.gain.exponentialRampToValueAtTime(0.050, now + 0.05);
+        gain.gain.exponentialRampToValueAtTime(0.085, now + 0.05);
         gain.gain.exponentialRampToValueAtTime(0.00001, now + 1.1);
 
         osc.connect(filter);
