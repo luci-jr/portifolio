@@ -21,7 +21,7 @@ Essa bagagem me capacita a olhar para sistemas não apenas como linhas de códig
 
 ---
 
-## ⚡ As 4 Dimensões Técnicas ("A Trindade Dev + Gamer")
+## ⚡ As 4 Especialidades Técnicas
 
 O portfólio reflete a amplitude das disciplinas técnicas aplicadas no dia a dia:
 
@@ -44,7 +44,7 @@ Este projeto é uma demonstração de engenharia aplicada, micro-interações re
 - **Badge de Papel Técnico Flutuante:** Pílula ampliada de presença executiva com indicador de status (`● DESENVOLVEDOR BACK-END`) e micro-animação contínua orgânica `role-badge-float`.
 - **Glassmorphism Paritário (Dark & Light Mode):** Camadas translúcidas em vidro fosco (`backdrop-filter: blur(12px)`), reflexo especular superior e iluminação sutil de néon âmbar.
 - **Carrossel Infinito de Stacks (*Tech Marquee Ticker*):** Fita horizontal em CSS contínuo a 60 FPS com 27 tecnologias em rotação perpétua ininterrupta (Java 21, Spring Boot 3, Go, Ebitengine, Angular 21, TypeScript, JavaScript, CSS3, Tailwind CSS, Node.js, WordPress, Docker, Docker Swarm, AWS Cloud, PostgreSQL 16, Oracle DB, MySQL, Redis, Linux/Ubuntu, Git & GitHub, Traefik v2, n8n, Postman, Firebase, Firestore, Vercel, Google Cloud), agora com arquitetura limpa e desacoplada em arquivos vetoriais externos em `public/icons/` e `icons/`.
-- **Barra Lateral Retrátil Cyberpunk (Estilo iPortfolio):** Navegação vertical offcanvas inspirada no clássico iPortfolio, com avatar iluminado, status online, redes sociais e 7 âncoras verticais com ícones minimalistas em âmbar gold (Início, Sobre, Trajetória, Vitrine, Stacks, Trindade e Contato), acionável com discrição via botão `[☰ MENU]` na barra superior, preservando 100% da integridade do layout horizontal.
+- **Barra Lateral Retrátil Cyberpunk (Estilo iPortfolio):** Navegação vertical offcanvas inspirada no clássico iPortfolio, com avatar iluminado, status online, redes sociais e 7 âncoras verticais com ícones minimalistas em âmbar gold (Início, Sobre, Trajetória, Vitrine, Stacks, Especialidades e Contato), acionável com discrição via botão `[☰ MENU]` na barra superior, preservando 100% da integridade do layout horizontal.
 - **Controles Flutuantes Ergonômicos:** Botões flutuantes para alternância de Modo Escuro/Claro e efeito de Scanlines CRT posicionados estrategicamente no canto inferior direito para acesso instantâneo.
 - **Telemetria Serverless em Go Nativo:** Função serverless em Go (`/api/status`) respondendo na edge da Vercel com métricas reais de latência, versão de runtime e localização regional de Belém-PA.
 - **WebAssembly em Produção:** Integração direta com jogos compilados de Go para WASM (*Égua Mano Gamer*), rodando nativamente no navegador a 60 FPS.

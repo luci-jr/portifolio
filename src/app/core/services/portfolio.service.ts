@@ -14,7 +14,7 @@ export interface ModeConfig {
   providedIn: 'root',
 })
 export class PortfolioService {
-  // Signal reativo do modo ativo da Trindade + Gamer (inicia em 'backend')
+  // Signal reativo do modo ativo de especialidade técnica (inicia em 'backend')
   readonly activeMode = signal<DevClass>('backend');
 
   // Signal reativo do efeito de scanlines CRT

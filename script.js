@@ -1,6 +1,6 @@
 /**
  * ==========================================================================
- * PORTFÓLIO RETRÔ / DEV TRINDADE — LUCIVALDO JUNIOR
+ * PORTFÓLIO RETRÔ / ENGENHARIA DE SOFTWARE — LUCIVALDO JUNIOR
  * Lógica de Interação: 1. Front-end, 2. Backend, 3. SysOps + Filtro de Projetos
  * ==========================================================================
  */
