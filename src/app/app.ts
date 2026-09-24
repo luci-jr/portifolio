@@ -16,10 +16,10 @@ import { FooterComponent } from './components/footer/footer.component';
     ProjectsComponent,
     AboutComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
   ],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
   readonly portfolio = inject(PortfolioService);

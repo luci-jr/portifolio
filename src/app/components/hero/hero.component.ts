@@ -6,7 +6,7 @@ import { TelemetryService } from '../../core/services/telemetry.service';
   selector: 'app-hero',
   standalone: true,
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css'
+  styleUrl: './hero.component.css',
 })
 export class HeroComponent {
   readonly portfolio = inject(PortfolioService);

@@ -5,7 +5,7 @@ import { PortfolioService, DevClass } from '../../core/services/portfolio.servic
   selector: 'app-navbar',
   standalone: true,
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
   readonly portfolio = inject(PortfolioService);

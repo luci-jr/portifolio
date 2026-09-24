@@ -17,160 +17,124 @@
   --border-color: #3b205f;
   --text-main: #fff7ed;
   --text-muted: #fca5a5;
-  --accent-color: #f59e0b; /* Dourado / Âmbar */
+  --accent-color: #f59e0b; /* Dourado / Âmbar Oficial Imutável */
   --accent-glow: rgba(245, 158, 11, 0.45);
-  --accent-secondary: #ec4899;
+  --accent-secondary: #d97706;
 
-  --terminal-bg: #090610;
-  --terminal-border: #26163b;
+  --terminal-bg: #0c0804;
+  --terminal-border: #3d2613;
 }
 
-/* 🌐 MODO 1: FRONTEND & GAMER (Arcade Neon 16-Bit / PaiD'égua Gold) */
+/* 🌐 MODO 1: FRONTEND & GAMER (Padronizado em Âmbar) */
 :host.mode-frontend,
 body.mode-frontend,
 .mode-frontend {
-  --bg-color: #120a1c;
-  --bg-surface: #1d122d;
-  --bg-surface-hover: #291a3f;
-  --border-color: #3b205f;
+  --bg-color: #0c0906;
+  --bg-surface: #171109;
+  --bg-surface-hover: #22180e;
+  --border-color: #382414;
   --text-main: #fff7ed;
-  --text-muted: #fca5a5;
+  --text-muted: #d4a373;
   --accent-color: #f59e0b;
   --accent-glow: rgba(245, 158, 11, 0.45);
-  --accent-secondary: #ec4899;
-  --terminal-bg: #090610;
-  --terminal-border: #26163b;
+  --accent-secondary: #d97706;
+  --terminal-bg: #0c0804;
+  --terminal-border: #3d2613;
 }
 
-/* ☕ MODO 2: BACKEND (Terminal Hacker / Matrix / Go & Java) */
+/* ☕ MODO 2: BACKEND (Padronizado em Âmbar — Sem verde) */
 :host.mode-backend,
 body.mode-backend,
 .mode-backend {
-  --bg-color: #090d12;
-  --bg-surface: #10161f;
-  --bg-surface-hover: #17202c;
-  --border-color: #1e293b;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --accent-color: #10b981;
-  --accent-glow: rgba(16, 185, 129, 0.4);
-  --accent-secondary: #34d399;
-  --terminal-bg: #06090e;
-  --terminal-border: #1b2533;
+  --bg-color: #0c0906;
+  --bg-surface: #171109;
+  --bg-surface-hover: #22180e;
+  --border-color: #382414;
+  --text-main: #fff7ed;
+  --text-muted: #d4a373;
+  --accent-color: #f59e0b;
+  --accent-glow: rgba(245, 158, 11, 0.45);
+  --accent-secondary: #d97706;
+  --terminal-bg: #0c0804;
+  --terminal-border: #3d2613;
 }
 
-/* 🐧 MODO 3: SYSOPS (Cyber Blueprint / Cloud Docker & AWS) */
+/* 🐧 MODO 3: SYSOPS (Padronizado em Âmbar — Sem azul) */
 :host.mode-sysops,
 body.mode-sysops,
 .mode-sysops {
-  --bg-color: #060e18;
-  --bg-surface: #0c1a2d;
-  --bg-surface-hover: #132742;
-  --border-color: #1e3a5f;
-  --text-main: #f0f9ff;
-  --text-muted: #7dd3fc;
-  --accent-color: #00f0ff;
-  --accent-glow: rgba(0, 240, 255, 0.4);
-  --accent-secondary: #38bdf8;
-  --terminal-bg: #030810;
-  --terminal-border: #112642;
+  --bg-color: #0c0906;
+  --bg-surface: #171109;
+  --bg-surface-hover: #22180e;
+  --border-color: #382414;
+  --text-main: #fff7ed;
+  --text-muted: #d4a373;
+  --accent-color: #f59e0b;
+  --accent-glow: rgba(245, 158, 11, 0.45);
+  --accent-secondary: #d97706;
+  --terminal-bg: #0c0804;
+  --terminal-border: #3d2613;
 }
 
-/* 🕹️ MODO 4: GAMER (Neon Arcade / Pixel Art / WebAssembly) */
+/* 🕹️ MODO 4: GAMER (Padronizado em Âmbar — Sem rosa) */
 :host.mode-gamer,
 body.mode-gamer,
 .mode-gamer {
-  --bg-color: #150624;
-  --bg-surface: #22093a;
-  --bg-surface-hover: #310e52;
-  --border-color: #4c1580;
+  --bg-color: #0c0906;
+  --bg-surface: #171109;
+  --bg-surface-hover: #22180e;
+  --border-color: #382414;
   --text-main: #fff7ed;
-  --text-muted: #f472b6;
-  --accent-color: #ec4899; /* Rosa Neon Arcade */
-  --accent-glow: rgba(236, 72, 153, 0.45);
-  --accent-secondary: #f59e0b;
-  --terminal-bg: #0e0318;
-  --terminal-border: #330b54;
+  --text-muted: #d4a373;
+  --accent-color: #f59e0b;
+  --accent-glow: rgba(245, 158, 11, 0.45);
+  --accent-secondary: #d97706;
+  --terminal-bg: #0c0804;
+  --terminal-border: #3d2613;
 }
 
 /* ==========================================================================
-   TEMA RETRÔ VINTAGE (SOLARIZED PAPER / HARDWARE CLÁSSICO MAC 1984)
+   TEMA RETRÔ VINTAGE (SOLARIZED AMBER / HARDWARE CLÁSSICO)
    ========================================================================== */
 :host.theme-light,
 body.theme-light,
 .theme-light {
-  --bg-color: #ede7dc;
-  --bg-surface: #f8f5ee;
-  --bg-surface-hover: #e2dbce;
-  --border-color: #c4baa7;
-  --text-main: #1c1917;
-  --text-muted: #57534e;
-  --terminal-bg: #f4efe6;
-  --terminal-border: #b8ad9b;
+  --bg-color: #faf5ed;
+  --bg-surface: #fffbf5;
+  --bg-surface-hover: #f3eae0;
+  --border-color: #e2d1be;
+  --text-main: #291809;
+  --text-muted: #6b5541;
+  --accent-color: #d97706;
+  --accent-secondary: #b45309;
+  --accent-glow: rgba(217, 119, 6, 0.4);
+  --terminal-bg: #fdf8f0;
+  --terminal-border: #fcd34d;
 }
 
 :host.theme-light.mode-backend,
 body.theme-light.mode-backend,
-.theme-light.mode-backend {
-  --bg-color: #ecebe4;
-  --bg-surface: #f8f6f0;
-  --bg-surface-hover: #dfded3;
-  --border-color: #b5c2b0;
-  --text-main: #142217;
-  --text-muted: #415243;
-  --accent-color: #16a34a;
-  --accent-secondary: #15803d;
-  --accent-glow: rgba(22, 163, 74, 0.45);
-  --terminal-bg: #f2f5ef;
-  --terminal-border: #86efac;
-}
-
+.theme-light.mode-backend,
 :host.theme-light.mode-sysops,
 body.theme-light.mode-sysops,
-.theme-light.mode-sysops {
-  --bg-color: #e6ebf0;
-  --bg-surface: #f5f8fa;
-  --bg-surface-hover: #d8e0e8;
-  --border-color: #afc1d4;
-  --text-main: #0c1e2e;
-  --text-muted: #3d546b;
-  --accent-color: #0284c7;
-  --accent-secondary: #0369a1;
-  --accent-glow: rgba(2, 132, 199, 0.45);
-  --terminal-bg: #eef3f8;
-  --terminal-border: #7dd3fc;
-}
-
+.theme-light.mode-sysops,
 :host.theme-light.mode-frontend,
 body.theme-light.mode-frontend,
-.theme-light.mode-frontend {
-  --bg-color: #eee7da;
-  --bg-surface: #fbf7ee;
-  --bg-surface-hover: #e4dcce;
-  --border-color: #d1c1a5;
-  --text-main: #2b1704;
-  --text-muted: #66503b;
-  --accent-color: #d97706;
-  --accent-secondary: #b45309;
-  --accent-glow: rgba(217, 119, 6, 0.48);
-  --terminal-bg: #fbf7ee;
-  --terminal-border: #fcd34d;
-}
-
+.theme-light.mode-frontend,
 :host.theme-light.mode-gamer,
 body.theme-light.mode-gamer,
 .theme-light.mode-gamer {
-  --bg-color: #ede5ea;
-  --bg-surface: #f9f4f7;
-  --bg-surface-hover: #e0d4db;
-  --border-color: #ccaebc;
-  --text-main: #2b0e1b;
-  --text-muted: #664353;
-  --accent-color: #e11d48;
-  --accent-secondary: #be123c;
-  --accent-glow: rgba(225, 29, 72, 0.45);
-  --terminal-bg: #fbf4f7;
-  --terminal-border: #f472b6;
+  --bg-color: #faf5ed;
+  --bg-surface: #fffbf5;
+  --bg-surface-hover: #f3eae0;
+  --border-color: #e2d1be;
+  --text-main: #291809;
+  --text-muted: #6b5541;
+  --accent-color: #d97706;
+  --accent-secondary: #b45309;
+  --accent-glow: rgba(217, 119, 6, 0.4);
+  --terminal-bg: #fdf8f0;
+  --terminal-border: #fcd34d;
 }
 
 /* ==========================================================================
@@ -181,12 +145,7 @@ body.theme-light .crt-overlay {
   opacity: 0.02;
 }
 
-:host.theme-light .top-nav,
-body.theme-light .top-nav {
-  background-color: rgba(248, 245, 238, 0.94);
-  border-bottom: 2px solid var(--border-color);
-  box-shadow: 0 2px 10px rgba(28, 25, 23, 0.05);
-}
+
 
 /* Tipografia com Brilho Neon e Efeitos Visuais Vivos em Light Mode */
 :host.theme-light .section-title,

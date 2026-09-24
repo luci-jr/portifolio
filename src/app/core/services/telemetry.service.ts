@@ -8,7 +8,7 @@ export interface TelemetryData {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TelemetryService {
   readonly telemetry = signal<string>('CARREGANDO TELEMETRIA EM GO... [BELÉM-PA: ONLINE]');
@@ -25,7 +25,7 @@ export class TelemetryService {
         const data = await response.json();
         const duration = Math.round(performance.now() - startTime);
         this.telemetry.set(
-          `SERVERLESS GO: OK | HOST: ${data.location || 'BELÉM-PA'} | RUNTIME: ${data.runtime || 'GO 1.26'} | PING: ${duration}ms`
+          `SERVERLESS GO: OK | HOST: ${data.location || 'BELÉM-PA'} | RUNTIME: ${data.runtime || 'GO 1.26'} | PING: ${duration}ms`,
         );
       }
     } catch {

@@ -23,12 +23,23 @@ export const PROJECTS_DATA: Project[] = [
     imageUrl: 'comunidade-tech-preview.webp',
     liveUrl: 'https://comunidade.tech.lucivaldo.cloud/inicio',
     liveLabel: 'Acessar Plataforma 🌐',
-    repoUrl: 'https://github.com/luci-jr/comunidade-tech'
+    repoUrl: 'https://github.com/luci-jr/comunidade-tech',
   },
 
   // ----------------------------------------------------------------------------
   // ☕ PROJETOS BACKEND (APIS & ENGINES)
   // ----------------------------------------------------------------------------
+  {
+    id: 'desafio-jungle-game',
+    title: 'Jungle Gaming (Apostas Concorrentes & iGaming)',
+    description:
+      'Serviço financeiro distribuído de alta concorrência para processamento de apostas iGaming em Go 1.26+ com Uber Fx, persistência ACID em PostgreSQL (Row-Level Locking & Triggers), mensageria AWS SQS FIFO e autenticação OIDC via Keycloak.',
+    category: 'backend',
+    tag: '☕ BACKEND / SISTEMAS CONCORRENTES & IGAMING',
+    techs: ['Go 1.26+', 'Uber Fx', 'PostgreSQL 16', 'AWS SQS FIFO', 'Keycloak', 'Docker Compose'],
+    imageUrl: 'jungle-cockpit.webp',
+    repoUrl: 'https://github.com/luci-jr/desafio-jungle-game',
+  },
   {
     id: 'api-rest-go-react',
     title: 'API RESTful Go & Synthwave Arcade',
@@ -39,7 +50,7 @@ export const PROJECTS_DATA: Project[] = [
     techs: ['Go 1.22+', 'GORM', 'PostgreSQL', 'Docker Compose', 'React Retro'],
     imageUrl:
       'https://raw.githubusercontent.com/luci-jr/api-rest_e_frontend_em_react/main/assets/react-app-retro.png',
-    repoUrl: 'https://github.com/luci-jr/api-rest_e_frontend_em_react'
+    repoUrl: 'https://github.com/luci-jr/api-rest_e_frontend_em_react',
   },
   {
     id: 'retro-store',
@@ -51,7 +62,7 @@ export const PROJECTS_DATA: Project[] = [
     techs: ['Go (Golang)', 'PostgreSQL', 'Docker', 'MVC Architecture', 'HTML5/CSS3'],
     imageUrl:
       'https://raw.githubusercontent.com/luci-jr/retro-store/main/images/retro-store-logo.png',
-    repoUrl: 'https://github.com/luci-jr/retro-store'
+    repoUrl: 'https://github.com/luci-jr/retro-store',
   },
   {
     id: 'retro-bank',
@@ -61,7 +72,7 @@ export const PROJECTS_DATA: Project[] = [
     category: 'backend',
     tag: '☕ BACKEND / GO CORE',
     techs: ['Go (Golang)', 'POO', 'Structs & Interfaces', 'Terminal CLI'],
-    repoUrl: 'https://github.com/luci-jr/Retro-Bank'
+    repoUrl: 'https://github.com/luci-jr/Retro-Bank',
   },
   {
     id: 'monitor-de-sites',
@@ -71,7 +82,7 @@ export const PROJECTS_DATA: Project[] = [
     category: 'backend',
     tag: '☕ BACKEND / CONCORRÊNCIA',
     techs: ['Go (Golang)', 'HTTP Client', 'Concurrency', 'File Logging'],
-    repoUrl: 'https://github.com/luci-jr/Monitor-de-sites'
+    repoUrl: 'https://github.com/luci-jr/Monitor-de-sites',
   },
 
   // ----------------------------------------------------------------------------
@@ -89,7 +100,7 @@ export const PROJECTS_DATA: Project[] = [
       'https://raw.githubusercontent.com/luci-jr/egua-mano_gamer/main/assets/screenshot_browser_desktop.png',
     liveUrl: 'https://luci-jr.github.io/egua-mano_gamer/',
     liveLabel: 'Jogar Agora 🕹️',
-    repoUrl: 'https://github.com/luci-jr/egua-mano_gamer'
+    repoUrl: 'https://github.com/luci-jr/egua-mano_gamer',
   },
   {
     id: 'colecao-retro',
@@ -99,9 +110,8 @@ export const PROJECTS_DATA: Project[] = [
     category: 'gamer',
     tag: '🕹️ GAMER / ANGULAR 19',
     techs: ['Angular 19', 'Signals', 'Control Flow', 'Arcade Neon UI'],
-    imageUrl:
-      'https://raw.githubusercontent.com/luci-jr/colecao-retro/main/screenshot.png',
-    repoUrl: 'https://github.com/luci-jr/colecao-retro'
+    imageUrl: 'https://raw.githubusercontent.com/luci-jr/colecao-retro/main/screenshot.png',
+    repoUrl: 'https://github.com/luci-jr/colecao-retro',
   },
 
   // ----------------------------------------------------------------------------
@@ -115,9 +125,8 @@ export const PROJECTS_DATA: Project[] = [
     category: 'sysops',
     tag: '🐧 SYSOPS / AWS CLOUD',
     techs: ['AWS Cloud', 'Serverless', 'S3 & IAM', 'IaC', 'Cloud Architecture'],
-    imageUrl:
-      'https://github.com/user-attachments/assets/dc2e1360-263c-47af-b3fc-912f140d9fa7',
-    repoUrl: 'https://github.com/luci-jr/jarvas-aws-architecture'
+    imageUrl: 'https://github.com/user-attachments/assets/dc2e1360-263c-47af-b3fc-912f140d9fa7',
+    repoUrl: 'https://github.com/luci-jr/jarvas-aws-architecture',
   },
   {
     id: 'nexus-swarm-hub',
@@ -127,6 +136,6 @@ export const PROJECTS_DATA: Project[] = [
     category: 'sysops',
     tag: '🐧 SYSOPS / EM DESENVOLVIMENTO',
     techs: ['Docker Swarm', 'Traefik v2', 'Linux Ubuntu', 'n8n', 'DevOps'],
-    repoUrl: 'https://github.com/luci-jr'
-  }
+    repoUrl: 'https://github.com/luci-jr',
+  },
 ];

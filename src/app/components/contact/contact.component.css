@@ -302,30 +302,30 @@
   box-shadow: 
     inset 0 1px 0 rgba(255, 255, 255, 0.2),
     0 8px 24px rgba(0, 0, 0, 0.45),
-    0 0 12px rgba(16, 185, 129, 0.25);
+    0 0 12px rgba(245, 158, 11, 0.25);
 }
 
 .btn-email .btn-led {
-  background: #a7f3d0;
-  box-shadow: 0 0 5px #34d399;
+  background: #fde68a;
+  box-shadow: 0 0 5px #fbbf24;
 }
 
 .btn-email:hover .btn-cap {
-  border-color: #6ee7b7;
-  background: rgba(5, 150, 105, 0.35);
+  border-color: #fcd34d;
+  background: rgba(217, 119, 6, 0.35);
   box-shadow: 
     inset 0 1px 0 rgba(255, 255, 255, 0.4),
     0 14px 30px rgba(0, 0, 0, 0.6),
-    0 0 24px rgba(16, 185, 129, 0.75),
-    inset 0 0 14px rgba(16, 185, 129, 0.2);
+    0 0 24px rgba(245, 158, 11, 0.75),
+    inset 0 0 14px rgba(245, 158, 11, 0.2);
 }
 
 .btn-email:hover .btn-led {
   background: #ffffff;
   box-shadow: 
-    0 0 8px #34d399,
-    0 0 18px #10b981,
-    0 0 26px #059669;
+    0 0 8px #fde68a,
+    0 0 18px #f59e0b,
+    0 0 26px #d97706;
 }
 
 .btn-email:hover .arcade-icon {

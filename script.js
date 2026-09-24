@@ -8,31 +8,51 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Configurações das 3 Classes na Ordem Oficial: Front-end -> Backend -> SysOps
   const classConfigs = {
-    frontend: {
-      role: 'CLASSE ATIVA: WEB DEVELOPER & UI BUILDER',
-      title: 'Criando Aplicações Web Escaláveis & Interfaces Reativas.',
-      desc: 'Ecossistema Angular 21+, TypeScript estrito, componentização standalone, Signals reativos e a plataforma Comunidade Tech.',
-      command: 'ng serve --project=comunidade-tech',
-      defaultOutput: 'ANGULAR 21: COMPILED | STANDALONE SIGNALS | FIREBASE: SYNC'
-    },
     backend: {
-      role: 'CLASSE ATIVA: BACKEND ARCHITECT',
-      title: 'Construindo Motores Concorrentes & APIs Resilientes.',
-      desc: 'Foco em alta performance com Go 1.22+ e Java 21, arquitetura limpa, microsserviços e baixa latência para sistemas de missão crítica.',
+      role: '● DESENVOLVEDOR BACK-END',
+      title: 'Construindo Sistemas Distribuídos e Microsserviços com <span class="highlight-tech">Java/Spring Boot</span>, <span class="highlight-tech">Go</span> e <span class="nowrap-end"><span class="highlight-tech">Cloud</span>.</span>',
+      desc: `<p class="hero-desc-p">
+            Minha trajetória profissional é marcada por uma transição de carreira estratégica para a Tecnologia, fundamentada em <strong class="highlight-tech">mais de 15 anos de liderança em ambientes operacionais de alta pressão como Chef de Cozinha</strong>. Essa vivência consolidou competências essenciais para a engenharia de software de missão crítica: <span class="desc-pill">resiliência sob pressão</span>, <span class="desc-pill">disciplina rigorosa</span>, <span class="desc-pill">gestão ágil de crises</span> e foco obstinado em entregas de qualidade com cumprimento rigoroso de prazos.
+          </p>
+          <p class="hero-desc-p">
+            Atualmente, atuo como <strong class="highlight-tech">Desenvolvedor Back-end &amp; SysOps/DevOps</strong>, unindo o desenvolvimento de microsserviços e sistemas distribuídos de alta concorrência à automação de fluxos e orquestração de infraestruturas em nuvem. Possuo experiência prática com <strong class="highlight-tech">Java 21 (Spring Boot 3)</strong> e <strong class="highlight-tech">Go (Golang)</strong>, conteinerização e clusters com <strong class="highlight-tech">Docker &amp; Swarm</strong>, roteamento seguro com <strong class="highlight-tech">Traefik</strong>, nuvem <strong class="highlight-tech">AWS</strong>, além de persistência transacional com bancos relacionais (<strong class="highlight-tech">PostgreSQL</strong> com isolamento ACID e <strong class="highlight-tech">Oracle DB</strong>).
+          </p>`,
       command: 'go run engine/main.go --status',
       defaultOutput: 'ENGINE: ONLINE | RUNTIME: GO 1.26 | ARCH: CLEAN | LATENCY: <5ms'
     },
+    frontend: {
+      role: '● WEB DEVELOPER & UI BUILDER',
+      title: 'Criando Aplicações Web Escaláveis & Interfaces Reativas.',
+      desc: `<p class="hero-desc-p">
+            Focado na construção de interfaces corporativas reativas e acessíveis utilizando o ecossistema <strong class="highlight-tech">Angular 21+</strong>, <strong class="highlight-tech">TypeScript estrito</strong> e arquitetura de <span class="desc-pill">Standalone Components</span> orientada a eventos.
+          </p>
+          <p class="hero-desc-p">
+            Aplicação prática de gerenciamento moderno de estado com <strong class="highlight-tech">Signals reativos</strong>, integração contínua com serviços em nuvem (Firebase) e estilização de alto impacto com Tailwind CSS e design systems modulares.
+          </p>`,
+      command: 'ng serve --project=comunidade-tech',
+      defaultOutput: 'ANGULAR 21: COMPILED | STANDALONE SIGNALS | FIREBASE: SYNC'
+    },
     sysops: {
-      role: 'CLASSE ATIVA: CLOUD & SYSOPS COMMANDER',
+      role: '● CLOUD & SYSOPS COMMANDER',
       title: 'Orquestrando Clusters Confiáveis & Pipelines CI/CD.',
-      desc: 'Infraestrutura como código com Docker Swarm, Traefik v2, instâncias AWS, observabilidade e automações resilientes com n8n.',
+      desc: `<p class="hero-desc-p">
+            Infraestrutura moderna e resiliente orientada a <span class="desc-pill">alta disponibilidade</span>, conteinerização em escala corporativa com <strong class="highlight-tech">Docker Swarm</strong> e orquestração de tráfego com terminação TLS automatizada via <strong class="highlight-tech">Traefik v2</strong>.
+          </p>
+          <p class="hero-desc-p">
+            Provisionamento de ambientes em nuvem <strong class="highlight-tech">AWS (S3, IAM, SQS)</strong>, observabilidade em tempo real, automações de fluxos operacionais com <strong class="highlight-tech">n8n</strong> e pipelines contínuos de deploy sobre servidores Linux Ubuntu.
+          </p>`,
       command: 'docker stack ps nexus_cluster',
       defaultOutput: 'SWARM: 6/6 SERVICES RUNNING | TRAEFIK: SSL OK | AWS: HEALTHY'
     },
     gamer: {
-      role: 'CLASSE ATIVA: GAME DEV & ENGINE ARCHITECT',
+      role: '● GAME DEV & ENGINE ARCHITECT',
       title: 'Desenvolvendo Jogos 2D, Engines & Mecânicas Interativas.',
-      desc: 'Exploração de Game Engines (Ebitengine, Godot e custom engines em Go), arquitetura de game loops, física 2D, matemática vetorial e compilação multiplataforma (Desktop & WebAssembly).',
+      desc: `<p class="hero-desc-p">
+            Desenvolvimento de jogos retrô e simulações gráficas em tempo real utilizando motores 2D nativos em <strong class="highlight-tech">Go (Ebitengine v2)</strong>, Godot e custom engines com física <span class="desc-pill">AABB</span> customizada e game loops determinísticos.
+          </p>
+          <p class="hero-desc-p">
+            Compilação nativa de alta fidelidade para Desktop e execução no navegador via <strong class="highlight-tech">WebAssembly (WASM) a 60 FPS</strong>, integrando arte pixel art regional e design de áudio chiptune interativo.
+          </p>`,
       command: 'go run cmd/game/main.go --engine=2d',
       defaultOutput: 'ENGINE: INITIALIZED | GAME LOOP: 60 FPS | PHYSICS: 2D AABB | AUDIO: CHIPTUNE'
     }
@@ -41,8 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Suporte a compatibilidade para "devops" apontando para "sysops"
   classConfigs.devops = classConfigs.sysops;
 
-  // Estado Atual (Inicia em Front-end)
-  let currentMode = 'frontend';
+  // Estado Atual (Inicia em Back-end)
+  let currentMode = 'backend';
 
   // Elementos do DOM
   const body = document.body;
@@ -105,8 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Atualiza conteúdo com micro-animação
     const config = classConfigs[modeKey];
     roleBadge.textContent = config.role;
-    heroTitle.textContent = config.title;
-    heroDesc.textContent = config.desc;
+    heroTitle.innerHTML = config.title;
+    heroDesc.innerHTML = config.desc;
 
     // Atualiza linha de comando do terminal
     const promptCommand = document.querySelector('.terminal-telemetry .term-line');

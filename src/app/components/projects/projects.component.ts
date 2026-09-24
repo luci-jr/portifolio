@@ -9,7 +9,7 @@ export type FilterOption = ProjectCategory | 'all';
   selector: 'app-projects',
   standalone: true,
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+  styleUrl: './projects.component.css',
 })
 export class ProjectsComponent {
   readonly portfolio = inject(PortfolioService);
@@ -26,7 +26,7 @@ export class ProjectsComponent {
     if (filter === 'all') {
       return this.allProjects();
     }
-    return this.allProjects().filter(p => p.category === filter);
+    return this.allProjects().filter((p) => p.category === filter);
   });
 
   // Altera o filtro manualmente via clique nas abas
