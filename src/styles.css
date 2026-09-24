@@ -162,6 +162,7 @@ body.theme-light .glow {
 body.theme-light .section-title:hover {
   color: var(--accent-color);
   text-shadow: 0 0 10px var(--accent-glow);
+  transform: scale(1.04);
 }
 
 :host.theme-light .dev-name-glow:hover,
@@ -807,91 +808,105 @@ body.theme-light .pixel-btn.outline:hover {
   50% {
     opacity: 1;
     transform: scale(1.15);
-    box-shadow: 0 0 8px var(--accent-color), 0 0 14px var(--accent-glow);
-  }
-}
-
+    box-shadow: 0 0 8px var(/* ==========================================================================
+   BADGE HUD DO DESENVOLVEDOR NA NAVBAR (Nome + Portfólio em Cápsula Neon)
+   ========================================================================== */
 .dev-name-glow {
-  color: var(--text-main);
-  text-decoration: none;
-  font-weight: 700;
-  letter-spacing: 1px;
   display: inline-flex;
   align-items: center;
-  cursor: pointer;
+  justify-content: center;
+  gap: 0.55rem;
+  font-family: var(--font-code);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent-color);
+  background: rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--accent-color);
+  padding: 0.4rem 1.25rem;
+  border-radius: 26px;
+  box-shadow: 0 0 16px var(--accent-glow), 0 4px 14px rgba(0, 0, 0, 0.35);
+  text-transform: uppercase;
+  animation: nav-badge-float 3.6s ease-in-out infinite;
+  will-change: transform, box-shadow;
+  transition: all 0.3s ease;
+  user-select: none;
+  cursor: default;
+  line-height: 1;
   position: relative;
-  background: transparent;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  animation: brand-name-float 3.5s ease-in-out infinite;
-  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* Breve fita de LED sutil na base (sem borda de caixa) */
-.dev-name-glow::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 20%;
-  right: 20%;
-  height: 1.5px;
-  background: linear-gradient(90deg, transparent 0%, var(--accent-color) 50%, transparent 100%);
-  box-shadow: 0 0 8px var(--accent-color), 0 0 16px var(--accent-glow);
-  opacity: 0;
-  border-radius: 2px;
-  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-  pointer-events: none;
+.dev-name-glow:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 24px var(--accent-glow), 0 0 8px var(--accent-color), 0 8px 18px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes nav-badge-float {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 0 14px var(--accent-glow), 0 3px 10px rgba(0, 0, 0, 0.35);
+  }
+  50% {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px var(--accent-glow), 0 6px 14px rgba(0, 0, 0, 0.45);
+  }
 }
 
 .dev-name-glow .pixel-bracket {
   color: var(--accent-color);
+  font-weight: 700;
+  display: inline-block;
+  opacity: 0.9;
+}
+
+.dev-name-glow .brand-name {
+  color: var(--accent-color);
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-shadow: 0 0 10px var(--accent-glow);
   display: inline-block;
   transition: all 0.3s ease;
 }
 
-.dev-name-glow .brand-name {
-  color: var(--text-main);
-  transition: all 0.3s ease;
-}
-
-/* Hover: flutua mais alto, acende o micro LED e ativa o breve efeito de ignição LED */
-.dev-name-glow:hover {
-  animation: brand-name-float 3.5s ease-in-out infinite paused, led-brief-ignite 0.45s ease-out;
-  transform: translateY(-6px);
-  border: none;
-  background: transparent;
-  box-shadow: none;
-}
-
-.dev-name-glow:hover::after {
-  opacity: 0.75;
-  left: 10%;
-  right: 10%;
-}
-
-.dev-name-glow:hover .nav-led-dot {
-  background: #ffffff;
-  box-shadow: 0 0 8px #ffffff, 0 0 16px var(--accent-color), 0 0 24px var(--accent-glow);
-  transform: scale(1.25);
-}
-
-.dev-name-glow:hover .pixel-bracket {
+.brand-portfolio-tag {
+  font-family: var(--font-code);
+  font-size: 0.78rem;
+  font-weight: 700;
   color: var(--accent-color);
-  text-shadow:
-    0 0 8px var(--accent-color),
-    0 0 18px var(--accent-color),
-    0 0 32px var(--accent-glow);
-  transform: scale(1.15);
+  letter-spacing: 1.5px;
+  margin-left: 0.35rem;
+  padding: 0.16rem 0.55rem;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  vertical-align: middle;
 }
 
-.dev-name-glow:hover .brand-name {
+.dev-name-glow:hover .brand-portfolio-tag {
+  background: rgba(245, 158, 11, 0.28);
+  border-color: var(--accent-color);
   color: #ffffff;
-  text-shadow:
-    0 0 6px rgba(255, 255, 255, 0.95),
-    0 0 14px var(--accent-color),
-    0 0 24px var(--accent-color),
-    0 0 38px var(--accent-glow);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+:host.theme-light .dev-name-glow,
+body.theme-light .dev-name-glow {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  box-shadow: 0 0 12px var(--accent-glow), 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+:host.theme-light .brand-portfolio-tag,
+body.theme-light .brand-portfolio-tag {
+  background: rgba(217, 119, 6, 0.12);
+  border-color: rgba(217, 119, 6, 0.45);
+  color: #b45309;
 }
 
 /* ==========================================================================
@@ -1077,6 +1092,17 @@ body.theme-light .nav-menu-btn:hover {
   width: 96px;
   height: 96px;
   margin: 0 auto 0.85rem auto;
+  animation: sidebar-avatar-float 3.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes sidebar-avatar-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 .sidebar-avatar-img {
@@ -1085,8 +1111,34 @@ body.theme-light .nav-menu-btn:hover {
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid var(--accent-color);
-  box-shadow: 0 0 22px var(--accent-glow);
+  animation: sidebar-led-pulse 3.5s ease-in-out infinite;
   display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  will-change: box-shadow, border-color;
+}
+
+@keyframes sidebar-led-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 4px 14px rgba(0, 0, 0, 0.5),
+      0 0 14px var(--accent-glow),
+      0 0 24px rgba(245, 158, 11, 0.25);
+    border-color: var(--accent-color);
+  }
+  50% {
+    box-shadow: 
+      0 12px 24px rgba(0, 0, 0, 0.65),
+      0 0 22px var(--accent-color),
+      0 0 38px var(--accent-glow),
+      0 0 55px rgba(245, 158, 11, 0.4);
+    border-color: #fbbf24;
+  }
+}
+
+.sidebar-avatar-wrapper:hover .sidebar-avatar-img {
+  transform: scale(1.06);
+  filter: brightness(1.1);
+  box-shadow: 0 0 28px var(--accent-color), 0 0 45px var(--accent-glow);
 }
 
 .sidebar-status-dot {

@@ -18,7 +18,7 @@ export class ProjectsComponent {
   readonly allProjects = signal<Project[]>(PROJECTS_DATA);
 
   // Filtro de exibição ativo independente (não sincronizado com o hero)
-  readonly activeFilter = signal<FilterOption>('frontend');
+  readonly activeFilter = signal<FilterOption>('all');
 
   // Lista computada e reativa baseada no filtro selecionado
   readonly filteredProjects = computed(() => {

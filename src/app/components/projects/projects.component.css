@@ -1,11 +1,17 @@
 .projects-section {
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
   padding-top: 1.5rem;
   padding-bottom: 3.5rem;
 }
 
 .section-header {
-  margin-bottom: 2.8rem;
-  text-align: left;
+  margin-bottom: 3.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-title {
@@ -14,23 +20,26 @@
   letter-spacing: 1px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   position: relative;
-  cursor: default;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  padding-bottom: 0.4rem;
+  cursor: pointer;
+  transform-origin: center;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), color 0.28s ease, text-shadow 0.28s ease;
+  padding-bottom: 0.55rem;
 }
 
-/* Barra Laser Neon inferior expansível */
+/* Barra Laser Neon inferior expansível (centralizada) */
 .section-title::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 32px;
-  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 2.5px;
   background: var(--accent-color);
-  box-shadow: 0 0 8px var(--accent-color);
+  box-shadow: 0 0 10px var(--accent-color);
   transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
   border-radius: 2px;
 }
@@ -57,27 +66,27 @@
   }
 }
 
-/* Hover no Título da Seção: acende LED total, projeta laser e avança cursor */
+/* Hover no Título da Seção: acende LED total, projeta laser e aumenta um pouquinho só (escala sutil) */
 .section-title:hover {
   color: #ffffff;
   text-shadow:
     0 0 6px rgba(255, 255, 255, 0.85),
     0 0 14px var(--accent-color),
     0 0 28px var(--accent-glow);
-  transform: translateX(3px);
+  transform: scale(1.04);
 }
 
 .section-title:hover::after {
   width: 100%;
   box-shadow:
-    0 0 12px var(--accent-color),
-    0 0 24px var(--accent-glow);
+    0 0 14px var(--accent-color),
+    0 0 26px var(--accent-glow);
 }
 
 .section-title:hover .glow {
   animation: none;
   color: #ffffff;
-  transform: translateX(6px) scale(1.2);
+  transform: scale(1.15);
   text-shadow:
     0 0 8px #ffffff,
     0 0 16px var(--accent-color),
@@ -86,14 +95,20 @@
 
 .section-subtitle {
   color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-top: 0.4rem;
+  font-size: 0.98rem;
+  margin-top: 1.15rem;
+  max-width: 720px;
+  line-height: 1.65;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Filtros de Segmento dos Projetos */
 .project-filters {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.6rem;
   margin-top: 1.5rem;
 }
@@ -130,29 +145,53 @@
   box-shadow: 0 0 14px var(--accent-glow);
 }
 
-/* Grid de Projetos */
+/* Grid de Projetos em Colunas de 3 a 4 Cards */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.3rem;
+  width: 100%;
+}
+
+@media (max-width: 1240px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 1.6rem;
+  width: 100%;
+  max-width: 100%;
+  background: rgba(18, 24, 38, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(245, 158, 11, 0.45);
+  border-left: 4px solid var(--accent-color);
+  border-radius: 12px;
+  padding: 1.15rem 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
   position: relative;
   overflow: hidden;
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    0 8px 30px rgba(0, 0, 0, 0.35),
+    0 0 16px rgba(245, 158, 11, 0.18),
+    -3px 0 14px var(--accent-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .project-card::before {
@@ -162,18 +201,20 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: var(--accent-color);
-  opacity: 0;
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  opacity: 0.85;
   transition: opacity 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
   border-color: var(--accent-color);
-  background: rgba(255, 255, 255, 0.06);
+  border-left: 4px solid var(--accent-color);
+  background: rgba(22, 30, 48, 0.82);
   box-shadow: 
-    0 12px 36px rgba(0, 0, 0, 0.45),
-    0 0 20px var(--accent-glow),
+    0 14px 40px rgba(0, 0, 0, 0.5),
+    0 0 25px var(--accent-glow),
+    -5px 0 20px var(--accent-glow),
     inset 0 1px 0 rgba(255, 255, 255, 0.22);
 }
 
@@ -183,10 +224,10 @@
 
 .card-media {
   width: 100%;
-  height: 150px;
+  height: 135px;
   border-radius: 6px;
   overflow: hidden;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.85rem;
   border: 1px solid var(--border-color);
   background: rgba(0, 0, 0, 0.4);
   display: flex;
@@ -206,59 +247,62 @@
 }
 
 .card-tag {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
   color: var(--accent-color);
-  letter-spacing: 1px;
-  margin-bottom: 0.6rem;
+  letter-spacing: 0.8px;
+  margin-bottom: 0.45rem;
 }
 
 .card-title {
-  font-size: 1.25rem;
+  font-size: 1.08rem;
   font-weight: 700;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.45rem;
   color: var(--text-main);
+  line-height: 1.35;
 }
 
 .card-desc {
-  font-size: 0.9rem;
+  font-size: 0.84rem;
   color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 1.2rem;
+  line-height: 1.55;
+  margin-bottom: 0.95rem;
 }
 
 .card-techs {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 1.4rem;
+  gap: 0.35rem;
+  margin-bottom: 1.1rem;
 }
 
 .card-techs span {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-color);
-  padding: 0.2rem 0.5rem;
+  padding: 0.18rem 0.45rem;
   border-radius: 4px;
   color: var(--text-muted);
 }
 
 .card-actions {
   display: flex;
-  gap: 0.8rem;
+  gap: 0.65rem;
   align-items: center;
+  flex-wrap: wrap;
+  margin-top: auto;
 }
 
 .card-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.4rem;
   font-family: var(--font-code);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 700;
   text-decoration: none;
   color: var(--text-main);
-  padding: 0.45rem 0.85rem;
+  padding: 0.38rem 0.75rem;
   border: 1px solid var(--border-color);
   border-radius: 4px;
   background: var(--bg-surface);

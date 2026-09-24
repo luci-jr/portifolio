@@ -289,24 +289,25 @@
 }
 
 /* ==========================================================================
-   HERO PROFILE CARD — Ficha Técnica do Desenvolvedor
+   HERO PROFILE CARD — Cockpit HUD Monumental Expandido (Zero Redundâncias)
    ========================================================================== */
 .hero-profile-card {
   display: flex;
-  align-items: center;
-  gap: 2rem;
-  background: rgba(18, 24, 38, 0.45);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 1.4rem 1.8rem;
-  margin: 0.2rem auto 0.2rem auto;
-  max-width: 640px;
+  flex-direction: column;
+  background: rgba(18, 24, 38, 0.58);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(245, 158, 11, 0.45);
+  border-left: 4.5px solid var(--accent-color);
+  border-radius: 14px;
+  padding: 2.4rem 3.2rem;
+  margin: 0.8rem auto 0.6rem auto;
+  max-width: 1160px;
   width: 100%;
   box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.35),
-    0 0 15px var(--accent-glow),
+    0 16px 44px rgba(0, 0, 0, 0.45),
+    0 0 20px rgba(245, 158, 11, 0.2),
+    -4px 0 20px var(--accent-glow),
     inset 0 1px 0 rgba(255, 255, 255, 0.12);
   transition: all 0.3s ease;
   position: relative;
@@ -320,35 +321,44 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
 }
 
 .hero-profile-card:hover {
   border-color: var(--accent-color);
+  border-left: 4.5px solid var(--accent-color);
   box-shadow:
-    0 12px 36px rgba(0, 0, 0, 0.45),
-    0 0 25px var(--accent-glow),
+    0 20px 52px rgba(0, 0, 0, 0.55),
+    0 0 35px var(--accent-glow),
+    -6px 0 28px var(--accent-glow),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
+}
+
+.profile-card-main {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
 }
 
 .profile-avatar-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   flex-shrink: 0;
 }
 
 .profile-avatar-frame {
   position: relative;
-  width: 90px;
-  height: 116px;
-  border-radius: 8px;
+  width: 155px;
+  height: 195px;
+  border-radius: 12px;
   overflow: hidden;
   border: 2px solid var(--accent-color);
-  box-shadow: 0 0 16px var(--accent-glow);
+  box-shadow: 0 0 28px var(--accent-glow);
   background: #0b0f14;
 }
 
@@ -359,44 +369,55 @@
   object-position: top center;
   display: block;
   filter: contrast(1.1) brightness(1.05);
-  transition: transform 0.3s ease;
+  transition: transform 0.35s ease;
 }
 
 .profile-avatar-frame:hover .profile-ascii-img {
-  transform: scale(1.06);
+  transform: scale(1.08);
 }
 
 .avatar-badge-tag {
   font-family: var(--font-code);
-  font-size: 0.62rem;
+  font-size: 0.74rem;
   font-weight: 700;
   color: var(--accent-color);
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
 }
 
 .profile-bio-details {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.bio-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.35rem 2.2rem;
+  text-align: left;
+}
+
+.bio-col {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  text-align: left;
-  flex-grow: 1;
+  gap: 1.35rem;
 }
 
 .bio-item {
   display: flex;
   align-items: baseline;
-  gap: 0.6rem;
+  gap: 0.65rem;
   font-family: var(--font-code);
-  font-size: 0.83rem;
-  line-height: 1.5;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .bio-key {
   color: var(--accent-color);
   font-weight: 700;
   white-space: nowrap;
-  letter-spacing: 0.5px;
-  min-width: 140px;
+  letter-spacing: 0.6px;
+  min-width: 125px;
+  font-size: 0.88rem;
 }
 
 .key-symbol {
@@ -407,6 +428,8 @@
 .bio-val {
   color: var(--text-main);
   font-weight: 500;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .bio-val.highlight {
@@ -416,19 +439,19 @@
 
 .bio-pulse-dot {
   display: inline-block;
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   background: #f59e0b;
   border-radius: 50%;
-  margin-right: 5px;
-  box-shadow: 0 0 6px #f59e0b;
+  margin-right: 6px;
+  box-shadow: 0 0 8px #f59e0b;
   animation: pulse-dot 2s ease-in-out infinite;
   vertical-align: middle;
 }
 
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(0.7); }
+  50% { opacity: 0.45; transform: scale(0.7); }
 }
 
 .status-val {
@@ -436,17 +459,36 @@
   font-weight: 700;
 }
 
+@media (max-width: 960px) {
+  .hero-profile-card {
+    padding: 1.6rem 1.4rem;
+  }
+  .profile-card-main {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.6rem;
+  }
+  .profile-avatar-frame {
+    width: 145px;
+    height: 185px;
+  }
+  .bio-grid-2col {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+}
+
 /* Light mode profile card */
 :host-context(.theme-light) .hero-profile-card {
-  background: rgba(255, 255, 255, 0.65);
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06), 0 0 14px var(--accent-glow);
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(217, 119, 6, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07), 0 0 16px var(--accent-glow);
 }
 
 :host-context(.theme-light) .hero-profile-card:hover {
-  background: rgba(255, 255, 255, 0.88);
-  border-color: var(--accent-color);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 20px var(--accent-glow);
+  background: rgba(255, 255, 255, 0.98);
+  border-color: #d97706;
+  box-shadow: 0 14px 38px rgba(217, 119, 6, 0.2);
 }
 
 :host-context(.theme-light) .profile-avatar-frame {

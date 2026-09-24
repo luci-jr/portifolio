@@ -2,7 +2,11 @@
 <div class="sidebar-backdrop" [class.is-open]="portfolio.sidebarOpen()" (click)="close()" aria-hidden="true"></div>
 
 <!-- Barra Lateral Retrátil Estilo iPortfolio Cyberpunk -->
-<aside class="sidebar-drawer" [class.is-open]="portfolio.sidebarOpen()" aria-label="Navegação Lateral do Portfólio">
+<aside class="sidebar-drawer"
+       [class.is-open]="portfolio.sidebarOpen()"
+       (mouseenter)="onSidebarMouseEnter()"
+       (mouseleave)="onSidebarMouseLeave()"
+       aria-label="Navegação Lateral do Portfólio">
   <!-- Cabeçalho com Botão de Recolher Menu Lateral -->
   <div class="sidebar-header">
     <button class="sidebar-close-btn" (click)="close()" type="button" title="Recolher Menu Lateral" aria-label="Recolher Menu Lateral">
@@ -48,9 +52,9 @@
   <!-- Navegação Vertical (Itens fiéis ao iPortfolio) -->
   <nav class="sidebar-nav">
     <ul class="sidebar-menu-list">
-      <!-- 1. Trajetória, Bio & Formação -->
+      <!-- 1. Minha História & Formação -->
       <li class="sidebar-menu-item">
-        <a href="#sobre" class="sidebar-nav-link" (click)="close()">
+        <a href="#sobre" class="sidebar-nav-link">
           <span class="navicon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -61,13 +65,13 @@
             </svg>
           </span>
           <span class="nav-prompt">&gt;_</span>
-          <span class="nav-text">Trajetória &amp; Bio</span>
+          <span class="nav-text">Minha História</span>
         </a>
       </li>
 
       <!-- 2. Portfolio / Vitrine de Projetos -->
       <li class="sidebar-menu-item">
-        <a href="#projetos" class="sidebar-nav-link" (click)="close()">
+        <a href="#projetos" class="sidebar-nav-link">
           <span class="navicon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
               <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -80,9 +84,9 @@
         </a>
       </li>
 
-      <!-- 3. Stacks & Tecnologias -->
+      <!-- 3. Tecnologias & Ferramentas -->
       <li class="sidebar-menu-item">
-        <a href="#stacks" class="sidebar-nav-link" (click)="close()">
+        <a href="#stacks" class="sidebar-nav-link">
           <span class="navicon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
               <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
@@ -91,13 +95,13 @@
             </svg>
           </span>
           <span class="nav-prompt">&gt;_</span>
-          <span class="nav-text">Stacks &amp; Tecnologias</span>
+          <span class="nav-text">Tecnologias &amp; Ferramentas</span>
         </a>
       </li>
 
       <!-- 4. Experiências Profissionais -->
       <li class="sidebar-menu-item">
-        <a href="#experiencias" class="sidebar-nav-link" (click)="close()">
+        <a href="#experiencias" class="sidebar-nav-link">
           <span class="navicon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
               <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
@@ -109,9 +113,23 @@
         </a>
       </li>
 
-      <!-- 5. Contato Direto -->
+      <!-- 5. Formações & Certificações -->
       <li class="sidebar-menu-item">
-        <a href="#contato" class="sidebar-nav-link" (click)="close()">
+        <a href="#formacoes" class="sidebar-nav-link">
+          <span class="navicon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+          </span>
+          <span class="nav-prompt">&gt;_</span>
+          <span class="nav-text">Formações &amp; Cursos</span>
+        </a>
+      </li>
+
+      <!-- 6. Contatos -->
+      <li class="sidebar-menu-item">
+        <a href="#contato" class="sidebar-nav-link">
           <span class="navicon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -129,7 +147,7 @@
   <div class="sidebar-footer">
     <div class="sidebar-meta">
       <span class="sidebar-meta-led"></span>
-      <span class="sidebar-meta-text">NEXUS COCKPIT v2.2 • BELÉM-PA</span>
+      <span class="sidebar-meta-text">DISPONÍVEL P/ PROJETOS • BELÉM-PA 📍</span>
     </div>
   </div>
 </aside>

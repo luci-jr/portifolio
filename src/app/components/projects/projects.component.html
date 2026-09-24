@@ -1,12 +1,20 @@
 <section class="section projects-section" id="projetos">
   <div class="section-header">
-    <h2 class="section-title"><span class="glow">></span> PROJETOS</h2>
+    <h2 class="section-title"><span class="glow">&gt;</span> VITRINE DE PROJETOS</h2>
     <p class="section-subtitle">
-      Aplicações reais em produção, código limpo e arquitetura corporativa.
+      Uma seleção de aplicações, microsserviços e estudos práticos construídos para resolver problemas reais e explorar novas soluções.
     </p>
 
     <!-- Abas de Filtro de Projetos por Segmento -->
     <div class="project-filters" aria-label="Filtro de Projetos por Segmento">
+      <button
+        class="filter-btn"
+        [class.active]="activeFilter() === 'all'"
+        (click)="setFilter('all')"
+        type="button"
+      >
+        ⚡ TODOS
+      </button>
       <button
         class="filter-btn"
         [class.active]="activeFilter() === 'frontend'"
@@ -38,14 +46,6 @@
         type="button"
       >
         🕹️ GAMER
-      </button>
-      <button
-        class="filter-btn"
-        [class.active]="activeFilter() === 'all'"
-        (click)="setFilter('all')"
-        type="button"
-      >
-        ⚡ TODOS
       </button>
     </div>
   </div>

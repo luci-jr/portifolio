@@ -25,4 +25,12 @@ export class SidebarComponent {
   toggle(): void {
     this.portfolio.toggleSidebar();
   }
+
+  onSidebarMouseEnter(): void {
+    this.portfolio.cancelScheduledClose();
+  }
+
+  onSidebarMouseLeave(): void {
+    this.portfolio.scheduleCloseSidebar(200);
+  }
 }

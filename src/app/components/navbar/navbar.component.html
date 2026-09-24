@@ -1,8 +1,14 @@
 <header class="top-nav">
   <!-- Redes Sociais Rápidas no Lado Esquerdo -->
   <div class="nav-social-links" aria-label="Redes Sociais Rápidas">
-    <!-- Botão para Abrir Menu Lateral (Estilo iPortfolio) -->
-    <button class="nav-menu-btn" (click)="toggleSidebar()" type="button" title="Abrir Navegação Lateral" aria-label="Abrir Menu Lateral">
+    <!-- Botão para Abrir Menu Lateral (Estilo iPortfolio com Clique ou Hover) -->
+    <button class="nav-menu-btn"
+            (click)="toggleSidebar()"
+            (mouseenter)="onMenuMouseEnter()"
+            (mouseleave)="onMenuMouseLeave()"
+            type="button"
+            title="Abrir Navegação Lateral"
+            aria-label="Abrir Menu Lateral">
       <span class="nav-menu-icon">☰</span>
       <span class="nav-menu-label">MENU</span>
     </button>
@@ -24,21 +30,14 @@
     </a>
   </div>
 
-  <!-- Centro: Avatar e Nome -->
+  <!-- Centro: Nome e Tag Portfólio -->
   <div class="brand">
-    <!-- Avatar de Perfil -->
-    <div class="nav-avatar-wrapper" title="Lucivaldo Junior">
-      <img src="perfil-navbar.png"
-           onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/perfil-navbar.png'}"
-           alt="Foto de Lucivaldo Junior"
-           class="nav-avatar-img">
-      <span class="nav-avatar-online-dot" title="ONLINE"></span>
-    </div>
-    <div class="dev-name-glow" title="Lucivaldo Junior — Back-end, SysOps & Front-end">
+    <div class="dev-name-glow" title="Lucivaldo Junior — Portfólio">
       <span class="nav-led-dot" title="Status: ONLINE"></span>
       <span class="pixel-bracket">[</span>
       <span class="brand-name">LUCIVALDO JUNIOR</span>
       <span class="pixel-bracket">]</span>
+      <span class="brand-portfolio-tag">PORTFÓLIO</span>
     </div>
   </div>
 
@@ -52,6 +51,18 @@
     <!-- Botão Alternador Tema Dark / Light -->
     <button class="crt-btn theme-toggle-btn" (click)="toggleTheme()" type="button" title="Alternar Modo Claro / Escuro">
       TEMA: <span>{{ portfolio.isLight() ? '☀️ LIGHT' : '🌙 DARK' }}</span>
+    </button>
+
+    <!-- Botão Trilha Sonora Imersiva Convidativa (Ambient Chill) -->
+    <button class="crt-btn audio-toggle-btn" [class.is-playing]="portfolio.audioPlaying()" (click)="portfolio.toggleAudio()" type="button" title="Alternar Trilha Sonora Imersiva (Ambient Chill)" aria-label="Trilha Sonora Imersiva">
+      <span class="audio-note-wrap">
+        <svg class="audio-note-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18V5l12-2v13"></path>
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="16" r="3"></circle>
+          <line class="audio-slash-line" x1="2" y1="2" x2="22" y2="22"></line>
+        </svg>
+      </span>
     </button>
 
     <!-- Botão CRT Scanlines -->

@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const classConfigs = {
     backend: {
       role: '● DESENVOLVEDOR BACK-END',
-      title: 'Construindo Sistemas Distribuídos e Microsserviços com <span class="highlight-tech">Java/Spring Boot</span>, <span class="highlight-tech">Go</span> e <span class="nowrap-end"><span class="highlight-tech">Cloud</span>.</span>',
+      title: 'De Chef de cozinha a desenvolvedor: construindo <span class="highlight-tech">sistemas</span>, <span class="highlight-tech">infraestrutura</span> e <span class="nowrap-end"><span class="highlight-tech">IA</span>.</span>',
       desc: `<p class="hero-desc-p">
-            Minha trajetória profissional é marcada por uma transição de carreira estratégica para a Tecnologia, fundamentada em <strong class="highlight-tech">mais de 15 anos de liderança em ambientes operacionais de alta pressão como Chef de Cozinha</strong>. Essa vivência consolidou competências essenciais para a engenharia de software de missão crítica: <span class="desc-pill">resiliência sob pressão</span>, <span class="desc-pill">disciplina rigorosa</span>, <span class="desc-pill">gestão ágil de crises</span> e foco obstinado em entregas de qualidade com cumprimento rigoroso de prazos.
+            Minha história profissional é marcada por uma transição de carreira estratégica para a Tecnologia, fundamentada em <strong class="highlight-tech">mais de 15 anos de liderança em ambientes operacionais de alta pressão como Chef de Cozinha</strong>. Essa vivência consolidou competências essenciais para a engenharia de software de missão crítica: <span class="desc-pill">resiliência sob pressão</span>, <span class="desc-pill">disciplina rigorosa</span>, <span class="desc-pill">gestão ágil de crises</span> e foco obstinado em entregas de qualidade com cumprimento rigoroso de prazos.
           </p>
           <p class="hero-desc-p">
             Atualmente, atuo como <strong class="highlight-tech">Desenvolvedor Back-end &amp; SysOps/DevOps</strong>, unindo o desenvolvimento de microsserviços e sistemas distribuídos de alta concorrência à automação de fluxos e orquestração de infraestruturas em nuvem. Possuo experiência prática com <strong class="highlight-tech">Java 21 (Spring Boot 3)</strong> e <strong class="highlight-tech">Go (Golang)</strong>, conteinerização e clusters com <strong class="highlight-tech">Docker &amp; Swarm</strong>, roteamento seguro com <strong class="highlight-tech">Traefik</strong>, nuvem <strong class="highlight-tech">AWS</strong>, além de persistência transacional com bancos relacionais (<strong class="highlight-tech">PostgreSQL</strong> com isolamento ACID e <strong class="highlight-tech">Oracle DB</strong>).
@@ -124,9 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Atualiza conteúdo com micro-animação
     const config = classConfigs[modeKey];
-    roleBadge.textContent = config.role;
-    heroTitle.innerHTML = config.title;
-    heroDesc.innerHTML = config.desc;
+    if (roleBadge) roleBadge.textContent = config.role;
+    if (heroTitle) heroTitle.innerHTML = config.title;
+    if (heroDesc) heroDesc.innerHTML = config.desc;
 
     // Atualiza linha de comando do terminal
     const promptCommand = document.querySelector('.terminal-telemetry .term-line');
@@ -160,51 +160,355 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === '4') setMode('gamer');
   });
 
-  // Alternador de Scanlines CRT
-  const savedCrtState = localStorage.getItem('crt_state');
-  if (savedCrtState === 'off') {
-    crtOverlay.classList.add('disabled');
-    crtStatus.textContent = 'OFF';
+  // ==========================================================================
+  // Controle de Scanlines CRT (Ativado por Padrão ao Entrar na Página)
+  // ==========================================================================
+  // Garante que o efeito CRT inicie ativado (ON) para qualquer visitante
+  crtOverlay.classList.remove('disabled');
+  if (crtStatus) crtStatus.textContent = 'ON';
+  localStorage.removeItem('crt_state'); // Reseta qualquer estado antigo residual
+
+  if (crtToggle) {
+    crtToggle.addEventListener('click', () => {
+      const isDisabled = crtOverlay.classList.toggle('disabled');
+      if (crtStatus) {
+        crtStatus.textContent = isDisabled ? 'OFF' : 'ON';
+      }
+    });
   }
 
-  crtToggle.addEventListener('click', () => {
-    const isDisabled = crtOverlay.classList.toggle('disabled');
-    if (isDisabled) {
-      crtStatus.textContent = 'OFF';
-      localStorage.setItem('crt_state', 'off');
-    } else {
-      crtStatus.textContent = 'ON';
-      localStorage.setItem('crt_state', 'on');
-    }
-  });
-
-  // Alternador de Tema: Dark <-> Light
+  // ==========================================================================
+  // Controle de Tema: Modo Dark por Padrão ao Entrar na Página
+  // ==========================================================================
   const themeToggle = document.getElementById('themeToggle');
   const themeStatus = document.getElementById('themeStatus');
   const themeIcon = document.getElementById('themeIcon');
-  const savedTheme = localStorage.getItem('theme_state');
 
   function applyTheme(isLight) {
     if (isLight) {
       body.classList.add('theme-light');
       if (themeStatus) themeStatus.textContent = 'LIGHT';
       if (themeIcon) themeIcon.textContent = '☀️';
-      localStorage.setItem('theme_state', 'light');
     } else {
       body.classList.remove('theme-light');
       if (themeStatus) themeStatus.textContent = 'DARK';
       if (themeIcon) themeIcon.textContent = '🌙';
-      localStorage.setItem('theme_state', 'dark');
     }
   }
 
-  // Inicializa tema de acordo com preferência salva
-  applyTheme(savedTheme === 'light');
+  // Garante que o Modo Dark inicie ativado para qualquer visitante
+  applyTheme(false);
+  localStorage.removeItem('theme_state'); // Reseta qualquer estado antigo residual
 
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
       const isCurrentlyLight = body.classList.contains('theme-light');
       applyTheme(!isCurrentlyLight);
+    });
+  }
+
+  // ==========================================================================
+  // Trilha Sonora Imersiva Convidativa (Warm Ambient Pad & Cozy Focus)
+  // ==========================================================================
+  const audioToggle = document.getElementById('audioToggle');
+
+  class ImmersiveAmbientAudioEngine {
+    constructor() {
+      this.isPlaying = false;
+      this.audioCtx = null;
+      this.audioMasterGain = null;
+      this.mainFilter = null;
+      this.delayNode = null;
+      this.lfoOsc = null;
+      this.chordTimer = null;
+      this.bellTimer = null;
+      this.activeChords = [];
+      this.chordIndex = 0;
+
+      // Progressão acolhedora, reconfortante e convidativa (Cmaj9 -> Am9 -> Fmaj9 -> Gadd9)
+      this.chords = [
+        {
+          name: 'Cmaj9',
+          bass: [65.41, 130.81],
+          notes: [196.00, 246.94, 293.66, 329.63, 392.00], // G3, B3, D4, E4, G4
+          bellNotes: [392.00, 493.88, 587.33, 659.25],    // G4, B4, D5, E5
+        },
+        {
+          name: 'Am9',
+          bass: [55.00, 110.00],
+          notes: [164.81, 196.00, 246.94, 261.63, 329.63], // E3, G3, B3, C4, E4
+          bellNotes: [329.63, 440.00, 493.88, 523.25],    // E4, A4, B4, C5
+        },
+        {
+          name: 'Fmaj9',
+          bass: [43.65, 87.31],
+          notes: [174.61, 220.00, 261.63, 329.63, 392.00], // F3, A3, C4, E4, G4
+          bellNotes: [349.23, 440.00, 523.25, 659.25],    // F4, A4, C5, E5
+        },
+        {
+          name: 'Gadd9',
+          bass: [49.00, 98.00],
+          notes: [146.83, 196.00, 246.94, 293.66, 440.00], // D3, G3, B3, D4, A4
+          bellNotes: [392.00, 440.00, 587.33, 783.99],    // G4, A4, D5, G5
+        },
+      ];
+    }
+
+    init() {
+      if (!this.audioCtx && typeof window !== 'undefined') {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (AudioCtx) {
+          this.audioCtx = new AudioCtx();
+
+          // Master Gain geral
+          this.audioMasterGain = this.audioCtx.createGain();
+          this.audioMasterGain.gain.setValueAtTime(0.001, this.audioCtx.currentTime);
+          this.audioMasterGain.connect(this.audioCtx.destination);
+
+          // Filtro geral aveludado com leve respiração
+          this.mainFilter = this.audioCtx.createBiquadFilter();
+          this.mainFilter.type = 'lowpass';
+          this.mainFilter.frequency.setValueAtTime(620, this.audioCtx.currentTime);
+          this.mainFilter.Q.setValueAtTime(1.1, this.audioCtx.currentTime);
+          this.mainFilter.connect(this.audioMasterGain);
+
+          // LFO lento para criar sensação orgânica de respiração sonora (0.09Hz)
+          const lfo = this.audioCtx.createOscillator();
+          const lfoGain = this.audioCtx.createGain();
+          lfo.type = 'sine';
+          lfo.frequency.setValueAtTime(0.09, this.audioCtx.currentTime);
+          lfoGain.gain.setValueAtTime(140, this.audioCtx.currentTime);
+          lfo.connect(lfoGain);
+          lfoGain.connect(this.mainFilter.frequency);
+          lfo.start();
+          this.lfoOsc = lfo;
+
+          // Delay Sutil e Imediato (Espacialidade leve sem atraso perceptível)
+          this.delayNode = this.audioCtx.createDelay();
+          this.delayNode.delayTime.setValueAtTime(0.14, this.audioCtx.currentTime);
+
+          const delayFeedback = this.audioCtx.createGain();
+          delayFeedback.gain.setValueAtTime(0.20, this.audioCtx.currentTime);
+
+          const delayFilter = this.audioCtx.createBiquadFilter();
+          delayFilter.type = 'lowpass';
+          delayFilter.frequency.setValueAtTime(950, this.audioCtx.currentTime);
+
+          this.delayNode.connect(delayFilter);
+          delayFilter.connect(delayFeedback);
+          delayFeedback.connect(this.delayNode);
+          this.delayNode.connect(this.mainFilter);
+        }
+      }
+    }
+
+    start() {
+      this.init();
+      if (!this.audioCtx || !this.audioMasterGain) return;
+
+      if (this.audioCtx.state === 'suspended') {
+        this.audioCtx.resume();
+      }
+
+      this.isPlaying = true;
+      const now = this.audioCtx.currentTime;
+      this.audioMasterGain.gain.cancelScheduledValues(now);
+      this.audioMasterGain.gain.setValueAtTime(Math.max(0.001, this.audioMasterGain.gain.value), now);
+      // Resposta imediata ao clique (sem delay perceptível)
+      this.audioMasterGain.gain.exponentialRampToValueAtTime(0.25, now + 0.12);
+
+      this.startAmbientProgression();
+      this.startGentleBells();
+    }
+
+    stop() {
+      this.isPlaying = false;
+      if (!this.audioCtx || !this.audioMasterGain) return;
+
+      const now = this.audioCtx.currentTime;
+      this.audioMasterGain.gain.cancelScheduledValues(now);
+      this.audioMasterGain.gain.setValueAtTime(this.audioMasterGain.gain.value, now);
+      this.audioMasterGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.5);
+
+      if (this.chordTimer) {
+        clearInterval(this.chordTimer);
+        this.chordTimer = null;
+      }
+      if (this.bellTimer) {
+        clearInterval(this.bellTimer);
+        this.bellTimer = null;
+      }
+
+      setTimeout(() => {
+        this.fadeAllChords(0.5);
+      }, 520);
+    }
+
+    toggle() {
+      if (this.isPlaying) {
+        this.stop();
+      } else {
+        this.start();
+      }
+      return this.isPlaying;
+    }
+
+    startAmbientProgression() {
+      if (this.chordTimer) clearInterval(this.chordTimer);
+
+      // Toca o primeiro acorde instantaneamente
+      this.playChordCrossfade(this.chords[this.chordIndex]);
+
+      // Intervalo dinâmico e envolvente a cada 3.8 segundos
+      this.chordTimer = setInterval(() => {
+        if (!this.isPlaying) return;
+        this.chordIndex = (this.chordIndex + 1) % this.chords.length;
+        this.playChordCrossfade(this.chords[this.chordIndex]);
+      }, 3800);
+    }
+
+    playChordCrossfade(chordData) {
+      if (!this.audioCtx || !this.mainFilter || !this.isPlaying) return;
+
+      // Transição ágil entre acordes
+      this.fadeAllChords(0.9);
+
+      const now = this.audioCtx.currentTime;
+      const currentChordNodes = [];
+
+      // Une notas de baixo e harmonias
+      const allFrequencies = [...chordData.bass, ...chordData.notes];
+
+      allFrequencies.forEach((freq, idx) => {
+        if (!this.audioCtx || !this.mainFilter) return;
+
+        // Oscilador Principal (senoidal pura e aveludada)
+        const osc1 = this.audioCtx.createOscillator();
+        const gain1 = this.audioCtx.createGain();
+        osc1.type = 'sine';
+        osc1.frequency.setValueAtTime(freq, now);
+
+        // Oscilador Secundário com leve detune (+3.5 cents)
+        const osc2 = this.audioCtx.createOscillator();
+        const gain2 = this.audioCtx.createGain();
+        osc2.type = 'triangle';
+        osc2.frequency.setValueAtTime(freq, now);
+        osc2.detune.setValueAtTime(idx % 2 === 0 ? 3.5 : -3.5, now);
+
+        // Nível suave por voz
+        const isBass = idx < chordData.bass.length;
+        const targetVol1 = isBass ? 0.045 : 0.028;
+        const targetVol2 = isBass ? 0.015 : 0.012;
+
+        // Ataque direto e acolhedor (0.35s)
+        gain1.gain.setValueAtTime(0.0001, now);
+        gain1.gain.exponentialRampToValueAtTime(targetVol1, now + 0.35);
+
+        gain2.gain.setValueAtTime(0.0001, now);
+        gain2.gain.exponentialRampToValueAtTime(targetVol2, now + 0.35);
+
+        osc1.connect(gain1);
+        osc2.connect(gain2);
+
+        gain1.connect(this.mainFilter);
+        gain2.connect(this.mainFilter);
+
+        // Leve reverberação espacial imediata
+        if (this.delayNode && !isBass) {
+          const delaySend = this.audioCtx.createGain();
+          delaySend.gain.setValueAtTime(0.015, now);
+          gain1.connect(delaySend);
+          delaySend.connect(this.delayNode);
+        }
+
+        osc1.start(now);
+        osc2.start(now);
+
+        currentChordNodes.push({ osc: osc1, gain: gain1 }, { osc: osc2, gain: gain2 });
+      });
+
+      this.activeChords.push({ nodes: currentChordNodes });
+    }
+
+    fadeAllChords(fadeDuration) {
+      if (!this.audioCtx) return;
+      const now = this.audioCtx.currentTime;
+
+      this.activeChords.forEach(chord => {
+        chord.nodes.forEach(({ osc, gain }) => {
+          try {
+            gain.gain.cancelScheduledValues(now);
+            gain.gain.setValueAtTime(Math.max(0.0001, gain.gain.value), now);
+            gain.gain.exponentialRampToValueAtTime(0.00001, now + fadeDuration);
+            osc.stop(now + fadeDuration + 0.05);
+          } catch (e) {}
+        });
+      });
+
+      this.activeChords = [];
+    }
+
+    startGentleBells() {
+      if (this.bellTimer) clearInterval(this.bellTimer);
+
+      // Intervalo mais presente e constante a cada 1.6s
+      this.bellTimer = setInterval(() => {
+        if (!this.isPlaying || !this.audioCtx) return;
+        const currentChord = this.chords[this.chordIndex];
+        const bellNotes = currentChord.bellNotes;
+        const randomFreq = bellNotes[Math.floor(Math.random() * bellNotes.length)];
+        this.playWarmBell(randomFreq);
+      }, 1600);
+    }
+
+    playWarmBell(freq) {
+      if (!this.audioCtx || !this.mainFilter || !this.isPlaying) return;
+      try {
+        const now = this.audioCtx.currentTime;
+        const osc = this.audioCtx.createOscillator();
+        const gain = this.audioCtx.createGain();
+        const filter = this.audioCtx.createBiquadFilter();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now);
+
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(900, now);
+
+        // Ataque rápido e suave (0.05s) e cauda ágil (1.1s)
+        gain.gain.setValueAtTime(0.0001, now);
+        gain.gain.exponentialRampToValueAtTime(0.035, now + 0.05);
+        gain.gain.exponentialRampToValueAtTime(0.00001, now + 1.1);
+
+        osc.connect(filter);
+        filter.connect(gain);
+        gain.connect(this.mainFilter);
+
+        if (this.delayNode) {
+          const delaySend = this.audioCtx.createGain();
+          delaySend.gain.setValueAtTime(0.022, now);
+          gain.connect(delaySend);
+          delaySend.connect(this.delayNode);
+        }
+
+        osc.start(now);
+        osc.stop(now + 1.15);
+      } catch (e) {}
+    }
+  }
+
+  const bgmPlayer = new ImmersiveAmbientAudioEngine();
+
+  if (audioToggle) {
+    audioToggle.addEventListener('click', () => {
+      const playing = bgmPlayer.toggle();
+      if (playing) {
+        audioToggle.classList.add('is-playing');
+        audioToggle.setAttribute('title', 'Pausar Trilha Acolhedora');
+      } else {
+        audioToggle.classList.remove('is-playing');
+        audioToggle.setAttribute('title', 'Tocar Trilha Acolhedora (Áudio Bloqueado)');
+      }
     });
   }
 
@@ -228,8 +532,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fetchServerlessTelemetry();
 
-  // Inicializa a vitrine filtrada por Front-end (modo padrão inicial)
-  filterProjects('frontend');
+  // Inicializa a vitrine de projetos com a aba "TODOS" ativa por padrão
+  filterProjects('all');
 
   /**
    * ==========================================================================
@@ -242,14 +546,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const sidebarCloseBtn = document.getElementById('sidebarCloseBtn');
   const sidebarNavLinks = document.querySelectorAll('.sidebar-nav-link');
 
+  let sidebarCloseTimeout = null;
+
+  function cancelScheduledClose() {
+    if (sidebarCloseTimeout) {
+      clearTimeout(sidebarCloseTimeout);
+      sidebarCloseTimeout = null;
+    }
+  }
+
   function openSidebar() {
+    cancelScheduledClose();
     if (sidebarDrawer) sidebarDrawer.classList.add('is-open');
     if (sidebarBackdrop) sidebarBackdrop.classList.add('is-open');
   }
 
   function closeSidebar() {
+    cancelScheduledClose();
     if (sidebarDrawer) sidebarDrawer.classList.remove('is-open');
     if (sidebarBackdrop) sidebarBackdrop.classList.remove('is-open');
+  }
+
+  function scheduleCloseSidebar(delay = 280) {
+    cancelScheduledClose();
+    sidebarCloseTimeout = setTimeout(() => {
+      closeSidebar();
+    }, delay);
   }
 
   function toggleSidebar() {
@@ -260,7 +582,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (sidebarToggleBtn) sidebarToggleBtn.addEventListener('click', toggleSidebar);
+  if (sidebarToggleBtn) {
+    // 1. Clicar no botão: alterna (ativa ou desativa o menu)
+    sidebarToggleBtn.addEventListener('click', toggleSidebar);
+
+    // 2. Passar o mouse no botão: ativa o menu
+    sidebarToggleBtn.addEventListener('mouseenter', () => {
+      openSidebar();
+    });
+
+    // 3. Tirar o mouse do botão: agenda o fechamento se não entrar na sidebar
+    sidebarToggleBtn.addEventListener('mouseleave', () => {
+      scheduleCloseSidebar(280);
+    });
+  }
+
   if (sidebarCloseBtn) sidebarCloseBtn.addEventListener('click', closeSidebar);
   if (sidebarBackdrop) sidebarBackdrop.addEventListener('click', closeSidebar);
 
@@ -269,17 +605,29 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeSidebar();
   });
 
-  // Fecha a gaveta e ativa o link correspondente ao clicar
+  // Ativa o link correspondente ao clicar SEM fechar a gaveta (mantém aberta para o usuário ver/navegar)
   sidebarNavLinks.forEach((link) => {
     link.addEventListener('click', () => {
       sidebarNavLinks.forEach((l) => l.classList.remove('active'));
       link.classList.add('active');
-      closeSidebar();
     });
   });
 
+  // Interações de mouse na gaveta lateral
+  if (sidebarDrawer) {
+    // Se o mouse entrar na gaveta, cancela o fechamento e mantém o menu aberto
+    sidebarDrawer.addEventListener('mouseenter', () => {
+      cancelScheduledClose();
+    });
+
+    // Ao tirar o mouse de cima da gaveta lateral, fecha automaticamente
+    sidebarDrawer.addEventListener('mouseleave', () => {
+      scheduleCloseSidebar(200);
+    });
+  }
+
   // Atualiza dinamicamente o link ativo conforme o scroll da página
-  const sectionsToObserve = ['heroSection', 'sobre', 'projetos', 'stacks', 'experiencias', 'contato'];
+  const sectionsToObserve = ['heroSection', 'sobre', 'projetos', 'stacks', 'experiencias', 'formacoes', 'contato'];
   window.addEventListener('scroll', () => {
     let currentSection = '';
     sectionsToObserve.forEach((secId) => {
@@ -327,7 +675,6 @@ document.addEventListener('DOMContentLoaded', () => {
         left: 0,
         behavior: 'smooth'
       });
-      if (typeof closeSidebar === 'function') closeSidebar();
       if (window.history.pushState) {
         window.history.pushState(null, '', window.location.pathname);
       }

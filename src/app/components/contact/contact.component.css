@@ -7,7 +7,7 @@
 
 .contact-section .section-header {
   text-align: center;
-  margin-bottom: 2.8rem;
+  margin-bottom: 3.2rem;
 }
 
 .section-title {
@@ -19,22 +19,23 @@
   justify-content: center;
   gap: 0.6rem;
   position: relative;
-  cursor: default;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  padding-bottom: 0.4rem;
+  cursor: pointer;
+  transform-origin: center;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), color 0.28s ease, text-shadow 0.28s ease;
+  padding-bottom: 0.55rem;
 }
 
-/* Barra Laser Neon inferior expansível */
+/* Barra Laser Neon inferior expansível (centralizada) */
 .section-title::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 32px;
-  height: 2px;
+  width: 42px;
+  height: 2.5px;
   background: var(--accent-color);
-  box-shadow: 0 0 8px var(--accent-color);
+  box-shadow: 0 0 10px var(--accent-color);
   transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
   border-radius: 2px;
 }
@@ -61,26 +62,27 @@
   }
 }
 
-/* Hover no Título da Seção: acende LED total, projeta laser e avança cursor */
+/* Hover no Título da Seção: acende LED total, projeta laser e aumenta um pouquinho só (escala sutil) */
 .section-title:hover {
   color: #ffffff;
   text-shadow:
     0 0 6px rgba(255, 255, 255, 0.85),
     0 0 14px var(--accent-color),
     0 0 28px var(--accent-glow);
+  transform: scale(1.04);
 }
 
 .section-title:hover::after {
-  width: 85%;
+  width: 100%;
   box-shadow:
-    0 0 12px var(--accent-color),
-    0 0 24px var(--accent-glow);
+    0 0 14px var(--accent-color),
+    0 0 26px var(--accent-glow);
 }
 
 .section-title:hover .glow {
   animation: none;
   color: #ffffff;
-  transform: translateX(6px) scale(1.2);
+  transform: scale(1.15);
   text-shadow:
     0 0 8px #ffffff,
     0 0 16px var(--accent-color),
@@ -89,8 +91,13 @@
 
 .section-subtitle {
   color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-top: 0.4rem;
+  font-size: 0.98rem;
+  margin-top: 1.15rem;
+  max-width: 720px;
+  line-height: 1.65;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ==========================================================================

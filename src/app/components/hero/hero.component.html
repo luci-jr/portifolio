@@ -1,38 +1,53 @@
 <section class="hero" id="heroSection">
   <!-- Conteúdo Central Reativo do Hero -->
   <div class="hero-content">
-    <div class="badge-role">{{ portfolio.currentConfig().role }}</div>
     <h1 class="hero-title" [innerHTML]="portfolio.currentConfig().title"></h1>
-    <div class="hero-desc" id="heroDesc" [innerHTML]="portfolio.currentConfig().desc"></div>
-
-    <!-- Card de Perfil do Desenvolvedor -->
+    <!-- Card de Perfil do Desenvolvedor (Cockpit HUD Expandido) -->
     <div class="hero-profile-card" aria-label="Ficha Técnica do Desenvolvedor">
-      <div class="profile-avatar-box">
-        <div class="profile-avatar-frame">
-          <img src="perfil-lucivaldo.jpg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/perfil-lucivaldo.jpg'}" alt="Foto de Perfil de Lucivaldo Junior" class="profile-ascii-img">
+      <div class="profile-card-main">
+        <div class="profile-avatar-box">
+          <div class="profile-avatar-frame">
+            <img src="perfil-lucivaldo.jpg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/perfil-lucivaldo.jpg'}" alt="Foto de Perfil de Lucivaldo Junior" class="profile-ascii-img">
+          </div>
         </div>
-        <span class="avatar-badge-tag">&lt;DEV_PROFILE // 2026&gt;</span>
-      </div>
 
-      <div class="profile-bio-details">
-        <div class="bio-item">
-          <span class="bio-key"><span class="key-symbol">&gt;</span> PROFISSÃO:</span>
-          <span class="bio-val highlight">Desenvolvedor Back-end (Java &amp; Go)</span>
-        </div>
-        <div class="bio-item">
-          <span class="bio-key"><span class="key-symbol">&gt;</span> IDADE:</span>
-          <span class="bio-val">39 anos</span>
-        </div>
-        <div class="bio-item">
-          <span class="bio-key"><span class="key-symbol">&gt;</span> ONDE MORO:</span>
-          <span class="bio-val">Belém do Pará — Brasil 📍</span>
-        </div>
-        <div class="bio-item bio-status-row">
-          <span class="bio-key"><span class="key-symbol">&gt;</span> DISPONIBILIDADE:</span>
-          <span class="bio-val status-val"><span class="bio-pulse-dot"></span> DISPONÍVEL PARA CONTRATAÇÃO (CLT / PJ)</span>
+        <div class="profile-bio-details">
+          <div class="bio-grid-2col">
+            <div class="bio-col">
+              <div class="bio-item">
+                <span class="bio-key"><span class="key-symbol">&gt;</span> CARGO:</span>
+                <span class="bio-val highlight">Desenvolvedor Back-end</span>
+              </div>
+              <div class="bio-item">
+                <span class="bio-key"><span class="key-symbol">&gt;</span> LOCALIZAÇÃO:</span>
+                <span class="bio-val">Belém-PA — Brasil 📍 (UTC-3)</span>
+              </div>
+              <div class="bio-item">
+                <span class="bio-key"><span class="key-symbol">&gt;</span> IDADE:</span>
+                <span class="bio-val">39 anos (Maturidade &amp; Foco)</span>
+              </div>
+            </div>
+
+            <div class="bio-col">
+              <div class="bio-item">
+                <span class="bio-key"><span class="key-symbol">&gt;</span> MODALIDADE:</span>
+                <span class="bio-val">Remoto • Híbrido • Presencial</span>
+              </div>
+              <div class="bio-item">
+                <span class="bio-key"><span class="key-symbol">&gt;</span> GRADUAÇÃO:</span>
+                <span class="bio-val">ADS — UNAMA (Cursando 2026–2028)</span>
+              </div>
+              <div class="bio-item bio-status-row">
+                <span class="bio-key"><span class="key-symbol">&gt;</span> STATUS:</span>
+                <span class="bio-val status-val"><span class="bio-pulse-dot"></span> DISPONÍVEL (CLT / PJ / PROJETOS)</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="hero-desc" id="heroDesc" [innerHTML]="portfolio.currentConfig().desc"></div>
 
     <div class="hero-actions">
       <a href="#projetos" class="pixel-btn primary">VER PROJETOS</a>
@@ -43,10 +58,9 @@
 
   <!-- Carrossel Infinito de Tecnologias (Infinite Tech Marquee em Toda a Largura) -->
   <div class="tech-marquee-wrapper" aria-label="Tecnologias e Stacks Dominadas">
-    <div class="marquee-tag">STACKS EM CONSTANTE DESENVOLVIMENTO</div>
+    <div class="marquee-tag">TECNOLOGIAS &amp; FERRAMENTAS</div>
     <div class="tech-marquee-container">
       <div class="tech-marquee-track">
-        <!-- Bloco 1 -->
         <!-- Bloco 1 -->
         <div class="tech-item"><span class="tech-icon"><i class="devicon-java-plain colored"></i></span><span class="tech-name">Java 21</span></div>
         <div class="tech-item"><span class="tech-icon"><i class="devicon-spring-original colored"></i></span><span class="tech-name">Spring Boot 3</span></div>
@@ -71,6 +85,8 @@
         <div class="tech-item"><span class="tech-icon"><i class="devicon-traefikproxy-original colored"></i></span><span class="tech-name">Traefik v2</span></div>
         <div class="tech-item"><span class="tech-icon"><img src="icons/n8n.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/n8n.svg'}" alt="n8n" class="tech-icon-img"></span><span class="tech-name">n8n</span></div>
         <div class="tech-item"><span class="tech-icon"><i class="devicon-postman-plain colored"></i></span><span class="tech-name">Postman</span></div>
+        <div class="tech-item"><span class="tech-icon"><img src="icons/npm.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/npm.svg'}" alt="NPM" class="tech-icon-img"></span><span class="tech-name">NPM</span></div>
+        <div class="tech-item"><span class="tech-icon"><img src="icons/nvm.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/nvm.svg'}" alt="NVM" class="tech-icon-img"></span><span class="tech-name">NVM</span></div>
         <div class="tech-item"><span class="tech-icon"><i class="devicon-firebase-plain colored"></i></span><span class="tech-name">Firebase</span></div>
         <div class="tech-item"><span class="tech-icon"><img src="icons/firestore.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/firestore.svg'}" alt="Firestore" class="tech-icon-img"></span><span class="tech-name">Firestore</span></div>
         <div class="tech-item"><span class="tech-icon"><i class="devicon-vercel-original"></i></span><span class="tech-name">Vercel</span></div>
@@ -99,6 +115,8 @@
         <div class="tech-item"><span class="tech-icon"><i class="devicon-traefikproxy-original colored"></i></span><span class="tech-name">Traefik v2</span></div>
         <div class="tech-item"><span class="tech-icon"><img src="icons/n8n.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/n8n.svg'}" alt="n8n" class="tech-icon-img"></span><span class="tech-name">n8n</span></div>
         <div class="tech-item"><span class="tech-icon"><i class="devicon-postman-plain colored"></i></span><span class="tech-name">Postman</span></div>
+        <div class="tech-item"><span class="tech-icon"><img src="icons/npm.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/npm.svg'}" alt="NPM" class="tech-icon-img"></span><span class="tech-name">NPM</span></div>
+        <div class="tech-item"><span class="tech-icon"><img src="icons/nvm.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/nvm.svg'}" alt="NVM" class="tech-icon-img"></span><span class="tech-name">NVM</span></div>
         <div class="tech-item"><span class="tech-icon"><i class="devicon-firebase-plain colored"></i></span><span class="tech-name">Firebase</span></div>
         <div class="tech-item"><span class="tech-icon"><img src="icons/firestore.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/firestore.svg'}" alt="Firestore" class="tech-icon-img"></span><span class="tech-name">Firestore</span></div>
         <div class="tech-item"><span class="tech-icon"><i class="devicon-vercel-original"></i></span><span class="tech-name">Vercel</span></div>

@@ -26,6 +26,14 @@ export class NavbarComponent {
     this.portfolio.toggleSidebar();
   }
 
+  onMenuMouseEnter(): void {
+    this.portfolio.openSidebar();
+  }
+
+  onMenuMouseLeave(): void {
+    this.portfolio.scheduleCloseSidebar(280);
+  }
+
   scrollToTop(): void {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }
