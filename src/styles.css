@@ -932,44 +932,6 @@ body.theme-light .pixel-btn.outline:hover {
   line-height: 1;
 }
 
-/* Botão Flutuante Ergonômico na Lateral Esquerda */
-.floating-sidebar-trigger {
-  position: fixed;
-  left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 990;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.65rem 0.9rem;
-  background: rgba(12, 9, 6, 0.88);
-  border: 1px solid rgba(245, 158, 11, 0.4);
-  border-radius: 30px;
-  color: var(--accent-color);
-  font-family: var(--font-code);
-  font-size: 0.8rem;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 12px rgba(245, 158, 11, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.floating-sidebar-trigger:hover {
-  background: var(--accent-color);
-  color: #0c0906;
-  border-color: var(--accent-color);
-  box-shadow: 0 6px 25px rgba(245, 158, 11, 0.45);
-  transform: translateY(-50%) translateX(4px) scale(1.05);
-}
-
-.floating-sidebar-trigger .floating-icon {
-  font-size: 1.05rem;
-  line-height: 1;
-}
-
 /* Overlay Backdrop */
 .sidebar-backdrop {
   position: fixed;
@@ -1264,28 +1226,4 @@ body.theme-light .sidebar-nav-link.active {
 :host.theme-light .sidebar-footer,
 body.theme-light .sidebar-footer {
   border-top-color: rgba(245, 158, 11, 0.25);
-}
-
-:host.theme-light .floating-sidebar-trigger,
-body.theme-light .floating-sidebar-trigger {
-  background: rgba(255, 255, 255, 0.92);
-  border-color: rgba(245, 158, 11, 0.4);
-  color: #b45309;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12), 0 0 10px rgba(245, 158, 11, 0.25);
-}
-
-:host.theme-light .floating-sidebar-trigger:hover,
-body.theme-light .floating-sidebar-trigger:hover {
-  background: var(--accent-color);
-  color: #ffffff;
-}
-
-@media (max-width: 768px) {
-  .floating-sidebar-trigger {
-    left: 8px;
-    padding: 0.5rem 0.65rem;
-  }
-  .floating-sidebar-trigger .floating-text {
-    display: none;
-  }
 }

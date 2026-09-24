@@ -239,7 +239,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const sidebarDrawer = document.getElementById('sidebarDrawer');
   const sidebarBackdrop = document.getElementById('sidebarBackdrop');
   const sidebarToggleBtn = document.getElementById('sidebarToggleBtn');
-  const floatingSidebarTrigger = document.getElementById('floatingSidebarTrigger');
   const sidebarCloseBtn = document.getElementById('sidebarCloseBtn');
   const sidebarNavLinks = document.querySelectorAll('.sidebar-nav-link');
 
@@ -262,7 +261,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (sidebarToggleBtn) sidebarToggleBtn.addEventListener('click', toggleSidebar);
-  if (floatingSidebarTrigger) floatingSidebarTrigger.addEventListener('click', toggleSidebar);
   if (sidebarCloseBtn) sidebarCloseBtn.addEventListener('click', closeSidebar);
   if (sidebarBackdrop) sidebarBackdrop.addEventListener('click', closeSidebar);
 
