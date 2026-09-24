@@ -1126,6 +1126,18 @@ body.theme-light .pixel-btn.outline:hover {
   flex-shrink: 0;
 }
 
+.sidebar-nav-link .nav-prompt {
+  color: var(--accent-color);
+  font-family: var(--font-code);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: -0.5px;
+  animation: prompt-blink 1.4s infinite;
+  text-shadow: 0 0 8px var(--accent-glow);
+  display: inline-block;
+  user-select: none;
+}
+
 .sidebar-nav-link .nav-text {
   transition: color 0.25s ease;
   letter-spacing: 0.02em;
