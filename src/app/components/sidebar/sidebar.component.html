@@ -3,10 +3,11 @@
 
 <!-- Barra Lateral Retrátil Estilo iPortfolio Cyberpunk -->
 <aside class="sidebar-drawer" [class.is-open]="portfolio.sidebarOpen()" aria-label="Navegação Lateral do Portfólio">
-  <!-- Cabeçalho com Botão Fechar -->
+  <!-- Cabeçalho com Botão de Recolher Menu Lateral -->
   <div class="sidebar-header">
-    <button class="sidebar-close-btn" (click)="close()" type="button" title="Fechar Menu Lateral" aria-label="Fechar Menu">
-      [✕ FECHAR]
+    <button class="sidebar-close-btn" (click)="close()" type="button" title="Recolher Menu Lateral" aria-label="Recolher Menu Lateral">
+      <span class="collapse-icon">◀</span>
+      <span class="collapse-label">RECOLHER</span>
     </button>
   </div>
 
