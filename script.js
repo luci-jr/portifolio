@@ -314,8 +314,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const now = this.audioCtx.currentTime;
       this.audioMasterGain.gain.cancelScheduledValues(now);
       this.audioMasterGain.gain.setValueAtTime(Math.max(0.001, this.audioMasterGain.gain.value), now);
-      // Resposta imediata ao clique (sem delay perceptível)
-      this.audioMasterGain.gain.exponentialRampToValueAtTime(0.25, now + 0.12);
+      // Resposta imediata ao clique (volume acolhedor e calibrado)
+      this.audioMasterGain.gain.exponentialRampToValueAtTime(0.40, now + 0.12);
 
       this.startAmbientProgression();
       this.startGentleBells();
