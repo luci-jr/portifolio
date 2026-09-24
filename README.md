@@ -29,7 +29,7 @@ O portfólio reflete a amplitude das disciplinas técnicas aplicadas no dia a di
 | :--- | :--- | :--- |
 | ☕ **Backend** | **Java 21 (Spring Boot 3) & Go 1.22+** | Microsserviços, Clean Architecture, concorrência nativa (goroutines/canais), APIs REST resilientes e persistência transacional com PostgreSQL e Oracle DB. |
 | 🐧 **SysOps / Cloud** | **Docker, Swarm, Traefik v2, AWS & Vercel** | Infraestrutura como código, roteamento TLS automático, orquestração de contêineres, observabilidade e automação de fluxos com n8n. |
-| 🌐 **Front-end & CMS** | **Angular 21+, TypeScript, JavaScript & WordPress** | Aplicações modulares escaláveis, Standalone Components, gerenciamento reativo de estado (Signals) e interfaces ricas. |
+| 🌐 **Front-end & CMS** | **Angular 21+, TypeScript, JavaScript, CSS3, Tailwind CSS & WordPress** | Aplicações modulares escaláveis, Standalone Components, gerenciamento reativo de estado (Signals) e interfaces ricas. |
 | 🕹️ **Game Dev / WASM** | **Go + Ebitengine v2 & WebAssembly** | Motores 2D com física customizada, arte regional 16-bit e compilação para navegadores de alta performance a 60 FPS. |
 
 ---
@@ -43,7 +43,7 @@ Este projeto é uma demonstração de engenharia aplicada, micro-interações re
 - **Hero Otimizado & Tipografia Balanceada:** Título principal de impacto orientado à ação (*"Construindo Sistemas Distribuídos e Microsserviços com Java/Spring Boot, Go e Cloud."*) com `text-wrap: balance` e prevenção de quebra de pontuação órfã via `.nowrap-end`.
 - **Badge de Papel Técnico Flutuante:** Pílula ampliada de presença executiva com indicador de status (`● DESENVOLVEDOR BACK-END`) e micro-animação contínua orgânica `role-badge-float`.
 - **Glassmorphism Paritário (Dark & Light Mode):** Camadas translúcidas em vidro fosco (`backdrop-filter: blur(12px)`), reflexo especular superior e iluminação sutil de néon âmbar.
-- **Carrossel Infinito de Stacks (*Tech Marquee Ticker*):** Fita horizontal em CSS contínuo a 60 FPS com 20+ tecnologias em rotação perpétua ininterrupta (Java 21, Spring Boot 3, Go, Angular 21, TypeScript, Docker, Docker Swarm, AWS Cloud, PostgreSQL 16, Oracle DB, MySQL, Redis, Linux/Ubuntu, Git, Traefik v2, n8n, Postman, Firebase, Firestore, Vercel, Google Cloud).
+- **Carrossel Infinito de Stacks (*Tech Marquee Ticker*):** Fita horizontal em CSS contínuo a 60 FPS com 22+ tecnologias em rotação perpétua ininterrupta (Java 21, Spring Boot 3, Go, Angular 21, TypeScript, JavaScript, CSS3, Tailwind CSS, Node.js, WordPress, Docker, Docker Swarm, AWS Cloud, PostgreSQL 16, Oracle DB, MySQL, Redis, Linux/Ubuntu, Git, Traefik v2, n8n, Postman, Firebase, Firestore, Vercel, Google Cloud).
 - **Controles Flutuantes Ergonômicos:** Botões flutuantes para alternância de Modo Escuro/Claro e efeito de Scanlines CRT posicionados estrategicamente no canto inferior direito para acesso instantâneo.
 - **Telemetria Serverless em Go Nativo:** Função serverless em Go (`/api/status`) respondendo na edge da Vercel com métricas reais de latência, versão de runtime e localização regional de Belém-PA.
 - **WebAssembly em Produção:** Integração direta com jogos compilados de Go para WASM (*Égua Mano Gamer*), rodando nativamente no navegador a 60 FPS.
