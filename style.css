@@ -1472,10 +1472,11 @@ body.theme-light .desc-pill {
   display: flex;
   align-items: center;
   gap: 2.4rem;
-  background: rgba(18, 24, 38, 0.58);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1.5px solid rgba(245, 158, 11, 0.35);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(245, 158, 11, 0.03) 25%, rgba(22, 16, 10, 0.42) 65%, rgba(12, 9, 5, 0.52) 100%);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(245, 158, 11, 0.30);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
   border-left: 4.5px solid var(--accent-color);
   border-radius: 14px;
   padding: 2.2rem 2.6rem;
@@ -1484,9 +1485,10 @@ body.theme-light .desc-pill {
   width: 100%;
   box-shadow:
     0 16px 44px rgba(0, 0, 0, 0.45),
-    0 0 20px rgba(245, 158, 11, 0.2),
+    0 0 20px rgba(245, 158, 11, 0.16),
     -4px 0 20px var(--accent-glow),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 0 22px 0 rgba(245, 158, 11, 0.03);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -1504,13 +1506,18 @@ body.theme-light .desc-pill {
 }
 
 .hero-presentation-card:hover {
-  border-color: var(--accent-color);
+  border-color: rgba(245, 158, 11, 0.65);
+  border-top-color: rgba(255, 255, 255, 0.32);
   border-left: 4.5px solid var(--accent-color);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(245, 158, 11, 0.05) 25%, rgba(32, 22, 14, 0.52) 65%, rgba(16, 12, 7, 0.62) 100%);
+  backdrop-filter: blur(20px) saturate(200%);
+  -webkit-backdrop-filter: blur(20px) saturate(200%);
   box-shadow:
     0 20px 52px rgba(0, 0, 0, 0.55),
     0 0 35px var(--accent-glow),
     -6px 0 28px var(--accent-glow),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.28),
+    inset 0 0 28px 0 rgba(245, 158, 11, 0.06);
   transform: translateY(-2px);
 }
 
@@ -2279,10 +2286,11 @@ body.theme-light .pixel-btn.outline:hover {
 .project-card {
   width: 100%;
   max-width: 100%;
-  background: rgba(18, 24, 38, 0.65);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1.5px solid rgba(245, 158, 11, 0.45);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(245, 158, 11, 0.03) 25%, rgba(22, 16, 10, 0.42) 65%, rgba(12, 9, 5, 0.52) 100%);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(245, 158, 11, 0.30);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
   border-left: 4px solid var(--accent-color);
   border-radius: 12px;
   padding: 1.15rem 1.2rem;
@@ -2293,10 +2301,11 @@ body.theme-light .pixel-btn.outline:hover {
   position: relative;
   overflow: hidden;
   box-shadow:
-    0 8px 30px rgba(0, 0, 0, 0.35),
-    0 0 16px rgba(245, 158, 11, 0.18),
+    0 10px 32px 0 rgba(0, 0, 0, 0.40),
+    0 0 16px rgba(245, 158, 11, 0.14),
     -3px 0 14px var(--accent-glow),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 0 20px 0 rgba(245, 158, 11, 0.03);
 }
 
 .project-card::before {
@@ -2313,14 +2322,18 @@ body.theme-light .pixel-btn.outline:hover {
 
 .project-card:hover {
   transform: translateY(-4px);
-  border-color: var(--accent-color);
+  border-color: rgba(245, 158, 11, 0.65);
+  border-top-color: rgba(255, 255, 255, 0.32);
   border-left: 4px solid var(--accent-color);
-  background: rgba(22, 30, 48, 0.82);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.09) 0%, rgba(245, 158, 11, 0.06) 25%, rgba(32, 22, 14, 0.52) 65%, rgba(16, 12, 7, 0.62) 100%);
+  backdrop-filter: blur(18px) saturate(200%);
+  -webkit-backdrop-filter: blur(18px) saturate(200%);
   box-shadow:
-    0 14px 40px rgba(0, 0, 0, 0.5),
-    0 0 25px var(--accent-glow),
-    -5px 0 20px var(--accent-glow),
-    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    0 16px 44px 0 rgba(0, 0, 0, 0.55),
+    0 0 28px var(--accent-glow),
+    -5px 0 22px var(--accent-glow),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.28),
+    inset 0 0 24px 0 rgba(245, 158, 11, 0.06);
 }
 
 .project-card:hover::before {
@@ -2457,10 +2470,11 @@ body.theme-light .pixel-btn.outline:hover {
 }
 
 .trajectory-card {
-  background: rgba(18, 24, 38, 0.65);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1.5px solid rgba(245, 158, 11, 0.45);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(245, 158, 11, 0.03) 25%, rgba(22, 16, 10, 0.42) 65%, rgba(12, 9, 5, 0.52) 100%);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(245, 158, 11, 0.30);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
   border-left: 4.5px solid var(--accent-color);
   border-radius: 14px;
   padding: 2.2rem 2.4rem;
@@ -2470,9 +2484,11 @@ body.theme-light .pixel-btn.outline:hover {
   position: relative;
   overflow: hidden;
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.35),
-    0 0 18px rgba(245, 158, 11, 0.18),
-    -4px 0 18px var(--accent-glow);
+    0 10px 32px 0 rgba(0, 0, 0, 0.38),
+    0 0 18px rgba(245, 158, 11, 0.14),
+    -4px 0 18px var(--accent-glow),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 0 20px 0 rgba(245, 158, 11, 0.03);
   transition: border-color 0.28s ease, box-shadow 0.28s ease, transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
@@ -2488,12 +2504,18 @@ body.theme-light .pixel-btn.outline:hover {
 }
 
 .trajectory-card:hover {
-  border-color: var(--accent-color);
+  border-color: rgba(245, 158, 11, 0.65);
+  border-top-color: rgba(255, 255, 255, 0.32);
   border-left: 4.5px solid var(--accent-color);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.09) 0%, rgba(245, 158, 11, 0.06) 25%, rgba(32, 22, 14, 0.52) 65%, rgba(16, 12, 7, 0.62) 100%);
+  backdrop-filter: blur(18px) saturate(200%);
+  -webkit-backdrop-filter: blur(18px) saturate(200%);
   box-shadow:
-    0 14px 40px rgba(0, 0, 0, 0.45),
+    0 16px 44px rgba(0, 0, 0, 0.55),
     0 0 28px var(--accent-glow),
-    -6px 0 24px var(--accent-glow);
+    -6px 0 24px var(--accent-glow),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.28),
+    inset 0 0 24px 0 rgba(245, 158, 11, 0.06);
   transform: translateY(-2px);
 }
 
@@ -3141,11 +3163,12 @@ body.theme-light .pillar-tag:hover {
   gap: 0.65rem;
   padding: 0.65rem 1.2rem;
   border-radius: 8px;
-  background: rgba(18, 24, 38, 0.65);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(22, 16, 10, 0.45) 100%);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
   border: 1px solid rgba(245, 158, 11, 0.28);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12);
   font-family: var(--font-code);
   font-size: 0.88rem;
   font-weight: 600;
@@ -3224,10 +3247,11 @@ body.theme-light .stack-float-chip:hover {
 }
 
 .experience-card {
-  background: rgba(18, 24, 38, 0.65);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1.5px solid rgba(245, 158, 11, 0.45);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(245, 158, 11, 0.03) 25%, rgba(22, 16, 10, 0.42) 65%, rgba(12, 9, 5, 0.52) 100%);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(245, 158, 11, 0.30);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
   border-left: 4px solid var(--accent-color);
   border-radius: 12px;
   padding: 1.6rem;
@@ -3240,10 +3264,11 @@ body.theme-light .stack-float-chip:hover {
   position: relative;
   overflow: hidden;
   box-shadow:
-    0 8px 28px rgba(0, 0, 0, 0.35),
-    0 0 16px rgba(245, 158, 11, 0.18),
+    0 10px 32px 0 rgba(0, 0, 0, 0.40),
+    0 0 16px rgba(245, 158, 11, 0.14),
     -3px 0 14px var(--accent-glow),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 0 20px 0 rgba(245, 158, 11, 0.03);
 }
 
 .experience-card::before {
@@ -3259,12 +3284,18 @@ body.theme-light .stack-float-chip:hover {
 
 .experience-card:hover {
   transform: translateY(-4px);
-  border-color: var(--accent-color);
+  border-color: rgba(245, 158, 11, 0.65);
+  border-top-color: rgba(255, 255, 255, 0.32);
   border-left: 4px solid var(--accent-color);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.09) 0%, rgba(245, 158, 11, 0.06) 25%, rgba(32, 22, 14, 0.52) 65%, rgba(16, 12, 7, 0.62) 100%);
+  backdrop-filter: blur(18px) saturate(200%);
+  -webkit-backdrop-filter: blur(18px) saturate(200%);
   box-shadow:
-    0 14px 38px rgba(0, 0, 0, 0.48),
-    0 0 24px var(--accent-glow),
-    -5px 0 20px var(--accent-glow);
+    0 16px 44px 0 rgba(0, 0, 0, 0.55),
+    0 0 28px var(--accent-glow),
+    -5px 0 22px var(--accent-glow),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.28),
+    inset 0 0 24px 0 rgba(245, 158, 11, 0.06);
 }
 
 .exp-card-header {
@@ -3383,10 +3414,11 @@ body.theme-light .exp-tag {
 }
 
 .education-card {
-  background: rgba(18, 24, 38, 0.65);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1.5px solid rgba(245, 158, 11, 0.45);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(245, 158, 11, 0.03) 25%, rgba(22, 16, 10, 0.42) 65%, rgba(12, 9, 5, 0.52) 100%);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(245, 158, 11, 0.30);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
   border-left: 4px solid var(--accent-color);
   border-radius: 12px;
   padding: 1.6rem;
@@ -3399,10 +3431,11 @@ body.theme-light .exp-tag {
   position: relative;
   overflow: hidden;
   box-shadow:
-    0 8px 28px rgba(0, 0, 0, 0.35),
-    0 0 16px rgba(245, 158, 11, 0.18),
+    0 10px 32px 0 rgba(0, 0, 0, 0.40),
+    0 0 16px rgba(245, 158, 11, 0.14),
     -3px 0 14px var(--accent-glow),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 0 20px 0 rgba(245, 158, 11, 0.03);
 }
 
 .education-card::before {
@@ -3418,12 +3451,18 @@ body.theme-light .exp-tag {
 
 .education-card:hover {
   transform: translateY(-4px);
-  border-color: var(--accent-color);
+  border-color: rgba(245, 158, 11, 0.65);
+  border-top-color: rgba(255, 255, 255, 0.32);
   border-left: 4px solid var(--accent-color);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.09) 0%, rgba(245, 158, 11, 0.06) 25%, rgba(32, 22, 14, 0.52) 65%, rgba(16, 12, 7, 0.62) 100%);
+  backdrop-filter: blur(18px) saturate(200%);
+  -webkit-backdrop-filter: blur(18px) saturate(200%);
   box-shadow:
-    0 14px 38px rgba(0, 0, 0, 0.48),
-    0 0 24px var(--accent-glow),
-    -5px 0 20px var(--accent-glow);
+    0 16px 44px 0 rgba(0, 0, 0, 0.55),
+    0 0 28px var(--accent-glow),
+    -5px 0 22px var(--accent-glow),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.28),
+    inset 0 0 24px 0 rgba(245, 158, 11, 0.06);
 }
 
 .edu-card-header {
