@@ -89,8 +89,26 @@ export class PortfolioService {
     this.crtEnabled.update((prev) => !prev);
   }
 
+  // Signal reativo para a barra lateral retrátil (estilo iPortfolio)
+  readonly sidebarOpen = signal<boolean>(false);
+
   // Alterna o modo Claro / Escuro
   toggleTheme(): void {
     this.isLight.update((prev) => !prev);
+  }
+
+  // Alterna abertura da barra lateral
+  toggleSidebar(): void {
+    this.sidebarOpen.update((prev) => !prev);
+  }
+
+  // Fecha a barra lateral
+  closeSidebar(): void {
+    this.sidebarOpen.set(false);
+  }
+
+  // Abre a barra lateral
+  openSidebar(): void {
+    this.sidebarOpen.set(true);
   }
 }

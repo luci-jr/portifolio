@@ -18,10 +18,22 @@
   <!-- Efeito Scanlines CRT retrô -->
   <div class="crt-overlay" id="crtOverlay"></div>
 
+  <!-- Botão Flutuante Ergonômico Lateral -->
+  <button id="floatingSidebarTrigger" class="floating-sidebar-trigger" title="Abrir Menu de Navegação" aria-label="Abrir Navegação Lateral">
+    <span class="floating-icon">☰</span>
+    <span class="floating-text">MENU</span>
+  </button>
+
   <!-- Barra de Telemetria Superior -->
   <header class="top-nav">
     <!-- Redes Sociais Rápidas no Lado Esquerdo -->
     <div class="nav-social-links" aria-label="Redes Sociais Rápidas">
+      <!-- Botão para Abrir Menu Lateral (Estilo iPortfolio) -->
+      <button id="sidebarToggleBtn" class="nav-menu-btn" title="Abrir Navegação Lateral" aria-label="Abrir Menu Lateral">
+        <span class="nav-menu-icon">☰</span>
+        <span class="nav-menu-label">MENU</span>
+      </button>
+
       <a href="https://github.com/luci-jr" target="_blank" class="nav-social-btn nav-btn-github" title="Acessar GitHub de Lucivaldo Junior" aria-label="GitHub">
         <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
           <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
@@ -121,7 +133,7 @@
       </div>
 
       <!-- Carrossel Infinito de Tecnologias (Infinite Tech Marquee em Toda a Largura) -->
-      <div class="tech-marquee-wrapper" aria-label="Tecnologias e Stacks Dominadas">
+      <div class="tech-marquee-wrapper" id="techMarquee" aria-label="Tecnologias e Stacks Dominadas">
         <div class="marquee-tag">EM CONSTANTE APRENDIZADO</div>
         <div class="tech-marquee-container">
           <div class="tech-marquee-track">
@@ -535,6 +547,164 @@
       <p class="footer-text">© 2026 <a href="https://github.com/luci-jr" target="_blank" rel="noopener noreferrer" class="footer-author-link" title="Acessar GitHub de Lucivaldo Junior">Lucivaldo Junior</a> — Desenvolvido com Angular 21, TypeScript & Go | Belém do Pará - Brasil</p>
     </div>
   </footer>
+
+  <!-- Overlay Backdrop da Barra Lateral -->
+  <div id="sidebarBackdrop" class="sidebar-backdrop" aria-hidden="true"></div>
+
+  <!-- Barra Lateral Retrátil Estilo iPortfolio Cyberpunk -->
+  <aside id="sidebarDrawer" class="sidebar-drawer" aria-label="Navegação Lateral do Portfólio">
+    <!-- Cabeçalho com Botão Fechar -->
+    <div class="sidebar-header">
+      <button id="sidebarCloseBtn" class="sidebar-close-btn" title="Fechar Menu Lateral" aria-label="Fechar Menu">
+        [✕ FECHAR]
+      </button>
+    </div>
+
+    <!-- Perfil do Desenvolvedor -->
+    <div class="sidebar-profile">
+      <div class="sidebar-avatar-wrapper">
+        <img src="perfil-navbar.png"
+             onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/perfil-navbar.png'}"
+             alt="Foto de Lucivaldo Junior"
+             class="sidebar-avatar-img">
+        <span class="sidebar-status-dot" title="Status: ONLINE"></span>
+      </div>
+      <h2 class="sidebar-name">
+        <span class="pixel-bracket">[</span>LUCIVALDO JUNIOR<span class="pixel-bracket">]</span>
+      </h2>
+      <p class="sidebar-role">DESENVOLVEDOR BACK-END &amp; SYSOPS</p>
+
+      <!-- Redes Sociais Rápidas -->
+      <div class="sidebar-socials">
+        <a href="https://github.com/luci-jr" target="_blank" class="sidebar-social-link" title="GitHub de Lucivaldo Junior" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/lucivaldojr/" target="_blank" class="sidebar-social-link" title="LinkedIn de Lucivaldo Junior" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+        <a href="mailto:lucivaldojr25@gmail.com" class="sidebar-social-link" title="Enviar Email" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+            <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navegação Vertical (Itens fiéis ao iPortfolio) -->
+    <nav class="sidebar-nav">
+      <ul class="sidebar-menu-list">
+        <!-- 1. Home / Início -->
+        <li>
+          <a href="#heroSection" class="sidebar-nav-link active" data-section="heroSection">
+            <span class="navicon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </span>
+            <span class="nav-text">Início</span>
+          </a>
+        </li>
+
+        <!-- 2. About / Sobre Mim -->
+        <li>
+          <a href="#sobre" class="sidebar-nav-link" data-section="sobre">
+            <span class="navicon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </span>
+            <span class="nav-text">Sobre Mim</span>
+          </a>
+        </li>
+
+        <!-- 3. Resume / Trajetória & Formação -->
+        <li>
+          <a href="#sobre" class="sidebar-nav-link" data-section="sobre">
+            <span class="navicon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </span>
+            <span class="nav-text">Trajetória &amp; Bio</span>
+          </a>
+        </li>
+
+        <!-- 4. Portfolio / Vitrine de Projetos -->
+        <li>
+          <a href="#projetos" class="sidebar-nav-link" data-section="projetos">
+            <span class="navicon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+            </span>
+            <span class="nav-text">Vitrine de Projetos</span>
+          </a>
+        </li>
+
+        <!-- 5. Services / Stacks & Tecnologias -->
+        <li>
+          <a href="#techMarquee" class="sidebar-nav-link" data-section="techMarquee">
+            <span class="navicon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+            </span>
+            <span class="nav-text">Stacks &amp; Tecnologias</span>
+          </a>
+        </li>
+
+        <!-- 6. Dropdown / Classes da Trindade & Telemetria -->
+        <li>
+          <a href="#classeSelector" class="sidebar-nav-link" data-section="classeSelector">
+            <span class="navicon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+            </span>
+            <span class="nav-text">Classes da Trindade</span>
+          </a>
+        </li>
+
+        <!-- 7. Contact / Contato Direto -->
+        <li>
+          <a href="#contato" class="sidebar-nav-link" data-section="contato">
+            <span class="navicon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </span>
+            <span class="nav-text">Contato Direto</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Rodapé da Sidebar -->
+    <div class="sidebar-footer">
+      <div class="sidebar-meta">
+        <span class="sidebar-meta-led"></span>
+        <span class="sidebar-meta-text">NEXUS COCKPIT v2.2 • BELÉM-PA</span>
+      </div>
+    </div>
+  </aside>
 
   <script src="script.js"></script>
 </body>

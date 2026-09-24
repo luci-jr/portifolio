@@ -21,4 +21,8 @@ export class NavbarComponent {
   toggleTheme(): void {
     this.portfolio.toggleTheme();
   }
+
+  toggleSidebar(): void {
+    this.portfolio.toggleSidebar();
+  }
 }

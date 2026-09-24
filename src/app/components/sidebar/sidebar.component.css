@@ -1,0 +1,4 @@
+/* Estilos encapsulados ou complementares do SidebarComponent */
+:host {
+  display: block;
+}

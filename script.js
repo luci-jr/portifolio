@@ -230,4 +230,79 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Inicializa a vitrine filtrada por Front-end (modo padrão inicial)
   filterProjects('frontend');
+
+  /**
+   * ==========================================================================
+   * Lógica da Barra Lateral Retrátil Estilo iPortfolio Cyberpunk
+   * ==========================================================================
+   */
+  const sidebarDrawer = document.getElementById('sidebarDrawer');
+  const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+  const sidebarToggleBtn = document.getElementById('sidebarToggleBtn');
+  const floatingSidebarTrigger = document.getElementById('floatingSidebarTrigger');
+  const sidebarCloseBtn = document.getElementById('sidebarCloseBtn');
+  const sidebarNavLinks = document.querySelectorAll('.sidebar-nav-link');
+
+  function openSidebar() {
+    if (sidebarDrawer) sidebarDrawer.classList.add('is-open');
+    if (sidebarBackdrop) sidebarBackdrop.classList.add('is-open');
+  }
+
+  function closeSidebar() {
+    if (sidebarDrawer) sidebarDrawer.classList.remove('is-open');
+    if (sidebarBackdrop) sidebarBackdrop.classList.remove('is-open');
+  }
+
+  function toggleSidebar() {
+    if (sidebarDrawer && sidebarDrawer.classList.contains('is-open')) {
+      closeSidebar();
+    } else {
+      openSidebar();
+    }
+  }
+
+  if (sidebarToggleBtn) sidebarToggleBtn.addEventListener('click', toggleSidebar);
+  if (floatingSidebarTrigger) floatingSidebarTrigger.addEventListener('click', toggleSidebar);
+  if (sidebarCloseBtn) sidebarCloseBtn.addEventListener('click', closeSidebar);
+  if (sidebarBackdrop) sidebarBackdrop.addEventListener('click', closeSidebar);
+
+  // Fecha no pressionamento de ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeSidebar();
+  });
+
+  // Fecha a gaveta e ativa o link correspondente ao clicar
+  sidebarNavLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      sidebarNavLinks.forEach((l) => l.classList.remove('active'));
+      link.classList.add('active');
+      closeSidebar();
+    });
+  });
+
+  // Atualiza dinamicamente o link ativo conforme o scroll da página
+  const sectionsToObserve = ['heroSection', 'sobre', 'projetos', 'techMarquee', 'contato'];
+  window.addEventListener('scroll', () => {
+    let currentSection = '';
+    sectionsToObserve.forEach((secId) => {
+      const el = document.getElementById(secId);
+      if (el) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= 200 && rect.bottom >= 100) {
+          currentSection = secId;
+        }
+      }
+    });
+
+    if (currentSection) {
+      sidebarNavLinks.forEach((link) => {
+        if (link.getAttribute('data-section') === currentSection) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+  }, { passive: true });
 });
+
