@@ -808,7 +808,11 @@ body.theme-light .pixel-btn.outline:hover {
   50% {
     opacity: 1;
     transform: scale(1.15);
-    box-shadow: 0 0 8px var(/* ==========================================================================
+    box-shadow: 0 0 8px var(--accent-glow);
+  }
+}
+
+/* ==========================================================================
    BADGE HUD DO DESENVOLVEDOR NA NAVBAR (Nome + Portfólio em Cápsula Neon)
    ========================================================================== */
 .dev-name-glow {

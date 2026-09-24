@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lucivaldo Junior - Portfólio - Desenvolvedor</title>
-  <meta name="description" content="Portfólio de Lucivaldo Junior — Front-end (Angular), Backend (Java/Go), SysOps e Game Dev." />
+  <meta name="description"
+    content="Portfólio de Lucivaldo Junior — Front-end (Angular), Backend (Java/Go), SysOps e Game Dev." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Press+Start+2P&family=VT323&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
 </head>
+
 <body class="mode-backend">
   <!-- Efeito Scanlines CRT retrô (Ativado por Padrão) -->
   <div class="crt-overlay" id="crtOverlay"></div>
@@ -23,24 +28,31 @@
     <!-- Redes Sociais Rápidas no Lado Esquerdo -->
     <div class="nav-social-links" aria-label="Redes Sociais Rápidas">
       <!-- Botão para Abrir Menu Lateral (Estilo iPortfolio) -->
-      <button id="sidebarToggleBtn" class="nav-menu-btn" title="Abrir Navegação Lateral" aria-label="Abrir Menu Lateral">
+      <button id="sidebarToggleBtn" class="nav-menu-btn" title="Abrir Navegação Lateral"
+        aria-label="Abrir Menu Lateral">
         <span class="nav-menu-icon">☰</span>
         <span class="nav-menu-label">MENU</span>
       </button>
 
-      <a href="https://github.com/luci-jr" target="_blank" class="nav-social-btn nav-btn-github" title="Acessar GitHub de Lucivaldo Junior" aria-label="GitHub">
+      <a href="https://github.com/luci-jr" target="_blank" class="nav-social-btn nav-btn-github"
+        title="Acessar GitHub de Lucivaldo Junior" aria-label="GitHub">
         <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          <path
+            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
         </svg>
       </a>
-      <a href="https://www.linkedin.com/in/lucivaldojr/" target="_blank" class="nav-social-btn nav-btn-linkedin" title="Acessar LinkedIn de Lucivaldo Junior" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/lucivaldojr/" target="_blank" class="nav-social-btn nav-btn-linkedin"
+        title="Acessar LinkedIn de Lucivaldo Junior" aria-label="LinkedIn">
         <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          <path
+            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
         </svg>
       </a>
-      <a href="mailto:lucivaldojr25@gmail.com" class="nav-social-btn nav-btn-email" title="Enviar Email para lucivaldojr25@gmail.com" aria-label="Email">
+      <a href="mailto:lucivaldojr25@gmail.com" class="nav-social-btn nav-btn-email"
+        title="Enviar Email para lucivaldojr25@gmail.com" aria-label="Email">
         <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-          <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+          <path
+            d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
         </svg>
       </a>
     </div>
@@ -69,9 +81,11 @@
       </button>
 
       <!-- Botão Trilha Sonora Imersiva Convidativa (Ambient Chill) -->
-      <button id="audioToggle" class="crt-btn audio-toggle-btn" title="Alternar Trilha Sonora Imersiva (Ambient Chill)" aria-label="Trilha Sonora Imersiva">
+      <button id="audioToggle" class="crt-btn audio-toggle-btn" title="Alternar Trilha Sonora Imersiva (Ambient Chill)"
+        aria-label="Trilha Sonora Imersiva">
         <span class="audio-note-wrap">
-          <svg class="audio-note-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="audio-note-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 18V5l12-2v13"></path>
             <circle cx="6" cy="18" r="3"></circle>
             <circle cx="18" cy="16" r="3"></circle>
@@ -92,59 +106,66 @@
     <section class="hero" id="heroSection">
       <!-- Conteúdo Central do Hero (Inicia em Backend) -->
       <div class="hero-content">
-        <h1 class="hero-title" id="heroTitle">De Chef de cozinha a desenvolvedor: construindo <span class="highlight-tech">sistemas</span>, <span class="highlight-tech">infraestrutura</span> e <span class="nowrap-end"><span class="highlight-tech">IA</span>.</span></h1>
-        <!-- Card de Perfil do Desenvolvedor (Cockpit HUD Expandido) -->
-        <div class="hero-profile-card" aria-label="Ficha Técnica do Desenvolvedor">
-          <div class="profile-card-main">
-            <div class="profile-avatar-box">
-              <div class="profile-avatar-frame">
-                <img src="perfil-lucivaldo.jpg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/perfil-lucivaldo.jpg'}" alt="Foto de Perfil de Lucivaldo Junior" class="profile-ascii-img">
-              </div>
+        <h1 class="hero-title" id="heroTitle">De Chef de cozinha a desenvolvedor: construindo <span
+            class="highlight-tech">sistemas</span>, <span class="highlight-tech">infraestrutura</span> e <span
+            class="nowrap-end"><span class="highlight-tech">IA</span>.</span></h1>
+        <!-- Painel Integrado: Foto com Ficha Direta + Apresentação -->
+        <div class="hero-presentation-card" aria-label="Apresentação do Desenvolvedor">
+          <!-- Coluna da Foto & Ficha Direta -->
+          <div class="hero-avatar-column">
+            <div class="profile-avatar-frame">
+              <img src="perfil-lucivaldo.jpg"
+                onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/perfil-lucivaldo.jpg'}"
+                alt="Foto de Perfil de Lucivaldo Junior" class="profile-ascii-img">
             </div>
 
-            <div class="profile-bio-details">
-              <div class="bio-grid-2col">
-                <div class="bio-col">
-                  <div class="bio-item">
-                    <span class="bio-key"><span class="key-symbol">&gt;</span> CARGO:</span>
-                    <span class="bio-val highlight">Desenvolvedor Back-end</span>
-                  </div>
-                  <div class="bio-item">
-                    <span class="bio-key"><span class="key-symbol">&gt;</span> LOCALIZAÇÃO:</span>
-                    <span class="bio-val">Belém-PA — Brasil 📍 (UTC-3)</span>
-                  </div>
-                  <div class="bio-item">
-                    <span class="bio-key"><span class="key-symbol">&gt;</span> IDADE:</span>
-                    <span class="bio-val">39 anos (Maturidade &amp; Foco)</span>
-                  </div>
-                </div>
-
-                <div class="bio-col">
-                  <div class="bio-item">
-                    <span class="bio-key"><span class="key-symbol">&gt;</span> MODALIDADE:</span>
-                    <span class="bio-val">Remoto • Híbrido • Presencial</span>
-                  </div>
-                  <div class="bio-item">
-                    <span class="bio-key"><span class="key-symbol">&gt;</span> GRADUAÇÃO:</span>
-                    <span class="bio-val">ADS — UNAMA (Cursando 2026–2028)</span>
-                  </div>
-                  <div class="bio-item bio-status-row">
-                    <span class="bio-key"><span class="key-symbol">&gt;</span> STATUS:</span>
-                    <span class="bio-val status-val"><span class="bio-pulse-dot"></span> DISPONÍVEL (CLT / PJ / PROJETOS)</span>
-                  </div>
-                </div>
+            <div class="avatar-quick-meta">
+              <div class="quick-meta-item">
+                <span class="meta-label"><span class="key-symbol">&gt;</span> CARGO:</span>
+                <span class="meta-val highlight">Desenvolvedor</span>
+              </div>
+              <div class="quick-meta-item">
+                <span class="meta-label"><span class="key-symbol">&gt;</span> CIDADE:</span>
+                <span class="meta-val">Belém do Pará 📍</span>
+              </div>
+              <div class="quick-meta-item">
+                <span class="meta-label"><span class="key-symbol">&gt;</span> IDADE:</span>
+                <span class="meta-val">39 anos</span>
+              </div>
+              <div class="quick-meta-item">
+                <span class="meta-label"><span class="key-symbol">&gt;</span> REGIME:</span>
+                <span class="meta-val">Remoto • Híbrido</span>
+              </div>
+              <div class="quick-meta-item status-row">
+                <span class="meta-label"><span class="key-symbol">&gt;</span> STATUS:</span>
+                <span class="meta-val status-val"><span class="bio-pulse-dot"></span> DISPONÍVEL</span>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="hero-desc" id="heroDesc">
-          <p class="hero-desc-p">
-            Minha história profissional é marcada por uma transição de carreira estratégica para a Tecnologia, fundamentada em <strong class="highlight-tech">mais de 15 anos de liderança em ambientes operacionais de alta pressão como Chef de Cozinha</strong>. Essa vivência consolidou competências essenciais para a engenharia de software de missão crítica: <span class="desc-pill">resiliência sob pressão</span>, <span class="desc-pill">disciplina rigorosa</span>, <span class="desc-pill">gestão ágil de crises</span> e foco obstinado em entregas de qualidade com cumprimento rigoroso de prazos.
-          </p>
-          <p class="hero-desc-p">
-            Atualmente, atuo como <strong class="highlight-tech">Desenvolvedor Back-end &amp; SysOps/DevOps</strong>, unindo o desenvolvimento de microsserviços e sistemas distribuídos de alta concorrência à automação de fluxos e orquestração de infraestruturas em nuvem. Possuo experiência prática com <strong class="highlight-tech">Java 21 (Spring Boot 3)</strong> e <strong class="highlight-tech">Go (Golang)</strong>, conteinerização e clusters com <strong class="highlight-tech">Docker &amp; Swarm</strong>, roteamento seguro com <strong class="highlight-tech">Traefik</strong>, nuvem <strong class="highlight-tech">AWS</strong>, além de persistência transacional com bancos relacionais (<strong class="highlight-tech">PostgreSQL</strong> com isolamento ACID e <strong class="highlight-tech">Oracle DB</strong>).
-          </p>
+          <!-- Coluna de Apresentação (Dinâmica com as Classes) -->
+          <div class="hero-desc" id="heroDesc">
+            <p class="hero-desc-p">
+              Minha história profissional é marcada por uma transição de carreira estratégica para a Tecnologia,
+              fundamentada em <strong class="highlight-tech">mais de 15 anos de liderança em ambientes operacionais de
+                alta pressão como Chef de Cozinha</strong>. Essa vivência consolidou competências essenciais para a
+              engenharia de software de missão crítica: <span class="desc-pill">resiliência sob pressão</span>, <span
+                class="desc-pill">disciplina rigorosa</span>, <span class="desc-pill">gestão ágil de crises</span> e
+              foco obstinado em entregas de qualidade com cumprimento rigoroso de prazos.
+            </p>
+            <p class="hero-desc-p">
+              Atualmente, atuo como <strong class="highlight-tech">Desenvolvedor Back-end &amp; SysOps/DevOps</strong>,
+              unindo o desenvolvimento de microsserviços e sistemas distribuídos de alta concorrência à automação de
+              fluxos, orquestração em nuvem e interfaces web modernas. Possuo experiência prática com <strong
+                class="highlight-tech">Java 21 (Spring Boot 3)</strong> e <strong class="highlight-tech">Go
+                (Golang)</strong>, conteinerização e clusters com <strong class="highlight-tech">Docker &amp;
+                Swarm</strong>, roteamento seguro com <strong class="highlight-tech">Traefik</strong>, nuvem <strong
+                class="highlight-tech">AWS</strong>, persistência com bancos relacionais (<strong
+                class="highlight-tech">PostgreSQL</strong> com isolamento ACID e <strong class="highlight-tech">Oracle
+                DB</strong>), além do desenvolvimento de interfaces reativas com <strong class="highlight-tech">Angular
+                21+ &amp; TypeScript</strong>.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -154,7 +175,8 @@
     <section class="section about-section" id="sobre">
       <div class="section-header">
         <h2 class="section-title"><span class="glow">&gt;</span> MINHA HISTÓRIA</h2>
-        <p class="section-subtitle">Da liderança sob pressão na alta gastronomia à engenharia de software: resiliência operacional, disciplina e código resiliente.</p>
+        <p class="section-subtitle">Da liderança sob pressão na alta gastronomia à engenharia de software: resiliência
+          operacional, disciplina e código resiliente.</p>
       </div>
 
       <div class="about-single-container">
@@ -169,16 +191,29 @@
 
           <div class="trajectory-body">
             <p>
-              Minha conexão com a tecnologia começou no início dos anos 2000. Entre <strong>2002 e 2006</strong>, atuei profissionalmente na <strong>Interconect</strong> como <strong>Técnico de Informática e Redes</strong>. Foi a minha escola de computação raiz: montagem física, diagnóstico de placas-mãe, memórias, periféricos e estruturação de redes locais cabeadas (LAN) na pilha TCP/IP, compreendendo desde a base como o hardware e os sistemas operacionais se comunicam.
+              Minha conexão com a tecnologia começou no início dos anos 2000. Entre <strong>2002 e 2006</strong>, atuei
+              profissionalmente na <strong>Interconect</strong> como <strong>Técnico de Informática e Redes</strong>.
+              Foi a minha escola de computação raiz: montagem física, diagnóstico de placas-mãe, memórias, periféricos e
+              estruturação de redes locais cabeadas (LAN) na pilha TCP/IP, compreendendo desde a base como o hardware e
+              os sistemas operacionais se comunicam.
             </p>
             <p>
-              Posteriormente, vivi uma jornada sólida de mais de 15 anos (<strong>2006 a 2023</strong>) na gastronomia profissional, atuando como <strong>Cozinheiro e Chefe de Cozinha</strong>. Liderar brigadas em cozinhas de alta demanda, atendendo centenas de pedidos simultâneos sob tolerância zero para falhas, forjou competências raras e indispensáveis para a engenharia de software: <strong>resiliência sob extrema pressão</strong>, <strong>inteligência emocional</strong>, <strong>gestão ágil de incidentes</strong> e a disciplina metodológica do <em>mise en place</em> (organização e governança que hoje aplico rigorosamente no planejamento de APIs, arquitetura e Clean Code).
+              Posteriormente, vivi uma jornada sólida de mais de 15 anos (<strong>2006 a 2023</strong>) na gastronomia
+              profissional, atuando como <strong>Cozinheiro e Chefe de Cozinha</strong>. Liderar brigadas em cozinhas de
+              alta demanda, atendendo centenas de pedidos simultâneos sob tolerância zero para falhas, forjou
+              competências raras e indispensáveis para a engenharia de software: <strong>resiliência sob extrema
+                pressão</strong>, <strong>inteligência emocional</strong>, <strong>gestão ágil de incidentes</strong> e
+              a disciplina metodológica do <em>mise en place</em> (organização e governança que hoje aplico
+              rigorosamente no planejamento de APIs, arquitetura e Clean Code).
             </p>
             <p>
-              A partir de <strong>2023</strong>, realizei minha transição definitiva para a engenharia de software com imersão profunda em back-end, nuvem e DevOps: formei-me no programa intensivo <strong>AWS re/Start (300h)</strong>, passei a integrar a comunidade técnica (<strong>AWS User Group Belém</strong>) e, em <strong>2026</strong>, ingressei na graduação superior em <strong>Análise e Desenvolvimento de Sistemas (UNAMA)</strong> (com previsão até 2028). Hoje atuo focado no desenvolvimento <strong>Back-end &amp; SysOps</strong>, construindo APIs concorrentes e microsserviços em <strong>Java 17/21 (Spring Boot 3)</strong> e <strong>Go (Golang 1.22+)</strong>, orquestrando contêineres com <strong>Docker Swarm</strong> na nuvem <strong>AWS</strong> e desenvolvendo interfaces reativas com <strong>Angular 21 &amp; TypeScript</strong>.
+              A partir de <strong>2023</strong>, iniciei minha <strong>transição de carreira para a tecnologia</strong> com imersão profunda em back-end, nuvem e DevOps: formei-me no programa intensivo <strong>AWS re/Start (300h)</strong>, passei a integrar ativamente a comunidade técnica (<strong>AWS User Group Belém</strong>) e consolidei mais de 600 horas em formações práticas voltadas a microsserviços e computação em nuvem. Hoje, direciono meus esforços para o aprendizado prático em <strong>Back-end &amp; SysOps</strong>, construindo APIs e microsserviços em <strong>Java 21 (Spring Boot 3)</strong> e <strong>Go (Golang 1.22+)</strong>, orquestrando contêineres com <strong>Docker Swarm</strong> na nuvem <strong>AWS</strong> e desenvolvendo interfaces reativas com <strong>Angular 21 &amp; TypeScript</strong>.
             </p>
             <p>
-              Atualmente, mantenho uma rotina consistente e disciplinada de <strong>estudos autodidatas contínuos</strong>: aprofundo-me diariamente por conta própria em conceitos fundamentais de ciência da computação, estruturas de dados, algoritmos, arquitetura de microsserviços e ecossistemas de <strong>Inteligência Artificial (IA)</strong>. Acredito no aprendizado orientado à prática real de código — construindo projetos do zero, explorando documentações técnicas oficiais e aplicando rigor em cada linha desenvolvida.
+              Atualmente, estou em <strong>constante evolução como desenvolvedor</strong>, conciliando disciplina de estudos e prática contínua para construir uma base técnica sólida. Dedico-me aos <strong>conceitos fundamentais de programação</strong>, arquitetura de software, desenvolvimento de <strong>APIs RESTful</strong>, modelagem de <strong>bancos de dados</strong>, computação em nuvem (<strong>Cloud AWS</strong>) e soluções voltadas à <strong>Inteligência Artificial (IA)</strong>.
+            </p>
+            <p>
+              À medida que avanço nos estudos, desenvolvo <strong>projetos práticos e experimentais</strong> para validar hipóteses, testar conceitos na prática e ganhar maturidade na engenharia de software. Complemento minha jornada com a exploração de <strong>documentações técnicas oficiais</strong> e referências aprofundadas da comunidade. Neste momento, direciono minha evolução prioritariamente para o <strong>desenvolvimento Back-end</strong>, com foco especializado em <strong>Java 21 (Spring Boot 3)</strong>, <strong>Go (Golang)</strong>, bancos de dados, <strong>cloud</strong> e <strong>automação</strong>.
             </p>
           </div>
 
@@ -199,7 +234,8 @@
     <section class="section projects-section" id="projetos">
       <div class="section-header">
         <h2 class="section-title"><span class="glow">&gt;</span> VITRINE DE PROJETOS</h2>
-        <p class="section-subtitle">Uma seleção de aplicações, microsserviços e estudos práticos construídos para resolver problemas reais e explorar novas soluções.</p>
+        <p class="section-subtitle">Uma seleção de aplicações, microsserviços e estudos práticos construídos para
+          resolver problemas reais e explorar novas soluções.</p>
 
         <!-- Abas de Filtro de Projetos -->
         <div class="project-filters" aria-label="Filtro de Projetos por Segmento">
@@ -220,15 +256,20 @@
           <div class="card-tag">🌐 FRONTEND / COMUNIDADE</div>
           <h3 class="card-title">Comunidade Tech</h3>
           <p class="card-desc">
-            Plataforma colaborativa completa para orientar, centralizar e acelerar a jornada de quem está ingressando na área de Tecnologia da Informação.
+            Plataforma colaborativa completa para orientar, centralizar e acelerar a jornada de quem está ingressando na
+            área de Tecnologia da Informação.
           </p>
           <div class="card-techs">
             <span>Angular 21+</span><span>TypeScript</span><span>Firebase</span><span>Tailwind CSS</span>
           </div>
           <div class="card-actions">
-            <a href="https://comunidade.tech.lucivaldo.cloud/inicio" target="_blank" class="card-link highlight">Acessar Plataforma 🌐</a>
+            <a href="https://comunidade.tech.lucivaldo.cloud/inicio" target="_blank" class="card-link highlight">Acessar
+              Plataforma 🌐</a>
             <a href="https://github.com/luci-jr/comunidade-tech" target="_blank" class="card-link">
-              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
               <span>GitHub ↗</span>
             </a>
           </div>
@@ -237,19 +278,26 @@
         <!-- 2. BACKEND: Jungle Gaming (Apostas Concorrentes & iGaming) -->
         <article class="project-card" data-category="backend">
           <div class="card-media">
-            <img src="public/jungle-cockpit.webp" alt="Jungle Gaming - Cockpit & Sistema Concorrente de Apostas" loading="lazy">
+            <img src="public/jungle-cockpit.webp" alt="Jungle Gaming - Cockpit & Sistema Concorrente de Apostas"
+              loading="lazy">
           </div>
           <div class="card-tag">☕ BACKEND / SISTEMAS CONCORRENTES &amp; IGAMING</div>
           <h3 class="card-title">Jungle Gaming (Apostas Concorrentes &amp; iGaming)</h3>
           <p class="card-desc">
-            Serviço financeiro distribuído de alta concorrência para processamento de apostas iGaming em Go 1.26+ com Uber Fx, persistência ACID em PostgreSQL (Row-Level Locking &amp; Triggers), mensageria AWS SQS FIFO e autenticação OIDC via Keycloak.
+            Serviço financeiro distribuído de alta concorrência para processamento de apostas iGaming em Go 1.26+ com
+            Uber Fx, persistência ACID em PostgreSQL (Row-Level Locking &amp; Triggers), mensageria AWS SQS FIFO e
+            autenticação OIDC via Keycloak.
           </p>
           <div class="card-techs">
-            <span>Go 1.26+</span><span>Uber Fx</span><span>PostgreSQL 16</span><span>AWS SQS FIFO</span><span>Keycloak</span><span>Docker Compose</span>
+            <span>Go 1.26+</span><span>Uber Fx</span><span>PostgreSQL 16</span><span>AWS SQS
+              FIFO</span><span>Keycloak</span><span>Docker Compose</span>
           </div>
           <div class="card-actions">
             <a href="https://github.com/luci-jr/desafio-jungle-game" target="_blank" class="card-link highlight">
-              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
               <span>GitHub ↗</span>
             </a>
           </div>
@@ -258,19 +306,27 @@
         <!-- 3. BACKEND: API RESTful Go & React Retro Synthwave -->
         <article class="project-card" data-category="backend">
           <div class="card-media">
-            <img src="https://raw.githubusercontent.com/luci-jr/api-rest_e_frontend_em_react/main/assets/react-app-retro.png" alt="API RESTful Go e React Retro Arcade" loading="lazy">
+            <img
+              src="https://raw.githubusercontent.com/luci-jr/api-rest_e_frontend_em_react/main/assets/react-app-retro.png"
+              alt="API RESTful Go e React Retro Arcade" loading="lazy">
           </div>
           <div class="card-tag">☕ BACKEND / GO REST</div>
           <h3 class="card-title">API RESTful Go & Synthwave Arcade</h3>
           <p class="card-desc">
-            API RESTful robusta em Go 1.22+ com Gorilla Mux, middlewares, CORS e persistência PostgreSQL via GORM, 100% conteinerizada em Docker Compose e integrada a front-end React Retro.
+            API RESTful robusta em Go 1.22+ com Gorilla Mux, middlewares, CORS e persistência PostgreSQL via GORM, 100%
+            conteinerizada em Docker Compose e integrada a front-end React Retro.
           </p>
           <div class="card-techs">
-            <span>Go 1.22+</span><span>GORM</span><span>PostgreSQL</span><span>Docker Compose</span><span>React Retro</span>
+            <span>Go 1.22+</span><span>GORM</span><span>PostgreSQL</span><span>Docker Compose</span><span>React
+              Retro</span>
           </div>
           <div class="card-actions">
-            <a href="https://github.com/luci-jr/api-rest_e_frontend_em_react" target="_blank" class="card-link highlight">
-              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <a href="https://github.com/luci-jr/api-rest_e_frontend_em_react" target="_blank"
+              class="card-link highlight">
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
               <span>GitHub ↗</span>
             </a>
           </div>
@@ -279,19 +335,24 @@
         <!-- 3. BACKEND: Retro Store (Inventário Arcade MVC) -->
         <article class="project-card" data-category="backend">
           <div class="card-media">
-            <img src="https://raw.githubusercontent.com/luci-jr/retro-store/main/images/retro-store-logo.png" alt="Retro Store" loading="lazy">
+            <img src="https://raw.githubusercontent.com/luci-jr/retro-store/main/images/retro-store-logo.png"
+              alt="Retro Store" loading="lazy">
           </div>
           <div class="card-tag">☕ BACKEND / GO MVC</div>
           <h3 class="card-title">Retro Store (Inventário Arcade)</h3>
           <p class="card-desc">
-            Aplicação web de inventário retrô desenvolvida em Go (Golang) com arquitetura MVC, rotas HTTP nativas, banco relacional PostgreSQL e contêiner Docker.
+            Aplicação web de inventário retrô desenvolvida em Go (Golang) com arquitetura MVC, rotas HTTP nativas, banco
+            relacional PostgreSQL e contêiner Docker.
           </p>
           <div class="card-techs">
             <span>Go (Golang)</span><span>PostgreSQL</span><span>Docker</span><span>MVC</span><span>HTML5/CSS3</span>
           </div>
           <div class="card-actions">
             <a href="https://github.com/luci-jr/retro-store" target="_blank" class="card-link highlight">
-              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
               <span>GitHub ↗</span>
             </a>
           </div>
@@ -302,14 +363,18 @@
           <div class="card-tag">☕ BACKEND / GO CORE</div>
           <h3 class="card-title">Retro Bank (Core Banking CLI)</h3>
           <p class="card-desc">
-            Simulador de core banking via terminal desenvolvido em Go. Focado na aplicação de conceitos de Orientação a Objetos, Structs, Interfaces e regras de negócio com concorrência.
+            Simulador de core banking via terminal desenvolvido em Go. Focado na aplicação de conceitos de Orientação a
+            Objetos, Structs, Interfaces e regras de negócio com concorrência.
           </p>
           <div class="card-techs">
             <span>Go (Golang)</span><span>POO</span><span>Structs & Interfaces</span><span>Terminal CLI</span>
           </div>
           <div class="card-actions">
             <a href="https://github.com/luci-jr/Retro-Bank" target="_blank" class="card-link highlight">
-              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
               <span>GitHub ↗</span>
             </a>
           </div>
@@ -320,14 +385,18 @@
           <div class="card-tag">☕ BACKEND / CONCORRÊNCIA</div>
           <h3 class="card-title">Monitor de Sites & Uptime</h3>
           <p class="card-desc">
-            Monitor de resiliência e disponibilidade de serviços HTTP em Go com interface no terminal, requisições periódicas automatizadas, sistema de logs e persistência simples em arquivos.
+            Monitor de resiliência e disponibilidade de serviços HTTP em Go com interface no terminal, requisições
+            periódicas automatizadas, sistema de logs e persistência simples em arquivos.
           </p>
           <div class="card-techs">
             <span>Go (Golang)</span><span>HTTP Client</span><span>Concurrency</span><span>File Logging</span>
           </div>
           <div class="card-actions">
             <a href="https://github.com/luci-jr/Monitor-de-sites" target="_blank" class="card-link highlight">
-              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
               <span>GitHub ↗</span>
             </a>
           </div>
@@ -336,20 +405,27 @@
         <!-- 6. GAMER: Égua Mano Gamer (Go + Ebitengine v2 / WebAssembly) -->
         <article class="project-card" data-category="gamer">
           <div class="card-media">
-            <img src="https://raw.githubusercontent.com/luci-jr/egua-mano_gamer/main/assets/screenshot_browser_desktop.png" alt="Égua Mano Gamer" loading="lazy">
+            <img
+              src="https://raw.githubusercontent.com/luci-jr/egua-mano_gamer/main/assets/screenshot_browser_desktop.png"
+              alt="Égua Mano Gamer" loading="lazy">
           </div>
           <div class="card-tag">🕹️ GAMER / WASM</div>
           <h3 class="card-title">Égua Mano Gamer (WASM)</h3>
           <p class="card-desc">
-            Jogo arcade 2D de plataforma com física customizada, temática regional de Belém do Pará, arte pixel art 16-bit e compilação nativa para WebAssembly a 60 FPS no navegador.
+            Jogo arcade 2D de plataforma com física customizada, temática regional de Belém do Pará, arte pixel art
+            16-bit e compilação nativa para WebAssembly a 60 FPS no navegador.
           </p>
           <div class="card-techs">
             <span>Go 1.22+</span><span>Ebitengine v2</span><span>WebAssembly</span><span>Pixel Art 16-bit</span>
           </div>
           <div class="card-actions">
-            <a href="https://luci-jr.github.io/egua-mano_gamer/" target="_blank" class="card-link highlight">Jogar Agora 🕹️</a>
+            <a href="https://luci-jr.github.io/egua-mano_gamer/" target="_blank" class="card-link highlight">Jogar Agora
+              🕹️</a>
             <a href="https://github.com/luci-jr/egua-mano_gamer" target="_blank" class="card-link">
-              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
               <span>GitHub ↗</span>
             </a>
           </div>
@@ -358,19 +434,24 @@
         <!-- 7. GAMER: Coleção Retro (Arcade Organizer Angular 19) -->
         <article class="project-card" data-category="gamer">
           <div class="card-media">
-            <img src="https://raw.githubusercontent.com/luci-jr/colecao-retro/main/screenshot.png" alt="Coleção Retro" loading="lazy">
+            <img src="https://raw.githubusercontent.com/luci-jr/colecao-retro/main/screenshot.png" alt="Coleção Retro"
+              loading="lazy">
           </div>
           <div class="card-tag">🕹️ GAMER / ANGULAR 19</div>
           <h3 class="card-title">Coleção Retro (Arcade Organizer)</h3>
           <p class="card-desc">
-            Gerenciador e organizador de jogos clássicos desenvolvido para praticar os recursos modernos do Angular 19 (Signals e Control Flow), com tema retrô dark neon inspirado em fliperamas.
+            Gerenciador e organizador de jogos clássicos desenvolvido para praticar os recursos modernos do Angular 19
+            (Signals e Control Flow), com tema retrô dark neon inspirado em fliperamas.
           </p>
           <div class="card-techs">
             <span>Angular 19</span><span>Signals</span><span>Control Flow</span><span>Arcade Neon UI</span>
           </div>
           <div class="card-actions">
             <a href="https://github.com/luci-jr/colecao-retro" target="_blank" class="card-link highlight">
-              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
               <span>GitHub ↗</span>
             </a>
           </div>
@@ -379,19 +460,25 @@
         <!-- 8. SYSOPS: Startup Jarva's (AWS Cloud Architecture) -->
         <article class="project-card" data-category="sysops">
           <div class="card-media">
-            <img src="https://github.com/user-attachments/assets/dc2e1360-263c-47af-b3fc-912f140d9fa7" alt="Startup Jarva's AWS Architecture" loading="lazy">
+            <img src="https://github.com/user-attachments/assets/dc2e1360-263c-47af-b3fc-912f140d9fa7"
+              alt="Startup Jarva's AWS Architecture" loading="lazy">
           </div>
           <div class="card-tag">🐧 SYSOPS / AWS CLOUD</div>
           <h3 class="card-title">Startup Jarva's (AWS Architecture)</h3>
           <p class="card-desc">
-            Solução AWS serverless para armazenamento seguro e escalável de documentos em plataforma SaaS, combinando autenticação, isolamento multi-tenant, acesso temporário e IaC.
+            Solução AWS serverless para armazenamento seguro e escalável de documentos em plataforma SaaS, combinando
+            autenticação, isolamento multi-tenant, acesso temporário e IaC.
           </p>
           <div class="card-techs">
-            <span>AWS Cloud</span><span>Serverless</span><span>S3 & IAM</span><span>IaC</span><span>Cloud Architecture</span>
+            <span>AWS Cloud</span><span>Serverless</span><span>S3 & IAM</span><span>IaC</span><span>Cloud
+              Architecture</span>
           </div>
           <div class="card-actions">
             <a href="https://github.com/luci-jr/jarvas-aws-architecture" target="_blank" class="card-link highlight">
-              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
               <span>GitHub: AWS IaC ↗</span>
             </a>
           </div>
@@ -402,14 +489,18 @@
           <div class="card-tag">🐧 SYSOPS / EM DESENVOLVIMENTO</div>
           <h3 class="card-title">Cluster Nexus Swarm & SysOps Hub</h3>
           <p class="card-desc">
-            Próximo projeto de infraestrutura em desenvolvimento: ambiente de orquestração corporativo com Docker Swarm, Traefik v2 (TLS automático), Linux Ubuntu e automações n8n.
+            Próximo projeto de infraestrutura em desenvolvimento: ambiente de orquestração corporativo com Docker Swarm,
+            Traefik v2 (TLS automático), Linux Ubuntu e automações n8n.
           </p>
           <div class="card-techs">
             <span>Docker Swarm</span><span>Traefik v2</span><span>Linux Ubuntu</span><span>n8n</span><span>DevOps</span>
           </div>
           <div class="card-actions">
             <a href="https://github.com/luci-jr" target="_blank" class="card-link highlight">
-              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <svg class="card-btn-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
               <span>GitHub ↗</span>
             </a>
           </div>
@@ -421,7 +512,8 @@
     <section class="section stacks-section" id="stacks">
       <div class="section-header">
         <h2 class="section-title"><span class="glow">&gt;</span> TECNOLOGIAS &amp; FERRAMENTAS</h2>
-        <p class="section-subtitle">Linguagens, frameworks e ferramentas que venho desenvolvendo e evoluindo com o tempo através de estudos e projetos práticos.</p>
+        <p class="section-subtitle">Linguagens, frameworks e ferramentas que venho desenvolvendo e evoluindo com o tempo
+          através de estudos e projetos práticos.</p>
       </div>
 
       <div class="stacks-floating-container">
@@ -439,7 +531,9 @@
           <span class="stack-name">Go (Golang)</span>
         </div>
         <div class="stack-float-chip" style="animation-delay: -1.8s;">
-          <span class="stack-icon"><img src="icons/ebitengine.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/ebitengine.svg'}" alt="Ebitengine" class="tech-icon-img"></span>
+          <span class="stack-icon"><img src="icons/ebitengine.svg"
+              onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/ebitengine.svg'}"
+              alt="Ebitengine" class="tech-icon-img"></span>
           <span class="stack-name">Ebitengine (Go)</span>
         </div>
         <div class="stack-float-chip" style="animation-delay: -2.3s;">
@@ -449,7 +543,8 @@
 
         <!-- Front-end & UI -->
         <div class="stack-float-chip" style="animation-delay: -0.4s;">
-          <span class="stack-icon"><i class="devicon-angularjs-plain colored" style="color: #dd0031 !important;"></i></span>
+          <span class="stack-icon"><i class="devicon-angularjs-plain colored"
+              style="color: #dd0031 !important;"></i></span>
           <span class="stack-name">Angular 21</span>
         </div>
         <div class="stack-float-chip" style="animation-delay: -0.9s;">
@@ -479,7 +574,9 @@
           <span class="stack-name">Docker</span>
         </div>
         <div class="stack-float-chip" style="animation-delay: -1.4s;">
-          <span class="stack-icon"><img src="docker-swarm.webp" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/docker-swarm.webp'}" alt="Docker Swarm" class="tech-icon-img"></span>
+          <span class="stack-icon"><img src="docker-swarm.webp"
+              onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/docker-swarm.webp'}"
+              alt="Docker Swarm" class="tech-icon-img"></span>
           <span class="stack-name">Docker Swarm</span>
         </div>
         <div class="stack-float-chip" style="animation-delay: -2.1s;">
@@ -529,13 +626,17 @@
           <span class="stack-name">Firebase</span>
         </div>
         <div class="stack-float-chip" style="animation-delay: -0.4s;">
-          <span class="stack-icon"><img src="icons/firestore.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/firestore.svg'}" alt="Firestore" class="tech-icon-img"></span>
+          <span class="stack-icon"><img src="icons/firestore.svg"
+              onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/firestore.svg'}"
+              alt="Firestore" class="tech-icon-img"></span>
           <span class="stack-name">Firestore</span>
         </div>
 
         <!-- Automação & Ferramentas -->
         <div class="stack-float-chip" style="animation-delay: -1.0s;">
-          <span class="stack-icon"><img src="icons/n8n.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/n8n.svg'}" alt="n8n" class="tech-icon-img"></span>
+          <span class="stack-icon"><img src="icons/n8n.svg"
+              onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/n8n.svg'}" alt="n8n"
+              class="tech-icon-img"></span>
           <span class="stack-name">n8n</span>
         </div>
         <div class="stack-float-chip" style="animation-delay: -1.6s;">
@@ -543,11 +644,15 @@
           <span class="stack-name">Postman</span>
         </div>
         <div class="stack-float-chip" style="animation-delay: -2.2s;">
-          <span class="stack-icon"><img src="icons/npm.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/npm.svg'}" alt="NPM" class="tech-icon-img"></span>
+          <span class="stack-icon"><img src="icons/npm.svg"
+              onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/npm.svg'}" alt="NPM"
+              class="tech-icon-img"></span>
           <span class="stack-name">NPM</span>
         </div>
         <div class="stack-float-chip" style="animation-delay: -0.5s;">
-          <span class="stack-icon"><img src="icons/nvm.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/nvm.svg'}" alt="NVM" class="tech-icon-img"></span>
+          <span class="stack-icon"><img src="icons/nvm.svg"
+              onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/nvm.svg'}" alt="NVM"
+              class="tech-icon-img"></span>
           <span class="stack-name">NVM</span>
         </div>
       </div>
@@ -557,7 +662,8 @@
     <section class="section experiences-section" id="experiencias">
       <div class="section-header">
         <h2 class="section-title"><span class="glow">&gt;</span> EXPERIÊNCIAS PROFISSIONAIS</h2>
-        <p class="section-subtitle">Vivência corporativa real no mercado, engenharia de software aplicada, esteiras de automação e liderança sob pressão contínua.</p>
+        <p class="section-subtitle">Vivência corporativa real no mercado, engenharia de software aplicada, esteiras de
+          automação e liderança sob pressão contínua.</p>
       </div>
 
       <div class="experiences-grid">
@@ -570,7 +676,14 @@
           <h3 class="exp-title">Desenvolvedor Back-end &amp; DevOps</h3>
           <h4 class="exp-company">Dobem Tech • Belém-PA / Remoto</h4>
           <p class="exp-desc">
-            Desenvolvimento e evolução de APIs RESTful em <strong>Java 17/21</strong> com <strong>Spring Boot 3</strong>, regras de negócio transacionais, autenticação com <strong>Spring Security</strong> e persistência com <strong>Spring Data JPA</strong>. Criação de testes unitários e de integração com <strong>JUnit 5</strong> e <strong>Mockito</strong>. Orquestração e automação de fluxos críticos via <strong>n8n</strong> integrando Meta WhatsApp Cloud API, Chatwoot e CRM Odoo. Sustentação de infraestrutura em <strong>AWS (EC2, S3, RDS)</strong>, orquestração de contêineres com <strong>Docker Swarm</strong> via Portainer, proxy reverso seguro com <strong>Traefik v2</strong> e cache em <strong>Redis</strong> para alta disponibilidade nas plataformas corporativas em produção (EVAH, Bira Veículos e Grupo Realme Pay).
+            Desenvolvimento e evolução de APIs RESTful em <strong>Java 17/21</strong> com <strong>Spring Boot
+              3</strong>, regras de negócio transacionais, autenticação com <strong>Spring Security</strong> e
+            persistência com <strong>Spring Data JPA</strong>. Criação de testes unitários e de integração com
+            <strong>JUnit 5</strong> e <strong>Mockito</strong>. Orquestração e automação de fluxos críticos via
+            <strong>n8n</strong> integrando Meta WhatsApp Cloud API, Chatwoot e CRM Odoo. Sustentação de infraestrutura
+            em <strong>AWS (EC2, S3, RDS)</strong>, orquestração de contêineres com <strong>Docker Swarm</strong> via
+            Portainer, proxy reverso seguro com <strong>Traefik v2</strong> e cache em <strong>Redis</strong> para alta
+            disponibilidade nas plataformas corporativas em produção (EVAH, Bira Veículos e Grupo Realme Pay).
           </p>
           <div class="exp-tags">
             <span class="exp-tag">Java 21</span>
@@ -594,7 +707,11 @@
           <h3 class="exp-title">Desenvolvedor Júnior &amp; DevOps</h3>
           <h4 class="exp-company">Cyberethic Solution • Belém-PA</h4>
           <p class="exp-desc">
-            Sustentação contínua de aplicações web e rotinas de deploy em nuvem <strong>AWS (EC2 e S3)</strong>. Elaboração de <strong>Dockerfiles</strong>, migração de serviços para contêineres <strong>Docker</strong> e automação de rotinas operacionais no terminal <strong>Linux Ubuntu</strong> através de <strong>Shell Scripts</strong>. Modelagem relacional e construção de consultas SQL analíticas em banco de dados <strong>PostgreSQL</strong>.
+            Sustentação contínua de aplicações web e rotinas de deploy em nuvem <strong>AWS (EC2 e S3)</strong>.
+            Elaboração de <strong>Dockerfiles</strong>, migração de serviços para contêineres <strong>Docker</strong> e
+            automação de rotinas operacionais no terminal <strong>Linux Ubuntu</strong> através de <strong>Shell
+              Scripts</strong>. Modelagem relacional e construção de consultas SQL analíticas em banco de dados
+            <strong>PostgreSQL</strong>.
           </p>
           <div class="exp-tags">
             <span class="exp-tag">AWS (EC2 / S3)</span>
@@ -615,7 +732,11 @@
           <h3 class="exp-title">Chefe de Cozinha &amp; Liderança sob Alta Pressão</h3>
           <h4 class="exp-company">Gastronomia Profissional • Setor Horeca</h4>
           <p class="exp-desc">
-            Mais de 15 anos liderando equipes em ambientes de extrema exigência e ritmo acelerado, atendendo centenas de pedidos simultâneos com tolerância zero para atrasos ou falhas. Essa bagagem consolidou diferenciais essenciais para a engenharia de software: resiliência emocional sob estresse, liderança ágil de crises, resolução pragmática de problemas e o rigor do método <em>mise en place</em> (planejamento, preparação sistemática e governança operacional).
+            Mais de 15 anos liderando equipes em ambientes de extrema exigência e ritmo acelerado, atendendo centenas de
+            pedidos simultâneos com tolerância zero para atrasos ou falhas. Essa bagagem consolidou diferenciais
+            essenciais para a engenharia de software: resiliência emocional sob estresse, liderança ágil de crises,
+            resolução pragmática de problemas e o rigor do método <em>mise en place</em> (planejamento, preparação
+            sistemática e governança operacional).
           </p>
           <div class="exp-tags">
             <span class="exp-tag">Liderança de Equipes</span>
@@ -635,7 +756,11 @@
           <h3 class="exp-title">Técnico de Informática &amp; Redes Locais</h3>
           <h4 class="exp-company">Interconect • Belém-PA</h4>
           <p class="exp-desc">
-            Atuação técnica direta em montagem, diagnóstico físico e manutenção corretiva/preventiva de computadores, placas-mãe, memórias e impressoras. Estruturação física e lógica de redes locais cabeadas (LAN, cabeamento estruturado e crimpagem), configuração de roteadores/switches na pilha <strong>TCP/IP</strong> e administração de sistemas operacionais, alicerçando o entendimento profundo sobre o funcionamento físico dos computadores.
+            Atuação técnica direta em montagem, diagnóstico físico e manutenção corretiva/preventiva de computadores,
+            placas-mãe, memórias e impressoras. Estruturação física e lógica de redes locais cabeadas (LAN, cabeamento
+            estruturado e crimpagem), configuração de roteadores/switches na pilha <strong>TCP/IP</strong> e
+            administração de sistemas operacionais, alicerçando o entendimento profundo sobre o funcionamento físico dos
+            computadores.
           </p>
           <div class="exp-tags">
             <span class="exp-tag">Hardware</span>
@@ -648,33 +773,15 @@
       </div>
     </section>
 
-    <!-- FORMAÇÕES & CERTIFICAÇÕES -->
+    <!-- CURSOS & EVENTOS -->
     <section class="section education-section" id="formacoes">
       <div class="section-header">
-        <h2 class="section-title"><span class="glow">&gt;</span> FORMAÇÕES &amp; CURSOS</h2>
-        <p class="section-subtitle">Graduação superior, programa intensivo de imersão em nuvem, certificações práticas e participação ativa em comunidades técnicas.</p>
+        <h2 class="section-title"><span class="glow">&gt;</span> CURSOS &amp; EVENTOS</h2>
+        <p class="section-subtitle">Programa intensivo de imersão em nuvem, certificações práticas e participação ativa
+          em eventos da comunidade técnica.</p>
       </div>
 
       <div class="education-grid">
-        <!-- Formação 1: Graduação ADS UNAMA -->
-        <div class="education-card">
-          <div class="edu-card-header">
-            <div class="edu-type-badge">GRADUAÇÃO SUPERIOR</div>
-            <span class="edu-period">2026 — 2028 (EM ANDAMENTO)</span>
-          </div>
-          <h3 class="edu-title">Análise e Desenvolvimento de Sistemas (ADS)</h3>
-          <h4 class="edu-institution">UNAMA — Universidade da Amazônia • Belém-PA</h4>
-          <p class="edu-desc">
-            Formação tecnológica superior iniciada em 2026 com foco em engenharia de requisitos, arquitetura de sistemas, estruturas de dados, algoritmos, modelagem de bancos de dados relacionais e não-relacionais, padrões de projeto e governança de tecnologia da informação.
-          </p>
-          <div class="edu-tags">
-            <span class="edu-tag">Ensino Superior</span>
-            <span class="edu-tag">Engenharia de Software</span>
-            <span class="edu-tag">Estruturas de Dados</span>
-            <span class="edu-tag">Modelagem de Dados</span>
-            <span class="edu-tag">Previsão 2028</span>
-          </div>
-        </div>
 
         <!-- Formação 2: AWS re/Start -->
         <div class="education-card">
@@ -685,11 +792,16 @@
           <h3 class="edu-title">AWS re/Start Graduate — Computação em Nuvem</h3>
           <h4 class="edu-institution">Amazon Web Services (AWS) &amp; Escola da Nuvem</h4>
           <p class="edu-desc">
-            Programa intensivo de 300 horas com laboratórios práticos em Linux CLI, redes em nuvem (VPC, Subnets, Gateways, Route 53), segurança e governança (IAM, Policies), computação elástica (EC2, Auto Scaling), armazenamento de objetos e blocos (S3, EBS) e bancos de dados gerenciados (RDS).
+            Programa intensivo de 300 horas com laboratórios práticos em Linux CLI, redes em nuvem (VPC, Subnets,
+            Gateways, Route 53), segurança e governança (IAM, Policies), computação elástica (EC2, Auto Scaling),
+            armazenamento de objetos e blocos (S3, EBS) e bancos de dados gerenciados (RDS).
           </p>
-          <a href="https://www.credly.com/earner/earned/badge/972bc121-806a-4cbc-a9f2-c2d6d9c23061" target="_blank" rel="noopener noreferrer" class="edu-badge-btn" title="Verificar Badge Oficial no Credly">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+          <a href="https://www.credly.com/earner/earned/badge/972bc121-806a-4cbc-a9f2-c2d6d9c23061" target="_blank"
+            rel="noopener noreferrer" class="edu-badge-btn" title="Verificar Badge Oficial no Credly">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" width="16" height="16">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+              </path>
             </svg>
             <span>Verificar Badge Oficial no Credly ↗</span>
           </a>
@@ -712,10 +824,16 @@
           <h3 class="edu-title">Formações em Back-End, Cloud &amp; Front-End</h3>
           <h4 class="edu-institution">Alura Cursos Online de Tecnologia</h4>
           <p class="edu-desc">
-            Mais de 600 horas de capacitação contínua com projetos práticos cobrindo: <strong>Back-End</strong> (Java OO, Spring Boot 3, Spring Data JPA, Go 1.22+, Oracle DB e PostgreSQL), <strong>DevOps &amp; Cloud</strong> (Linux Ubuntu, Git/GitHub, AWS Lightsail, EC2, RDS e Docker) e <strong>Front-End</strong> (Angular, TypeScript, Signals, HTML5 e CSS Grid/Flexbox).
+            Mais de 600 horas de capacitação contínua com projetos práticos cobrindo: <strong>Back-End</strong> (Java
+            OO, Spring Boot 3, Spring Data JPA, Go 1.22+, Oracle DB e PostgreSQL), <strong>DevOps &amp; Cloud</strong>
+            (Linux Ubuntu, Git/GitHub, AWS Lightsail, EC2, RDS e Docker) e <strong>Front-End</strong> (Angular,
+            TypeScript, Signals, HTML5 e CSS Grid/Flexbox).
           </p>
-          <a href="https://cursos.alura.com.br/user/lucivaldojr/fullCertificate/d7d10b1533cee5fef4420b54a29a2911" target="_blank" rel="noopener noreferrer" class="edu-badge-btn" title="Verificar Certificado Unificado Oficial na Alura">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+          <a href="https://cursos.alura.com.br/user/lucivaldojr/fullCertificate/d7d10b1533cee5fef4420b54a29a2911"
+            target="_blank" rel="noopener noreferrer" class="edu-badge-btn"
+            title="Verificar Certificado Unificado Oficial na Alura">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" width="16" height="16">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
               <polyline points="14 2 14 8 20 8"></polyline>
               <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -742,7 +860,9 @@
           <h3 class="edu-title">7º Meetup AWS User Group Belém</h3>
           <h4 class="edu-institution">AWS User Group Belém (Comunidade Oficial)</h4>
           <p class="edu-desc">
-            Participação ativa e imersão presencial com palestras de arquitetos e profissionais de computação em nuvem na Amazônia. Discussão de casos práticos de migração corporativa, microsserviços serverless, resiliência de infraestrutura e governança sob o AWS Well-Architected Framework.
+            Participação ativa e imersão presencial com palestras de arquitetos e profissionais de computação em nuvem
+            na Amazônia. Discussão de casos práticos de migração corporativa, microsserviços serverless, resiliência de
+            infraestrutura e governança sob o AWS Well-Architected Framework.
           </p>
           <div class="edu-tags">
             <span class="edu-tag">AWS User Group</span>
@@ -758,37 +878,44 @@
     <section class="section contact-section" id="contato">
       <div class="section-header">
         <h2 class="section-title"><span class="glow">></span> CONTATOS</h2>
-        <p class="section-subtitle">Tem um projeto em mente, busca uma consultoria ou quer conversar sobre novas oportunidades? Vamos conversar.</p>
+        <p class="section-subtitle">Tem um projeto em mente, busca uma consultoria ou quer conversar sobre novas
+          oportunidades? Vamos conversar.</p>
       </div>
       <div class="arcade-buttons-grid">
         <!-- 1. GITHUB Arcade Button -->
-        <a href="https://github.com/luci-jr" target="_blank" class="arcade-btn btn-github" title="Acessar GitHub de Lucivaldo Junior">
+        <a href="https://github.com/luci-jr" target="_blank" class="arcade-btn btn-github"
+          title="Acessar GitHub de Lucivaldo Junior">
           <div class="btn-cap">
             <span class="btn-led led-github"></span>
             <svg class="arcade-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
             </svg>
             <span class="btn-text">GITHUB: luci-jr</span>
           </div>
         </a>
 
         <!-- 2. LINKEDIN Arcade Button -->
-        <a href="https://www.linkedin.com/in/lucivaldojr/" target="_blank" class="arcade-btn btn-linkedin" title="Acessar LinkedIn de Lucivaldo Junior">
+        <a href="https://www.linkedin.com/in/lucivaldojr/" target="_blank" class="arcade-btn btn-linkedin"
+          title="Acessar LinkedIn de Lucivaldo Junior">
           <div class="btn-cap">
             <span class="btn-led led-linkedin"></span>
             <svg class="arcade-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
             </svg>
             <span class="btn-text">LINKEDIN: lucivaldojr</span>
           </div>
         </a>
 
         <!-- 3. EMAIL Arcade Button -->
-        <a href="mailto:lucivaldojr25@gmail.com" class="arcade-btn btn-email" title="Enviar Email para lucivaldojr25@gmail.com">
+        <a href="mailto:lucivaldojr25@gmail.com" class="arcade-btn btn-email"
+          title="Enviar Email para lucivaldojr25@gmail.com">
           <div class="btn-cap">
             <span class="btn-led led-email"></span>
             <svg class="arcade-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-              <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+              <path
+                d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
             </svg>
             <span class="btn-text">EMAIL: lucivaldojr25</span>
           </div>
@@ -800,7 +927,9 @@
   <footer class="footer">
     <div class="footer-led-plate">
       <span class="footer-led-indicator" title="Status do Sistema: ONLINE"></span>
-      <p class="footer-text">© 2026 <a href="https://github.com/luci-jr" target="_blank" rel="noopener noreferrer" class="footer-author-link" title="Acessar GitHub de Lucivaldo Junior">Lucivaldo Junior</a> — Desenvolvido com Angular 21, TypeScript & Go | Belém do Pará - Brasil</p>
+      <p class="footer-text">© 2026 <a href="https://github.com/luci-jr" target="_blank" rel="noopener noreferrer"
+          class="footer-author-link" title="Acessar GitHub de Lucivaldo Junior">Lucivaldo Junior</a> — Desenvolvido com
+        Angular 21, TypeScript & Go | Belém do Pará - Brasil</p>
     </div>
   </footer>
 
@@ -811,7 +940,8 @@
   <aside id="sidebarDrawer" class="sidebar-drawer" aria-label="Navegação Lateral do Portfólio">
     <!-- Cabeçalho com Botão de Recolher Menu Lateral -->
     <div class="sidebar-header">
-      <button id="sidebarCloseBtn" class="sidebar-close-btn" title="Recolher Menu Lateral" aria-label="Recolher Menu Lateral">
+      <button id="sidebarCloseBtn" class="sidebar-close-btn" title="Recolher Menu Lateral"
+        aria-label="Recolher Menu Lateral">
         <span class="collapse-icon">◀</span>
         <span class="collapse-label">RECOLHER</span>
       </button>
@@ -821,9 +951,8 @@
     <div class="sidebar-profile">
       <div class="sidebar-avatar-wrapper">
         <img src="perfil-navbar.png"
-             onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/perfil-navbar.png'}"
-             alt="Foto de Lucivaldo Junior"
-             class="sidebar-avatar-img">
+          onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/perfil-navbar.png'}"
+          alt="Foto de Lucivaldo Junior" class="sidebar-avatar-img">
         <span class="sidebar-status-dot" title="Status: ONLINE"></span>
       </div>
       <h2 class="sidebar-name">
@@ -833,19 +962,24 @@
 
       <!-- Redes Sociais Rápidas -->
       <div class="sidebar-socials">
-        <a href="https://github.com/luci-jr" target="_blank" class="sidebar-social-link" title="GitHub de Lucivaldo Junior" aria-label="GitHub">
+        <a href="https://github.com/luci-jr" target="_blank" class="sidebar-social-link"
+          title="GitHub de Lucivaldo Junior" aria-label="GitHub">
           <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
           </svg>
         </a>
-        <a href="https://www.linkedin.com/in/lucivaldojr/" target="_blank" class="sidebar-social-link" title="LinkedIn de Lucivaldo Junior" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/lucivaldojr/" target="_blank" class="sidebar-social-link"
+          title="LinkedIn de Lucivaldo Junior" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
           </svg>
         </a>
         <a href="mailto:lucivaldojr25@gmail.com" class="sidebar-social-link" title="Enviar Email" aria-label="Email">
           <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-            <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+            <path
+              d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
           </svg>
         </a>
       </div>
@@ -858,7 +992,8 @@
         <li class="sidebar-menu-item">
           <a href="#sobre" class="sidebar-nav-link" data-section="sobre">
             <span class="navicon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" width="20" height="20">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                 <polyline points="14 2 14 8 20 8"></polyline>
                 <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -875,7 +1010,8 @@
         <li class="sidebar-menu-item">
           <a href="#projetos" class="sidebar-nav-link" data-section="projetos">
             <span class="navicon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" width="20" height="20">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                 <circle cx="8.5" cy="8.5" r="1.5"></circle>
                 <polyline points="21 15 16 10 5 21"></polyline>
@@ -890,7 +1026,8 @@
         <li class="sidebar-menu-item">
           <a href="#stacks" class="sidebar-nav-link" data-section="stacks">
             <span class="navicon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" width="20" height="20">
                 <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
                 <polyline points="2 17 12 22 22 17"></polyline>
                 <polyline points="2 12 12 17 22 12"></polyline>
@@ -905,7 +1042,8 @@
         <li class="sidebar-menu-item">
           <a href="#experiencias" class="sidebar-nav-link" data-section="experiencias">
             <span class="navicon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" width="20" height="20">
                 <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                 <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
               </svg>
@@ -915,17 +1053,18 @@
           </a>
         </li>
 
-        <!-- 5. Formações & Certificações -->
+        <!-- 5. Cursos & Eventos -->
         <li class="sidebar-menu-item">
           <a href="#formacoes" class="sidebar-nav-link" data-section="formacoes">
             <span class="navicon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" width="20" height="20">
                 <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
                 <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
               </svg>
             </span>
             <span class="nav-prompt">&gt;_</span>
-            <span class="nav-text">Formações &amp; Cursos</span>
+            <span class="nav-text">Cursos &amp; Eventos</span>
           </a>
         </li>
 
@@ -933,7 +1072,8 @@
         <li class="sidebar-menu-item">
           <a href="#contato" class="sidebar-nav-link" data-section="contato">
             <span class="navicon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" width="20" height="20">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
@@ -956,4 +1096,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

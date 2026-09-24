@@ -2,52 +2,41 @@
   <!-- Conteúdo Central Reativo do Hero -->
   <div class="hero-content">
     <h1 class="hero-title" [innerHTML]="portfolio.currentConfig().title"></h1>
-    <!-- Card de Perfil do Desenvolvedor (Cockpit HUD Expandido) -->
-    <div class="hero-profile-card" aria-label="Ficha Técnica do Desenvolvedor">
-      <div class="profile-card-main">
-        <div class="profile-avatar-box">
-          <div class="profile-avatar-frame">
-            <img src="perfil-lucivaldo.jpg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/perfil-lucivaldo.jpg'}" alt="Foto de Perfil de Lucivaldo Junior" class="profile-ascii-img">
-          </div>
+    <!-- Painel Integrado: Foto com Ficha Direta + Apresentação -->
+    <div class="hero-presentation-card" aria-label="Apresentação do Desenvolvedor">
+      <!-- Coluna da Foto & Ficha Direta -->
+      <div class="hero-avatar-column">
+        <div class="profile-avatar-frame">
+          <img src="perfil-lucivaldo.jpg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/perfil-lucivaldo.jpg'}" alt="Foto de Perfil de Lucivaldo Junior" class="profile-ascii-img">
         </div>
 
-        <div class="profile-bio-details">
-          <div class="bio-grid-2col">
-            <div class="bio-col">
-              <div class="bio-item">
-                <span class="bio-key"><span class="key-symbol">&gt;</span> CARGO:</span>
-                <span class="bio-val highlight">Desenvolvedor Back-end</span>
-              </div>
-              <div class="bio-item">
-                <span class="bio-key"><span class="key-symbol">&gt;</span> LOCALIZAÇÃO:</span>
-                <span class="bio-val">Belém-PA — Brasil 📍 (UTC-3)</span>
-              </div>
-              <div class="bio-item">
-                <span class="bio-key"><span class="key-symbol">&gt;</span> IDADE:</span>
-                <span class="bio-val">39 anos (Maturidade &amp; Foco)</span>
-              </div>
-            </div>
-
-            <div class="bio-col">
-              <div class="bio-item">
-                <span class="bio-key"><span class="key-symbol">&gt;</span> MODALIDADE:</span>
-                <span class="bio-val">Remoto • Híbrido • Presencial</span>
-              </div>
-              <div class="bio-item">
-                <span class="bio-key"><span class="key-symbol">&gt;</span> GRADUAÇÃO:</span>
-                <span class="bio-val">ADS — UNAMA (Cursando 2026–2028)</span>
-              </div>
-              <div class="bio-item bio-status-row">
-                <span class="bio-key"><span class="key-symbol">&gt;</span> STATUS:</span>
-                <span class="bio-val status-val"><span class="bio-pulse-dot"></span> DISPONÍVEL (CLT / PJ / PROJETOS)</span>
-              </div>
-            </div>
+        <div class="avatar-quick-meta">
+          <div class="quick-meta-item">
+            <span class="meta-label"><span class="key-symbol">&gt;</span> CARGO:</span>
+            <span class="meta-val highlight">Desenvolvedor</span>
+          </div>
+          <div class="quick-meta-item">
+            <span class="meta-label"><span class="key-symbol">&gt;</span> CIDADE:</span>
+            <span class="meta-val">Belém do Pará 📍</span>
+          </div>
+          <div class="quick-meta-item">
+            <span class="meta-label"><span class="key-symbol">&gt;</span> IDADE:</span>
+            <span class="meta-val">39 anos</span>
+          </div>
+          <div class="quick-meta-item">
+            <span class="meta-label"><span class="key-symbol">&gt;</span> REGIME:</span>
+            <span class="meta-val">Remoto • Híbrido</span>
+          </div>
+          <div class="quick-meta-item status-row">
+            <span class="meta-label"><span class="key-symbol">&gt;</span> STATUS:</span>
+            <span class="meta-val status-val"><span class="bio-pulse-dot"></span> DISPONÍVEL</span>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="hero-desc" id="heroDesc" [innerHTML]="portfolio.currentConfig().desc"></div>
+      <!-- Coluna de Apresentação (Dinâmica com as Classes) -->
+      <div class="hero-desc" id="heroDesc" [innerHTML]="portfolio.currentConfig().desc"></div>
+    </div>
 
     <div class="hero-actions">
       <a href="#projetos" class="pixel-btn primary">VER PROJETOS</a>
