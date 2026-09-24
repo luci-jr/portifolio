@@ -898,19 +898,23 @@ body.theme-light .pixel-btn.outline:hover {
    BARRA LATERAL RETRÁTIL ESTILO iPORTFOLIO CYBERPUNK ÂMBAR (ANGULAR)
    ========================================================================== */
 
-/* Botão de Menu na Top Nav */
+/* Botão de Menu na Top Nav com Efeito e Flutuação Semelhante às Redes Sociais */
 .nav-menu-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.45rem;
-  background: rgba(245, 158, 11, 0.08);
+  height: 38px;
+  padding: 0 0.85rem;
+  border-radius: 6px;
+  background: rgba(18, 24, 38, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(245, 158, 11, 0.35);
   color: var(--accent-color);
   font-family: var(--font-code);
   font-size: 0.82rem;
   font-weight: 700;
-  padding: 0.4rem 0.75rem;
-  border-radius: 4px;
   cursor: pointer;
   letter-spacing: 0.04em;
   margin-right: 0.35rem;
@@ -921,32 +925,55 @@ body.theme-light .pixel-btn.outline:hover {
   transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, background-color 0.22s ease;
 }
 
+.nav-menu-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .nav-menu-btn:hover {
-  background: var(--accent-color);
-  color: #0c0906;
-  border-color: var(--accent-color);
-  box-shadow: 0 0 15px var(--accent-glow);
-  transform: translateY(-2px);
   animation-play-state: paused;
+  transform: translateY(-5px);
+  color: #fbbf24;
+  border-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.16);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.7), inset 0 0 6px rgba(245, 158, 11, 0.3);
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.8);
 }
 
 .nav-menu-btn .nav-menu-icon {
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.nav-menu-btn:hover .nav-menu-icon {
+  transform: scale(1.1);
+  color: #fbbf24;
 }
 
 :host.theme-light .nav-menu-btn,
 body.theme-light .nav-menu-btn {
-  background: rgba(217, 119, 6, 0.08);
-  border-color: rgba(217, 119, 6, 0.35);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(217, 119, 6, 0.35);
   color: #d97706;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.95);
 }
 
 :host.theme-light .nav-menu-btn:hover,
 body.theme-light .nav-menu-btn:hover {
-  background: #d97706;
-  color: #ffffff;
-  border-color: #d97706;
+  animation-play-state: paused;
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  box-shadow: 0 0 12px var(--accent-glow), 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* Overlay Backdrop */
