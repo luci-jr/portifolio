@@ -62,8 +62,13 @@
       </div>
     </div>
 
-    <!-- Controles do Sistema no Lado Direito: Alternador de Tema (Dark/Light) & Scanlines CRT -->
+    <!-- Controles do Sistema no Lado Direito: Início, Alternador de Tema (Dark/Light) & Scanlines CRT -->
     <div class="system-controls">
+      <!-- Botão Início -->
+      <a href="#heroSection" class="crt-btn nav-home-btn" title="Ir para o Início" aria-label="Início">
+        <span class="home-icon">⌂</span> <span class="home-label">INÍCIO</span>
+      </a>
+
       <!-- Botão Alternador Tema Dark / Light -->
       <button id="themeToggle" class="crt-btn theme-toggle-btn" title="Alternar Modo Claro / Escuro">
         <span id="themeIcon">🌙</span> <span id="themeStatus">DARK</span>
@@ -122,67 +127,81 @@
         </div>
       </div>
 
-      <!-- Carrossel Infinito de Tecnologias (Infinite Tech Marquee em Toda a Largura) -->
-      <div class="tech-marquee-wrapper" id="techMarquee" aria-label="Tecnologias e Stacks Dominadas">
-        <div class="marquee-tag">EM CONSTANTE APRENDIZADO</div>
-        <div class="tech-marquee-container">
-          <div class="tech-marquee-track">
-            <!-- Bloco 1 -->
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-java-plain colored"></i></span><span class="tech-name">Java 21</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-spring-original colored"></i></span><span class="tech-name">Spring Boot 3</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-go-plain colored"></i></span><span class="tech-name">Go (Golang)</span></div>
-            <div class="tech-item"><span class="tech-icon"><img src="icons/ebitengine.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/ebitengine.svg'}" alt="Ebitengine" class="tech-icon-img"></span><span class="tech-name">Ebitengine (Go)</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-angularjs-plain colored" style="color: #dd0031 !important;"></i></span><span class="tech-name">Angular 21</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-typescript-plain colored"></i></span><span class="tech-name">TypeScript</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-javascript-plain colored"></i></span><span class="tech-name">JavaScript (JS)</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-css3-plain colored"></i></span><span class="tech-name">CSS3</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-tailwindcss-original colored"></i></span><span class="tech-name">Tailwind CSS</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-nodejs-plain colored"></i></span><span class="tech-name">Node.js</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-wordpress-plain" style="color: #21759b !important;"></i></span><span class="tech-name">WordPress</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-docker-plain colored"></i></span><span class="tech-name">Docker</span></div>
-            <div class="tech-item"><span class="tech-icon"><img src="docker-swarm.webp" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/docker-swarm.webp'}" alt="Docker Swarm" class="tech-icon-img"></span><span class="tech-name">Docker Swarm</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></span><span class="tech-name">AWS Cloud</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-postgresql-plain colored"></i></span><span class="tech-name">PostgreSQL 16</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-oracle-original colored"></i></span><span class="tech-name">Oracle DB</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-mysql-plain colored"></i></span><span class="tech-name">MySQL</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-redis-plain colored"></i></span><span class="tech-name">Redis</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-linux-plain"></i></span><span class="tech-name">Linux / Ubuntu</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-git-plain colored"></i></span><span class="tech-name">Git &amp; GitHub</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-traefikproxy-original colored"></i></span><span class="tech-name">Traefik v2</span></div>
-            <div class="tech-item"><span class="tech-icon"><img src="icons/n8n.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/n8n.svg'}" alt="n8n" class="tech-icon-img"></span><span class="tech-name">n8n</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-postman-plain colored"></i></span><span class="tech-name">Postman</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-firebase-plain colored"></i></span><span class="tech-name">Firebase</span></div>
-            <div class="tech-item"><span class="tech-icon"><img src="icons/firestore.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/firestore.svg'}" alt="Firestore" class="tech-icon-img"></span><span class="tech-name">Firestore</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-vercel-original"></i></span><span class="tech-name">Vercel</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-googlecloud-plain colored"></i></span><span class="tech-name">Google Cloud</span></div>
-            <!-- Bloco 2 (Duplicado para loop infinito contínuo) -->
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-java-plain colored"></i></span><span class="tech-name">Java 21</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-spring-original colored"></i></span><span class="tech-name">Spring Boot 3</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-go-plain colored"></i></span><span class="tech-name">Go (Golang)</span></div>
-            <div class="tech-item"><span class="tech-icon"><img src="icons/ebitengine.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/ebitengine.svg'}" alt="Ebitengine" class="tech-icon-img"></span><span class="tech-name">Ebitengine (Go)</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-angularjs-plain colored" style="color: #dd0031 !important;"></i></span><span class="tech-name">Angular 21</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-typescript-plain colored"></i></span><span class="tech-name">TypeScript</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-javascript-plain colored"></i></span><span class="tech-name">JavaScript (JS)</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-css3-plain colored"></i></span><span class="tech-name">CSS3</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-tailwindcss-original colored"></i></span><span class="tech-name">Tailwind CSS</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-nodejs-plain colored"></i></span><span class="tech-name">Node.js</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-wordpress-plain" style="color: #21759b !important;"></i></span><span class="tech-name">WordPress</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-docker-plain colored"></i></span><span class="tech-name">Docker</span></div>
-            <div class="tech-item"><span class="tech-icon"><img src="docker-swarm.webp" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/docker-swarm.webp'}" alt="Docker Swarm" class="tech-icon-img"></span><span class="tech-name">Docker Swarm</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></span><span class="tech-name">AWS Cloud</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-postgresql-plain colored"></i></span><span class="tech-name">PostgreSQL 16</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-oracle-original colored"></i></span><span class="tech-name">Oracle DB</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-mysql-plain colored"></i></span><span class="tech-name">MySQL</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-redis-plain colored"></i></span><span class="tech-name">Redis</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-linux-plain"></i></span><span class="tech-name">Linux / Ubuntu</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-git-plain colored"></i></span><span class="tech-name">Git &amp; GitHub</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-traefikproxy-original colored"></i></span><span class="tech-name">Traefik v2</span></div>
-            <div class="tech-item"><span class="tech-icon"><img src="icons/n8n.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/n8n.svg'}" alt="n8n" class="tech-icon-img"></span><span class="tech-name">n8n</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-postman-plain colored"></i></span><span class="tech-name">Postman</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-firebase-plain colored"></i></span><span class="tech-name">Firebase</span></div>
-            <div class="tech-item"><span class="tech-icon"><img src="icons/firestore.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/firestore.svg'}" alt="Firestore" class="tech-icon-img"></span><span class="tech-name">Firestore</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-vercel-original"></i></span><span class="tech-name">Vercel</span></div>
-            <div class="tech-item"><span class="tech-icon"><i class="devicon-googlecloud-plain colored"></i></span><span class="tech-name">Google Cloud</span></div>
+    </section>
+
+    <!-- SOBRE & TRAJETÓRIA -->
+    <section class="section about-section" id="sobre">
+      <div class="section-header">
+        <h2 class="section-title"><span class="glow">&gt;</span> MINHA_TRAJETORIA</h2>
+        <p class="section-subtitle">Do hardware e redes nos anos 2000 aos 15 anos de liderança na gastronomia, até a engenharia de software moderna.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <!-- Capítulo 1: Origem na Tecnologia -->
+          <div class="about-chapter">
+            <span class="about-chapter-tag">2002 — 2006 // AS RAÍZES TÉCNICAS</span>
+            <h3 class="about-chapter-title">O Contato Inicial com Hardware e Redes</h3>
+            <p>
+              Minha história com a computação começou no início dos anos 2000. Entre 2002 e 2006, atuei profissionalmente na <strong>Interconect</strong> como <strong>Técnico de Informática e Redes</strong>. Essa vivência foi a minha escola de computação raiz: montagem e manutenção física de microcomputadores, diagnóstico de placas, periféricos, impressoras e estruturação de redes locais cabeadas. Ali entendi como o hardware, o sistema operacional e a conectividade se integram por baixo dos panos.
+            </p>
+          </div>
+
+          <!-- Capítulo 2: A Forja na Gastronomia -->
+          <div class="about-chapter">
+            <span class="about-chapter-tag">2006 — 2023 // DISCIPLINA &amp; LIDERANÇA</span>
+            <h3 class="about-chapter-title">A Forja de 15+ Anos na Gastronomia Profissional</h3>
+            <p>
+              A vida me levou a explorar outro universo de exigência máxima: a gastronomia profissional. Durante mais de 15 anos, atuei como <strong>Cozinheiro e Chefe de Cozinha</strong> (passando por funções de alta precisão como pizzaiolo e sushiman). 
+            </p>
+            <p>
+              Uma cozinha industrial em horário de pico é um dos ambientes mais desafiadores do mercado: centenas de pedidos concorrentes, tolerância zero para falhas e decisões sob calor e pressão contínua. Essa jornada forjou o meu maior diferencial competitivo: <strong>resiliência extrema</strong>, <strong>inteligência emocional</strong>, <strong>gestão de crises em tempo real</strong>, <strong>liderança de equipes</strong> e a disciplina obsessiva do <em>mise en place</em> — organização metodológica que hoje aplico rigorosamente no planejamento de sistemas, arquitetura de APIs e Clean Code.
+            </p>
+          </div>
+
+          <!-- Capítulo 3: A Transição Consciente -->
+          <div class="about-chapter">
+            <span class="about-chapter-tag">2023 — PRESENTE // ENGENHARIA DE SOFTWARE</span>
+            <h3 class="about-chapter-title">A Transição Consciente &amp; O Foco em Back-end</h3>
+            <p>
+              Em 2023, tomei a decisão planejada de voltar às minhas origens técnicas e fazer a transição definitiva para o desenvolvimento de software. Ingressei na graduação em <strong>Análise e Desenvolvimento de Sistemas (UNAMA)</strong> e fui selecionado para o programa de imersão <strong>AWS re/Start (300h)</strong>, aprofundando conceitos de nuvem, Linux, redes, segurança e automações.
+            </p>
+            <p>
+              Hoje atuo com determinação como <strong>Desenvolvedor Back-end Júnior</strong>, construindo APIs concorrentes e microsserviços em <strong>Java 21 (Spring Boot 3)</strong> e <strong>Go (Golang 1.22+)</strong>, orquestrando containers com <strong>Docker Swarm</strong> na nuvem <strong>AWS</strong> e criando interfaces modernas com <strong>Angular 21 &amp; TypeScript</strong>. Além do código, participo ativamente da comunidade técnica de Belém (<strong>AWS User Group Belém</strong>), guiado pela honestidade técnica e pela paixão de construir sistemas que geram impacto real.
+            </p>
+          </div>
+        </div>
+
+        <!-- Box Lateral de Competências & Formações -->
+        <div class="stack-box-column">
+          <div class="stack-box">
+            <h4 class="stack-title">NÚCLEO TÉCNICO</h4>
+            <ul class="stack-list">
+              <li><strong>Back-end &amp; Engines:</strong> Java 17/21, Spring Boot 3, Go (Golang 1.22+), Ebitengine (Go), APIs RESTful</li>
+              <li><strong>Cloud &amp; DevOps:</strong> AWS Cloud (EC2, S3, RDS), Docker, Docker Swarm, Linux Ubuntu, Traefik v2, Vercel</li>
+              <li><strong>Front-end &amp; CMS:</strong> Angular 21+, TypeScript, JavaScript (JS), CSS3, Tailwind CSS, WordPress, Signals, HTML5</li>
+              <li><strong>Bancos de Dados:</strong> PostgreSQL 16 (ACID), Oracle DB, AWS RDS, Redis (Cache &amp; Filas), Firestore</li>
+              <li><strong>Automações:</strong> n8n Workflows, Bash Scripting, Python</li>
+            </ul>
+          </div>
+
+          <div class="stack-box">
+            <h4 class="stack-title">FORMAÇÃO &amp; COMUNIDADE</h4>
+            <ul class="stack-list">
+              <li><strong>Graduação:</strong> Análise e Desenvolvimento de Sistemas — UNAMA</li>
+              <li><strong>AWS re/Start:</strong> 300h intensivas de Cloud, Linux, Redes e Segurança</li>
+              <li><strong>Comunidade Tech:</strong> Membro ativo do 7º Meetup AWS User Group Belém</li>
+              <li><strong>Fundamentos:</strong> 4 anos de experiência raiz com Hardware e Redes (Interconect)</li>
+            </ul>
+          </div>
+
+          <div class="stack-box">
+            <h4 class="stack-title">DIFERENCIAIS HUMANOS (SOFT SKILLS)</h4>
+            <ul class="stack-list">
+              <li><strong>Resiliência Sob Pressão:</strong> Maturidade forjada em 15+ anos na gestão de brigadas</li>
+              <li><strong>Cultura de Processos:</strong> Método <em>mise en place</em> aplicado ao Clean Code e arquitetura</li>
+              <li><strong>Comunicação Transparente:</strong> Clareza técnica, honestidade e facilidade de trabalho em equipe</li>
+              <li><strong>Capacidade de Aprendizado Rápido:</strong> Foco em fundamentos de computação e soluções práticas</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -411,79 +430,222 @@
       </div>
     </section>
 
-    <!-- SOBRE & TRAJETÓRIA -->
-    <section class="section about-section" id="sobre">
+    <!-- STACKS & TECNOLOGIAS (BOTÕES FLUTUANTES) -->
+    <section class="section stacks-section" id="stacks">
       <div class="section-header">
-        <h2 class="section-title"><span class="glow">&gt;</span> MINHA_TRAJETORIA</h2>
-        <p class="section-subtitle">Do hardware e redes nos anos 2000 aos 15 anos de liderança na gastronomia, até a engenharia de software moderna.</p>
+        <h2 class="section-title"><span class="glow">&gt;</span> STACKS_E_TECNOLOGIAS</h2>
+        <p class="section-subtitle">Ecossistema tecnológico dominado e aplicado na construção de soluções corporativas e escaláveis.</p>
       </div>
-      <div class="about-grid">
-        <div class="about-text">
-          <!-- Capítulo 1: Origem na Tecnologia -->
-          <div class="about-chapter">
-            <span class="about-chapter-tag">2002 — 2006 // AS RAÍZES TÉCNICAS</span>
-            <h3 class="about-chapter-title">O Contato Inicial com Hardware e Redes</h3>
-            <p>
-              Minha história com a computação começou no início dos anos 2000. Entre 2002 e 2006, atuei profissionalmente na <strong>Interconect</strong> como <strong>Técnico de Informática e Redes</strong>. Essa vivência foi a minha escola de computação raiz: montagem e manutenção física de microcomputadores, diagnóstico de placas, periféricos, impressoras e estruturação de redes locais cabeadas. Ali entendi como o hardware, o sistema operacional e a conectividade se integram por baixo dos panos.
-            </p>
-          </div>
 
-          <!-- Capítulo 2: A Forja na Gastronomia -->
-          <div class="about-chapter">
-            <span class="about-chapter-tag">2006 — 2023 // DISCIPLINA &amp; LIDERANÇA</span>
-            <h3 class="about-chapter-title">A Forja de 15+ Anos na Gastronomia Profissional</h3>
-            <p>
-              A vida me levou a explorar outro universo de exigência máxima: a gastronomia profissional. Durante mais de 15 anos, atuei como <strong>Cozinheiro e Chefe de Cozinha</strong> (passando por funções de alta precisão como pizzaiolo e sushiman). 
-            </p>
-            <p>
-              Uma cozinha industrial em horário de pico é um dos ambientes mais desafiadores do mercado: centenas de pedidos concorrentes, tolerância zero para falhas e decisões sob calor e pressão contínua. Essa jornada forjou o meu maior diferencial competitivo: <strong>resiliência extrema</strong>, <strong>inteligência emocional</strong>, <strong>gestão de crises em tempo real</strong>, <strong>liderança de equipes</strong> e a disciplina obsessiva do <em>mise en place</em> — organização metodológica que hoje aplico rigorosamente no planejamento de sistemas, arquitetura de APIs e Clean Code.
-            </p>
-          </div>
+      <div class="stacks-floating-container">
+        <!-- Back-end & Linguagens -->
+        <div class="stack-float-chip" style="animation-delay: -0.1s;">
+          <span class="stack-icon"><i class="devicon-java-plain colored"></i></span>
+          <span class="stack-name">Java 21</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -0.6s;">
+          <span class="stack-icon"><i class="devicon-spring-original colored"></i></span>
+          <span class="stack-name">Spring Boot 3</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -1.2s;">
+          <span class="stack-icon"><i class="devicon-go-plain colored"></i></span>
+          <span class="stack-name">Go (Golang)</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -1.8s;">
+          <span class="stack-icon"><img src="icons/ebitengine.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/ebitengine.svg'}" alt="Ebitengine" class="tech-icon-img"></span>
+          <span class="stack-name">Ebitengine (Go)</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -2.3s;">
+          <span class="stack-icon"><i class="devicon-nodejs-plain colored"></i></span>
+          <span class="stack-name">Node.js</span>
+        </div>
 
-          <!-- Capítulo 3: A Transição Consciente -->
-          <div class="about-chapter">
-            <span class="about-chapter-tag">2023 — PRESENTE // ENGENHARIA DE SOFTWARE</span>
-            <h3 class="about-chapter-title">A Transição Consciente &amp; O Foco em Back-end</h3>
-            <p>
-              Em 2023, tomei a decisão planejada de voltar às minhas origens técnicas e fazer a transição definitiva para o desenvolvimento de software. Ingressei na graduação em <strong>Análise e Desenvolvimento de Sistemas (UNAMA)</strong> e fui selecionado para o programa de imersão <strong>AWS re/Start (300h)</strong>, aprofundando conceitos de nuvem, Linux, redes, segurança e automações.
-            </p>
-            <p>
-              Hoje atuo com determinação como <strong>Desenvolvedor Back-end Júnior</strong>, construindo APIs concorrentes e microsserviços em <strong>Java 21 (Spring Boot 3)</strong> e <strong>Go (Golang 1.22+)</strong>, orquestrando containers com <strong>Docker Swarm</strong> na nuvem <strong>AWS</strong> e criando interfaces modernas com <strong>Angular 21 &amp; TypeScript</strong>. Além do código, participo ativamente da comunidade técnica de Belém (<strong>AWS User Group Belém</strong>), guiado pela honestidade técnica e pela paixão de construir sistemas que geram impacto real.
-            </p>
+        <!-- Front-end & UI -->
+        <div class="stack-float-chip" style="animation-delay: -0.4s;">
+          <span class="stack-icon"><i class="devicon-angularjs-plain colored" style="color: #dd0031 !important;"></i></span>
+          <span class="stack-name">Angular 21</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -0.9s;">
+          <span class="stack-icon"><i class="devicon-typescript-plain colored"></i></span>
+          <span class="stack-name">TypeScript</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -1.5s;">
+          <span class="stack-icon"><i class="devicon-javascript-plain colored"></i></span>
+          <span class="stack-name">JavaScript (JS)</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -2.0s;">
+          <span class="stack-icon"><i class="devicon-css3-plain colored"></i></span>
+          <span class="stack-name">CSS3</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -2.6s;">
+          <span class="stack-icon"><i class="devicon-tailwindcss-original colored"></i></span>
+          <span class="stack-name">Tailwind CSS</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -0.3s;">
+          <span class="stack-icon"><i class="devicon-wordpress-plain" style="color: #21759b !important;"></i></span>
+          <span class="stack-name">WordPress</span>
+        </div>
+
+        <!-- DevOps, Cloud & Orquestração -->
+        <div class="stack-float-chip" style="animation-delay: -0.8s;">
+          <span class="stack-icon"><i class="devicon-docker-plain colored"></i></span>
+          <span class="stack-name">Docker</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -1.4s;">
+          <span class="stack-icon"><img src="docker-swarm.webp" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/docker-swarm.webp'}" alt="Docker Swarm" class="tech-icon-img"></span>
+          <span class="stack-name">Docker Swarm</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -2.1s;">
+          <span class="stack-icon"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></span>
+          <span class="stack-name">AWS Cloud</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -2.7s;">
+          <span class="stack-icon"><i class="devicon-googlecloud-plain colored"></i></span>
+          <span class="stack-name">Google Cloud</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -0.5s;">
+          <span class="stack-icon"><i class="devicon-traefikproxy-original colored"></i></span>
+          <span class="stack-name">Traefik v2</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -1.1s;">
+          <span class="stack-icon"><i class="devicon-linux-plain"></i></span>
+          <span class="stack-name">Linux / Ubuntu</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -1.7s;">
+          <span class="stack-icon"><i class="devicon-git-plain colored"></i></span>
+          <span class="stack-name">Git &amp; GitHub</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -2.4s;">
+          <span class="stack-icon"><i class="devicon-vercel-original"></i></span>
+          <span class="stack-name">Vercel</span>
+        </div>
+
+        <!-- Bancos de Dados & Caches -->
+        <div class="stack-float-chip" style="animation-delay: -0.2s;">
+          <span class="stack-icon"><i class="devicon-postgresql-plain colored"></i></span>
+          <span class="stack-name">PostgreSQL 16</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -0.7s;">
+          <span class="stack-icon"><i class="devicon-oracle-original colored"></i></span>
+          <span class="stack-name">Oracle DB</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -1.3s;">
+          <span class="stack-icon"><i class="devicon-mysql-plain colored"></i></span>
+          <span class="stack-name">MySQL</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -1.9s;">
+          <span class="stack-icon"><i class="devicon-redis-plain colored"></i></span>
+          <span class="stack-name">Redis</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -2.5s;">
+          <span class="stack-icon"><i class="devicon-firebase-plain colored"></i></span>
+          <span class="stack-name">Firebase</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -0.4s;">
+          <span class="stack-icon"><img src="icons/firestore.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/firestore.svg'}" alt="Firestore" class="tech-icon-img"></span>
+          <span class="stack-name">Firestore</span>
+        </div>
+
+        <!-- Automação & Ferramentas -->
+        <div class="stack-float-chip" style="animation-delay: -1.0s;">
+          <span class="stack-icon"><img src="icons/n8n.svg" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='public/icons/n8n.svg'}" alt="n8n" class="tech-icon-img"></span>
+          <span class="stack-name">n8n</span>
+        </div>
+        <div class="stack-float-chip" style="animation-delay: -1.6s;">
+          <span class="stack-icon"><i class="devicon-postman-plain colored"></i></span>
+          <span class="stack-name">Postman</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIÊNCIAS PROFISSIONAIS -->
+    <section class="section experiences-section" id="experiencias">
+      <div class="section-header">
+        <h2 class="section-title"><span class="glow">&gt;</span> EXPERIENCIAS_PROFISSIONAIS</h2>
+        <p class="section-subtitle">Vivência operacional sólida, liderança em cenários de alta pressão e engenharia de software aplicada.</p>
+      </div>
+
+      <div class="experiences-grid">
+        <!-- Experiência 1: Desenvolvedor Back-end & DevOps -->
+        <div class="experience-card">
+          <div class="exp-card-header">
+            <div class="exp-role-badge">BACK-END &amp; DEVOPS</div>
+            <span class="exp-period">2023 — PRESENTE</span>
+          </div>
+          <h3 class="exp-title">Desenvolvedor Back-end &amp; SysOps</h3>
+          <h4 class="exp-company">Projetos &amp; Ecossistema Nexus • Belém-PA</h4>
+          <p class="exp-desc">
+            Desenvolvimento de microsserviços concorrentes e APIs RESTful em Java 21 (Spring Boot 3) e Go (Golang 1.22+). Modelagem e persistência transacional com isolamento ACID em PostgreSQL 16 e Oracle DB. Orquestração de contêineres com Docker &amp; Docker Swarm, balanceamento reverso seguro com Traefik v2 e provisionamento de recursos em nuvem AWS (EC2, S3, RDS). Automação de fluxos operacionais e webhooks com n8n.
+          </p>
+          <div class="exp-tags">
+            <span class="exp-tag">Java 21</span>
+            <span class="exp-tag">Spring Boot 3</span>
+            <span class="exp-tag">Go (Golang)</span>
+            <span class="exp-tag">Docker Swarm</span>
+            <span class="exp-tag">AWS</span>
+            <span class="exp-tag">PostgreSQL ACID</span>
+            <span class="exp-tag">Traefik v2</span>
           </div>
         </div>
 
-        <!-- Box Lateral de Competências & Formações -->
-        <div class="stack-box-column">
-          <div class="stack-box">
-            <h4 class="stack-title">NÚCLEO TÉCNICO</h4>
-            <ul class="stack-list">
-              <li><strong>Back-end &amp; Engines:</strong> Java 17/21, Spring Boot 3, Go (Golang 1.22+), Ebitengine (Go), APIs RESTful</li>
-              <li><strong>Cloud &amp; DevOps:</strong> AWS Cloud (EC2, S3, RDS), Docker, Docker Swarm, Linux Ubuntu, Traefik v2, Vercel</li>
-              <li><strong>Front-end &amp; CMS:</strong> Angular 21+, TypeScript, JavaScript (JS), CSS3, Tailwind CSS, WordPress, Signals, HTML5</li>
-              <li><strong>Bancos de Dados:</strong> PostgreSQL 16 (ACID), Oracle DB, AWS RDS, Redis (Cache &amp; Filas), Firestore</li>
-              <li><strong>Automações:</strong> n8n Workflows, Bash Scripting, Python</li>
-            </ul>
+        <!-- Experiência 2: Front-end & Web Apps -->
+        <div class="experience-card">
+          <div class="exp-card-header">
+            <div class="exp-role-badge">FRONT-END &amp; UI BUILDER</div>
+            <span class="exp-period">2023 — PRESENTE</span>
           </div>
-
-          <div class="stack-box">
-            <h4 class="stack-title">FORMAÇÃO &amp; COMUNIDADE</h4>
-            <ul class="stack-list">
-              <li><strong>Graduação:</strong> Análise e Desenvolvimento de Sistemas — UNAMA</li>
-              <li><strong>AWS re/Start:</strong> 300h intensivas de Cloud, Linux, Redes e Segurança</li>
-              <li><strong>Comunidade Tech:</strong> Membro ativo do 7º Meetup AWS User Group Belém</li>
-              <li><strong>Fundamentos:</strong> 4 anos de experiência raiz com Hardware e Redes (Interconect)</li>
-            </ul>
+          <h3 class="exp-title">Desenvolvedor Front-end &amp; Aplicações Web</h3>
+          <h4 class="exp-company">Comunidade Tech &amp; Portfólio • Belém-PA</h4>
+          <p class="exp-desc">
+            Construção de aplicações corporativas reativas e acessíveis utilizando Angular 21+, TypeScript estrito e arquitetura modular de Standalone Components. Gerenciamento reativo de estado por Signals, sincronização com serviços em nuvem (Firebase &amp; Firestore) e interfaces de alto impacto visual com Tailwind CSS e CSS nativo.
+          </p>
+          <div class="exp-tags">
+            <span class="exp-tag">Angular 21</span>
+            <span class="exp-tag">TypeScript</span>
+            <span class="exp-tag">Signals</span>
+            <span class="exp-tag">Tailwind CSS</span>
+            <span class="exp-tag">Firebase</span>
+            <span class="exp-tag">UI/UX</span>
           </div>
+        </div>
 
-          <div class="stack-box">
-            <h4 class="stack-title">DIFERENCIAIS HUMANOS (SOFT SKILLS)</h4>
-            <ul class="stack-list">
-              <li><strong>Resiliência Sob Pressão:</strong> Maturidade forjada em 15+ anos na gestão de brigadas</li>
-              <li><strong>Cultura de Processos:</strong> Método <em>mise en place</em> aplicado ao Clean Code e arquitetura</li>
-              <li><strong>Comunicação Transparente:</strong> Clareza técnica, honestidade e facilidade de trabalho em equipe</li>
-              <li><strong>Capacidade de Aprendizado Rápido:</strong> Foco em fundamentos de computação e soluções práticas</li>
-            </ul>
+        <!-- Experiência 3: Liderança & Gastronomia -->
+        <div class="experience-card">
+          <div class="exp-card-header">
+            <div class="exp-role-badge">LIDERANÇA &amp; OPERAÇÕES</div>
+            <span class="exp-period">2006 — 2023 (15+ ANOS)</span>
+          </div>
+          <h3 class="exp-title">Chefe de Cozinha &amp; Gestão de Operações de Alta Pressão</h3>
+          <h4 class="exp-company">Gastronomia Profissional • Setor Horeca</h4>
+          <p class="exp-desc">
+            Mais de 15 anos liderando brigadas em ambientes operacionais de extrema exigência, com centenas de pedidos concorrentes sob tolerância zero para erros. Forjou competências indispensáveis para engenharia de sistemas: resiliência sob pressão contínua, inteligência emocional, gestão ágil de crises, disciplina do <em>mise en place</em> (organização e governança metodológica) e liderança de pessoas.
+          </p>
+          <div class="exp-tags">
+            <span class="exp-tag">Gestão de Crises</span>
+            <span class="exp-tag">Liderança de Equipes</span>
+            <span class="exp-tag">Mise en Place</span>
+            <span class="exp-tag">Resiliência</span>
+            <span class="exp-tag">SLA Crítico</span>
+          </div>
+        </div>
+
+        <!-- Experiência 4: Hardware & Redes -->
+        <div class="experience-card">
+          <div class="exp-card-header">
+            <div class="exp-role-badge">INFRAESTRUTURA &amp; HARDWARE</div>
+            <span class="exp-period">2002 — 2006</span>
+          </div>
+          <h3 class="exp-title">Técnico de Hardware &amp; Redes Locais</h3>
+          <h4 class="exp-company">Interconect • Belém-PA</h4>
+          <p class="exp-desc">
+            Atuação profissional na montagem, manutenção corretiva e preventiva de microcomputadores, diagnóstico físico de placas-mãe, memórias, periféricos e impressoras. Estruturação física e lógica de redes locais cabeadas (LAN), configuração de roteadores e sistemas operacionais, consolidando a compreensão profunda de computação física.
+          </p>
+          <div class="exp-tags">
+            <span class="exp-tag">Hardware</span>
+            <span class="exp-tag">Redes Locais</span>
+            <span class="exp-tag">Diagnóstico</span>
+            <span class="exp-tag">TCP/IP</span>
+            <span class="exp-tag">Sistemas Operacionais</span>
           </div>
         </div>
       </div>
@@ -586,25 +748,11 @@
       </div>
     </div>
 
-    <!-- Navegação Vertical (Itens fiéis ao iPortfolio) -->
+    <!-- Navegação Vertical (Itens fiéis ao iPortfolio Cyberpunk) -->
     <nav class="sidebar-nav">
       <ul class="sidebar-menu-list">
-        <!-- 1. Home / Início -->
-        <li>
-          <a href="#heroSection" class="sidebar-nav-link active" data-section="heroSection">
-            <span class="navicon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-              </svg>
-            </span>
-            <span class="nav-prompt">&gt;_</span>
-            <span class="nav-text">Início</span>
-          </a>
-        </li>
-
-        <!-- 2. Trajetória, Bio & Formação -->
-        <li>
+        <!-- 1. Trajetória, Bio & Formação -->
+        <li class="sidebar-menu-item">
           <a href="#sobre" class="sidebar-nav-link" data-section="sobre">
             <span class="navicon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
@@ -620,8 +768,8 @@
           </a>
         </li>
 
-        <!-- 4. Portfolio / Vitrine de Projetos -->
-        <li>
+        <!-- 2. Portfolio / Vitrine de Projetos -->
+        <li class="sidebar-menu-item">
           <a href="#projetos" class="sidebar-nav-link" data-section="projetos">
             <span class="navicon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
@@ -635,15 +783,14 @@
           </a>
         </li>
 
-        <!-- 5. Services / Stacks & Tecnologias -->
-        <li>
-          <a href="#techMarquee" class="sidebar-nav-link" data-section="techMarquee">
+        <!-- 3. Stacks & Tecnologias -->
+        <li class="sidebar-menu-item">
+          <a href="#stacks" class="sidebar-nav-link" data-section="stacks">
             <span class="navicon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
-                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
               </svg>
             </span>
             <span class="nav-prompt">&gt;_</span>
@@ -651,23 +798,22 @@
           </a>
         </li>
 
-        <!-- 6. Dropdown / Especialidades Técnicas & Telemetria -->
-        <li>
-          <a href="#classeSelector" class="sidebar-nav-link" data-section="classeSelector">
+        <!-- 4. Experiências Profissionais -->
+        <li class="sidebar-menu-item">
+          <a href="#experiencias" class="sidebar-nav-link" data-section="experiencias">
             <span class="navicon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
-                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
               </svg>
             </span>
             <span class="nav-prompt">&gt;_</span>
-            <span class="nav-text">Especialidades Técnicas</span>
+            <span class="nav-text">Experiências Profissionais</span>
           </a>
         </li>
 
-        <!-- 7. Contact / Contato Direto -->
-        <li>
+        <!-- 5. Contato Direto -->
+        <li class="sidebar-menu-item">
           <a href="#contato" class="sidebar-nav-link" data-section="contato">
             <span class="navicon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
@@ -676,7 +822,7 @@
               </svg>
             </span>
             <span class="nav-prompt">&gt;_</span>
-            <span class="nav-text">Contato Direto</span>
+            <span class="nav-text">Contatos</span>
           </a>
         </li>
       </ul>

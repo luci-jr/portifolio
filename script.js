@@ -279,14 +279,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Atualiza dinamicamente o link ativo conforme o scroll da página
-  const sectionsToObserve = ['heroSection', 'classeSelector', 'techMarquee', 'projetos', 'sobre', 'contato'];
+  const sectionsToObserve = ['heroSection', 'sobre', 'projetos', 'stacks', 'experiencias', 'contato'];
   window.addEventListener('scroll', () => {
     let currentSection = '';
     sectionsToObserve.forEach((secId) => {
       const el = document.getElementById(secId);
       if (el) {
         const rect = el.getBoundingClientRect();
-        if (rect.top <= 200 && rect.bottom >= 100) {
+        if (rect.top <= 250 && rect.bottom >= 100) {
           currentSection = secId;
         }
       }
