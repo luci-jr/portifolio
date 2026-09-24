@@ -25,4 +25,8 @@ export class NavbarComponent {
   toggleSidebar(): void {
     this.portfolio.toggleSidebar();
   }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }
 }

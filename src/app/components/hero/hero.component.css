@@ -9,6 +9,7 @@
   overflow: hidden;
   background: transparent;
   width: 100%;
+  scroll-margin-top: 140px;
 }
 
 /* Aura e Feixe de Luz Ambiente Dinâmica no Centro do Hero (Suave, exclusiva do topo) */

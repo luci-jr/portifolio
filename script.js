@@ -302,5 +302,36 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }, { passive: true });
+
+  // Botão Início e links que levam ao início: rolagem 100% alinhada ao topo absoluto (Y = 0)
+  const navHomeBtn = document.getElementById('navHomeBtn');
+  if (navHomeBtn) {
+    navHomeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+      if (window.history.pushState) {
+        window.history.pushState(null, '', window.location.pathname);
+      }
+    });
+  }
+
+  document.querySelectorAll('a[href="#heroSection"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+      if (typeof closeSidebar === 'function') closeSidebar();
+      if (window.history.pushState) {
+        window.history.pushState(null, '', window.location.pathname);
+      }
+    });
+  });
 });
 

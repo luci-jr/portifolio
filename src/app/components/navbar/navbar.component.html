@@ -45,9 +45,9 @@
   <!-- Controles do Sistema no Lado Direito: Início, Alternador de Tema (Dark/Light) & Scanlines CRT -->
   <div class="system-controls">
     <!-- Botão Início -->
-    <a href="#heroSection" class="crt-btn nav-home-btn" title="Ir para o Início" aria-label="Início">
+    <button class="crt-btn nav-home-btn" (click)="scrollToTop()" type="button" title="Ir para o Início" aria-label="Início">
       <span class="home-icon">⌂</span> <span class="home-label">INÍCIO</span>
-    </a>
+    </button>
 
     <!-- Botão Alternador Tema Dark / Light -->
     <button class="crt-btn theme-toggle-btn" (click)="toggleTheme()" type="button" title="Alternar Modo Claro / Escuro">
