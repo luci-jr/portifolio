@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "echo 'Static build ready'",
+    "build:ng": "ng build",
+    "vercel-build": "echo 'Static build ready'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
