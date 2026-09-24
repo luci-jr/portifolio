@@ -1,3 +1,9 @@
+<!-- Botão Flutuante Ergonômico Lateral -->
+<button class="floating-sidebar-trigger" (click)="toggle()" type="button" title="Abrir Menu de Navegação" aria-label="Abrir Navegação Lateral">
+  <span class="floating-icon">☰</span>
+  <span class="floating-text">MENU</span>
+</button>
+
 <!-- Overlay Backdrop da Barra Lateral -->
 <div class="sidebar-backdrop" [class.is-open]="portfolio.sidebarOpen()" (click)="close()" aria-hidden="true"></div>
 

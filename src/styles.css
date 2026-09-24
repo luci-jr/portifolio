@@ -930,6 +930,57 @@ body.theme-light .pixel-btn.outline:hover {
   line-height: 1;
 }
 
+/* Botão Flutuante Ergonômico Lateral */
+.floating-sidebar-trigger {
+  position: fixed;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 990;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.95rem;
+  background: rgba(12, 9, 6, 0.88);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  border-left: 3.5px solid var(--accent-color);
+  border-radius: 30px;
+  color: var(--accent-color);
+  font-family: var(--font-code);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.55), 0 0 12px rgba(245, 158, 11, 0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.floating-sidebar-trigger:hover {
+  background: var(--accent-color);
+  color: #0c0906;
+  border-color: var(--accent-color);
+  box-shadow: 0 6px 25px rgba(245, 158, 11, 0.45);
+  transform: translateY(-50%) translateX(4px) scale(1.04);
+}
+
+.floating-sidebar-trigger .floating-icon {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.floating-sidebar-trigger .floating-text {
+  letter-spacing: 0.05em;
+}
+
+body:has(.sidebar-drawer.is-open) .floating-sidebar-trigger,
+.sidebar-drawer.is-open ~ .floating-sidebar-trigger {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) translateX(-25px);
+}
+
 /* Overlay Backdrop */
 .sidebar-backdrop {
   position: fixed;
@@ -1287,4 +1338,30 @@ body.theme-light .sidebar-nav-link.active {
 :host.theme-light .sidebar-footer,
 body.theme-light .sidebar-footer {
   border-top-color: rgba(245, 158, 11, 0.25);
+}
+
+:host.theme-light .floating-sidebar-trigger,
+body.theme-light .floating-sidebar-trigger {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(217, 119, 6, 0.45);
+  border-left-color: #d97706;
+  color: #b45309;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12), 0 0 10px rgba(217, 119, 6, 0.25);
+}
+
+:host.theme-light .floating-sidebar-trigger:hover,
+body.theme-light .floating-sidebar-trigger:hover {
+  background: #d97706;
+  color: #ffffff;
+  border-color: #d97706;
+}
+
+@media (max-width: 768px) {
+  .floating-sidebar-trigger {
+    left: 10px;
+    padding: 0.55rem 0.7rem;
+  }
+  .floating-sidebar-trigger .floating-text {
+    display: none;
+  }
 }
