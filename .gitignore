@@ -45,7 +45,6 @@ __screenshots__/
 Thumbs.db
 
 # Documentação Privada / Notas Locais do Desenvolvedor
-GUIA_MANUTENCAO.md
 MANUAL_INTERNO.md
 .local/
 docs/privado/

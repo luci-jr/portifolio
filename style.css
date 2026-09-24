@@ -1177,7 +1177,7 @@ body.theme-light .nav-traj-btn:hover .btn-prompt {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2.8rem 0 0.8rem 0;
+  padding: 2.2rem 0 0.2rem 0;
   overflow: hidden;
   background: transparent;
   width: 100%;
@@ -1479,7 +1479,7 @@ body.theme-light .desc-pill {
   border-left: 4.5px solid var(--accent-color);
   border-radius: 14px;
   padding: 2.2rem 2.6rem;
-  margin: 1.2rem auto 1.4rem auto;
+  margin: 1.2rem auto 0.6rem auto;
   max-width: 1160px;
   width: 100%;
   box-shadow:
@@ -2088,18 +2088,23 @@ body.theme-light .pixel-btn.outline:hover {
 .section {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 4rem 1.5rem;
+  padding: 1.6rem 1.5rem;
   scroll-margin-top: 80px;
+}
+
+.about-section {
+  padding: 1.4rem 1.5rem 1.8rem 1.5rem;
+  position: relative;
 }
 
 .projects-section {
   max-width: 1320px;
   width: 100%;
-  padding-top: 1.5rem;
+  padding: 1.4rem 1.5rem 1.4rem 1.5rem;
 }
 
 .section-header {
-  margin-bottom: 3.2rem;
+  margin-bottom: 2.2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -2641,7 +2646,7 @@ body.theme-light .pillar-tag:hover {
 .contact-section {
   text-align: center;
   border-top: 1px solid var(--border-color);
-  padding: 4.5rem 1.5rem;
+  padding: 1.6rem 1.5rem 3.5rem 1.5rem;
   position: relative;
 }
 
@@ -3104,7 +3109,7 @@ body.theme-light .pillar-tag:hover {
    SEÇÃO STACKS & TECNOLOGIAS (BOTÕES FLUTUANTES)
    ========================================================================== */
 .stacks-section {
-  padding: 3.5rem 0 1.5rem 0;
+  padding: 1.4rem 0 1.4rem 0;
   position: relative;
 }
 
@@ -3207,7 +3212,7 @@ body.theme-light .stack-float-chip:hover {
    SEÇÃO EXPERIÊNCIAS PROFISSIONAIS
    ========================================================================== */
 .experiences-section {
-  padding: 1.5rem 0 4rem 0;
+  padding: 1.4rem 0 1.8rem 0;
   position: relative;
 }
 
@@ -3366,6 +3371,7 @@ body.theme-light .exp-tag {
    SEÇÃO DE FORMAÇÕES & CERTIFICAÇÕES
    ========================================================================== */
 .education-section {
+  padding: 1.4rem 1.5rem 1.8rem 1.5rem;
   position: relative;
 }
 
