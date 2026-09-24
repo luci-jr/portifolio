@@ -2886,9 +2886,13 @@ body.theme-light .about-chapter:hover {
   padding: 0.4rem 0.75rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: all 0.25s ease;
   letter-spacing: 0.04em;
   margin-right: 0.35rem;
+  position: relative;
+  overflow: hidden;
+  animation: nav-social-float 3.5s ease-in-out infinite;
+  animation-delay: -1.2s;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, background-color 0.22s ease;
 }
 
 .nav-menu-btn:hover {
@@ -2896,12 +2900,25 @@ body.theme-light .about-chapter:hover {
   color: #0c0906;
   border-color: var(--accent-color);
   box-shadow: 0 0 15px var(--accent-glow);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  animation-play-state: paused;
 }
 
 .nav-menu-btn .nav-menu-icon {
   font-size: 1rem;
   line-height: 1;
+}
+
+body.theme-light .nav-menu-btn {
+  background: rgba(217, 119, 6, 0.08);
+  border-color: rgba(217, 119, 6, 0.35);
+  color: #d97706;
+}
+
+body.theme-light .nav-menu-btn:hover {
+  background: #d97706;
+  color: #ffffff;
+  border-color: #d97706;
 }
 
 /* Overlay Backdrop */
