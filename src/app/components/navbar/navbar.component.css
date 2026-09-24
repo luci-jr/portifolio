@@ -451,6 +451,14 @@
   animation-delay: 0.35s;
 }
 
+.nav-projects-btn {
+  animation-delay: 0.65s !important;
+}
+
+.nav-contact-btn {
+  animation-delay: 0.95s !important;
+}
+
 .pixel-btn.nav-traj-btn:hover,
 .nav-social-links .nav-traj-btn:hover,
 .nav-traj-btn:hover {

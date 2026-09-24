@@ -123,8 +123,9 @@ body.theme-light.mode-gamer {
 /* ==========================================================================
    ADAPTAÇÕES RETRÔ VINTAGE (TIPOGRAFIA NÍTIDA, SEM HALOS BORRADOS)
    ========================================================================== */
+/* Efeito Scanlines CRT com a mesma intensidade e fidelidade analógica no modo claro */
 body.theme-light .crt-overlay {
-  opacity: 0.02;
+  opacity: 0.75;
 }
 
 
@@ -976,6 +977,14 @@ body.theme-light .nav-avatar-img {
   backdrop-filter: blur(8px);
   animation: nav-controls-float 3.5s ease-in-out infinite;
   animation-delay: 0.35s;
+}
+
+.nav-projects-btn {
+  animation-delay: 0.65s !important;
+}
+
+.nav-contact-btn {
+  animation-delay: 0.95s !important;
 }
 
 .pixel-btn.nav-traj-btn:hover,

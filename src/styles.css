@@ -137,12 +137,10 @@ body.theme-light.mode-gamer,
   --terminal-border: #fcd34d;
 }
 
-/* ==========================================================================
-   ADAPTAÇÕES RETRÔ VINTAGE (TIPOGRAFIA NÍTIDA, SEM HALOS BORRADOS)
-   ========================================================================== */
+/* Efeito Scanlines CRT com a mesma intensidade e fidelidade analógica no modo claro */
 :host.theme-light .crt-overlay,
 body.theme-light .crt-overlay {
-  opacity: 0.02;
+  opacity: 0.75;
 }
 
 
